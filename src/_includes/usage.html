@@ -2,17 +2,21 @@
 # https://developers.google.com/style/code-syntax#optional-arguments
 {% endcomment -%}
 
-{% if post %}
-    {% assign usage = post.usage %}
-{% else %}
-    {% assign usage = page.usage %}
-{% endif %}
+{%- if post -%}
+    {%- assign usage = post.usage -%}
+{%- else -%}
+    {%- assign usage = page.usage -%}
+{%- endif -%}
 
-{% if usage.signature %}
+{%- if usage.signature -%}
     <div class="post-meta">:information_source: <code>{{- usage.signature -}}</code></div>
-{% endif %}
+{%- endif -%}
 
-{% if usage.examples[0] %}
+{%- if usage.default -%}
+    <div class="post-meta">:house: <code>{{- usage.default -}}</code></div>
+{%- endif -%}
+
+{%- if usage.examples[0] -%}
     <div class="post-meta" style="display:flex; justify-content:flex-start; align-items:flex-start;">:bulb:&nbsp;
     <pre>
     {%- for example in usage.examples -%}
@@ -21,4 +25,4 @@
     {%- endfor -%}
     </pre>
     </div>
-{% endif %}
+{%- endif -%}

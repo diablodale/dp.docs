@@ -1,11 +1,10 @@
 ---
-title: opencl
 products:
   - dp.kinect3
   - dp.oak
 usage:
   signature: "@opencl {GPU_NAME_SUBSTRING | GPU_INDEX}"
-  default_value: "off"
+  default: "off"
   examples:
     - "@opencl intel"
     - "@opencl amd"
