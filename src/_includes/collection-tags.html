@@ -1,0 +1,13 @@
+<!-- no known way to create/modify global site var/config; therefore can't cache these -->
+
+{% assign collection-tags = '' | split: '' %}
+{% for collection in site.collections %}
+    {% for page in collection.docs %}
+        {% for tag in page.tags %}
+            {% unless collection-tags contains tag %}
+                {% assign arrayTag = tag | split: '@%[' %}
+                {% assign collection-tags = collection-tags | concat: arrayTag %}
+            {% endunless %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

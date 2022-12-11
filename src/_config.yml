@@ -36,6 +36,7 @@ host: 0.0.0.0
 
 # Build settings
 theme: minima
+page_excerpts: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -59,3 +60,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+#header_pages:
+#  - dp.kinect-tags-cats.md
+#  - dp.kinect2-tags-cats.md
+#  - dp.kinect3-tags-cats.md
+#  - dp.oak-tags-cats.md
+#  - about.markdown
+
+collections:
+  sensors:
+    output: true
