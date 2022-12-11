@@ -5,5 +5,7 @@ services:
       dockerfile: Dockerfile
     image: jekyll:latest
     container_name: jekyll
+    ports:
+      - "4000:4000"
     volumes:
       - ./src:/docs/src
