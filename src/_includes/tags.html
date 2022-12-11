@@ -7,9 +7,9 @@
 {% endif %}
 
 {% if tags[0] %}
-<div class="post-tags">
+<div class="post-meta">
 {% for tag in tags %}
-<a href="{{site.baseurl}}/tags/#{{- tag | slugize -}}">{{- tag | downcase -}}</a>
+<a href="{{site.baseurl}}/tags/#{{- tag | slugize -}}"><code>{{- tag | downcase -}}</code></a>
 {% unless forloop.last %}&nbsp;{% endunless %}
 {% endfor %}
 </div>

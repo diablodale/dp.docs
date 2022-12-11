@@ -71,5 +71,12 @@ exclude:
 #  - about.markdown
 
 collections:
-  sensors:
+  maxplugins:
     output: true
+
+defaults:
+  - scope:
+      path: "*/attributes"
+      type: maxplugins
+    values:
+      layout: attribute
