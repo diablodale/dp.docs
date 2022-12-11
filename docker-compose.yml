@@ -1,0 +1,9 @@
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jekyll:latest
+    container_name: jekyll
+    volumes:
+      - ./src:/docs/src
