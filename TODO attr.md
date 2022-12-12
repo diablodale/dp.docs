@@ -2,19 +2,6 @@ dp.kinect2 supports a normal compliment of Max attributes plus the following. Th
 
 ### Audio and Speech #
 
-`soundinfooutput [0]` Enables calculation and output of `soundinfo` and `soundbodies` data messages. You can choose for it to be 0=off, 1=available only on the attribute, or 2=on the attribute + sent out on the OSC/skeleton outlet. When `@soundinfooutput=2` and `@skeleton > 0`, dp.kinect2 will additionally output a `soundbodies` message indicating a correlation between heard sound and tracked bodies. This message will list all tracked bodies which the Kinect calculates are correlated with the heard sound. You might use this information to determine who is engaging with the Kinect or who is speaking.
-
-    OSC below (max route friendly @skeletonformat=1 is also supported)  
-    --------------------------------------------------------------------    
-    /soundbodies BodyID1 BodyID2 BodyID3 ...
-
-* `BodyIDx...` are integers which indicate tracked bodies which are correlated with the heard sound
-
-For example:
-* `/soundbodies 4` tracked body #4 is correlated with the heard sound
-* `/soundbodies 3 1` tracked bodies #3 and #1 are correlated with the heard sound
-* `/soundbodies 1 2 3 4 5 6` tracked bodies #1, #2, #3, #4, #5, and #6 are correlated with the heard sound
-
 `speechadapt [on]` Enables constant adaptation of speech recognition to adjust for the current speaker(s). This can cause problems over time in noisy environments or where there are a great number of speakers (in a kiosk environment, for example). For these scenarios and long recognition sessions (a few hours or more), it may be beneficial to turn off adaptation of the acoustic model. This will prevent recognition accuracy from degrading over time and lessen memory usage.
 
 `speechconf [normal]` Your choice (high, normal, no filter) of what speech to be recognized. Your selection and better will be output. For example, the default (normal) will output speech it recognized as having normal confidence or high confidence.
@@ -216,7 +203,5 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 `rotatexyz [0.0 0.0 0.0]` Rotation of all Kinect data as the concatenation of rotations (in degrees) about the positive x, y, and z axes in the form: [xrot yrot zrot]. Also known as Euler angles. The order of rotation is y then z then x.
 
 `scale [1.0 1.0 1.0]` 3D scaling factor of all Kinect data in the form: [x y z].
-
-`skeletonformat [OSC]` Choice for the format of messages output on the 5th outlet where 0=OSC and 1=max route friendly.
 
 `smoothing [0.5 0.5 0.5 0.05 0.04]` Five floats representing your choice of smoothing for skeleton data. The default is tuned for gesture recognition in games (some smoothing, little latency, and only filters out small jitters). These values **may not** be best for your needs. Please [read the detail Microsoft provides](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh855623(v=ieb.10)) which includes other suggested values for specific scenarios and the [whitepaper on data smoothing](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj131429(v=ieb.10)).
