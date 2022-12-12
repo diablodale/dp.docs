@@ -2,6 +2,8 @@
 products:
   - dp.kinect3
   - dp.oak
+categories:
+  - physical
 usage:
   signature: "@opencl {GPU_NAME_SUBSTRING | GPU_INDEX}"
   default: "off"

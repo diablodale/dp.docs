@@ -1,0 +1,19 @@
+---
+products:
+  - dp.kinect2
+categories:
+  - audio
+usage:
+  signature: "@silencevague INT"
+  default: "OS specific"
+  examples:
+    - "@silencevague 800"
+---
+
+Milliseconds of silence needed before completing a recognition that is
+**ambiguous**. For example, in a grammar which has two sentences,
+"new game please" and "new game", an ambiguous recognition would
+be "new game."
+
+The value of this attribute must be greater than
+[`@silenceprecise`]({% link _max/attributes/silenceprecise.md %}).

@@ -2,6 +2,8 @@
 products:
   - dp.kinect3
   - dp.oak
+categories:
+  - physical
 usage:
   signature: "@timestamp {0 | 1}"
   default: "0"

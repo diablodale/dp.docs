@@ -43,6 +43,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
+  - jekyll-relative-links
+relative_links:
+  collections: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -71,12 +74,12 @@ exclude:
 #  - about.markdown
 
 collections:
-  maxplugins:
+  max:
     output: true
 
 defaults:
   - scope:
       path: "*/attributes"
-      type: maxplugins
+      type: max
     values:
       layout: attribute

@@ -259,6 +259,7 @@ DEPENDENCIES
   github-pages (~> 227)
   http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.12)
+  jekyll-relative-links (~> 0.6.1)
   jekyll-seo-tag (~> 2.8)
   jekyll-sitemap (~> 1.4)
   jemoji (~> 0.12.0)
