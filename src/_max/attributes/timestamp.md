@@ -5,7 +5,7 @@ products:
 categories:
   - physical
 usage:
-  signature: "@timestamp {0 | 1}"
+  signature: "{0 | 1}"
   default: "0"
   examples:
     - "@timestamp 0"

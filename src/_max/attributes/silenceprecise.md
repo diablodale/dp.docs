@@ -4,7 +4,7 @@ products:
 categories:
   - audio
 usage:
-  signature: "@silenceprecise INT"
+  signature: "MILLISECONDS"
   default: "OS specific"
   examples:
     - "@silenceprecise 800"

@@ -4,10 +4,10 @@ products:
 categories:
   - audio
 usage:
-  signature: "@silencevague INT"
+  signature: "MILLISECONDS"
   default: "OS specific"
   examples:
-    - "@silencevague 800"
+    - "@silencevague 1000"
 ---
 
 Milliseconds of silence needed before completing a recognition that is

@@ -4,20 +4,25 @@
 
 {%- if post -%}
     {%- assign usage = post.usage -%}
+    {%- assign layout = post.layout -%}
 {%- else -%}
     {%- assign usage = page.usage -%}
+    {%- assign layout = page.layout -%}
 {%- endif -%}
 
 {%- if usage.signature -%}
-    <div class="post-meta">:information_source: <code>{{- usage.signature -}}</code></div>
+    <div class="post-meta">:information_source: signature <code>
+        {%- if layout == "attribute" -%}@{%- endif -%}
+        {{- page.slug | escape }} {{ usage.signature -}}</code>
+    </div>
 {%- endif -%}
 
 {%- if usage.default -%}
-    <div class="post-meta">:house: <code>{{- usage.default -}}</code></div>
+    <div class="post-meta">:house: default <code>{{- usage.default -}}</code></div>
 {%- endif -%}
 
 {%- if usage.examples[0] -%}
-    <div class="post-meta" style="display:flex; justify-content:flex-start; align-items:flex-start;">:bulb:&nbsp;
+    <div class="post-meta" style="display:flex; justify-content:flex-start; align-items:flex-start;">:bulb: examples&nbsp;
     <pre>
     {%- for example in usage.examples -%}
         {{- example -}}

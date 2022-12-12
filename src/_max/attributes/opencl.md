@@ -5,19 +5,17 @@ products:
 categories:
   - physical
 usage:
-  signature: "@opencl {GPU_NAME_SUBSTRING | GPU_INDEX}"
+  signature: "{GPU_NAME_SUBSTRING | GPU_INDEX}"
   default: "off"
   examples:
     - "@opencl intel"
     - "@opencl amd"
     - "@opencl nvidia"
-    - "@opencl 1"
     - "@opencl default"
+    - "@opencl 1"
+    - '@opencl "2070"  <--  number quoted otherwise is gpu index 2070'
     - "@opencl 0"
     - "@opencl off"
-    - "@opencl rtx"
-    - '@opencl "2070"  <--  number quoted otherwise is device index 2070'
-
 ---
 
 OpenCL device for image processing (e.g. flipx, undistort, align, etc.)
