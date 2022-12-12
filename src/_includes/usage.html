@@ -10,24 +10,25 @@
     {%- assign layout = page.layout -%}
 {%- endif -%}
 
-{%- if usage.signature -%}
-    <div class="post-meta">:information_source: signature <code>
-        {%- if layout == "attribute" -%}@{%- endif -%}
-        {{- page.slug | escape }} {{ usage.signature -}}</code>
-    </div>
-{%- endif -%}
+{%- if usage -%}
+    <dl class="post-meta">
+    {%- if usage.signature -%}
+        <dt>:information_source: signature</dt>
+        <dd><code>{%- if layout == "attribute" -%}@{%- endif -%}
+            {{- page.slug | escape }} {{ usage.signature -}}
+        </code></dd>
+    {%- endif -%}
 
-{%- if usage.default -%}
-    <div class="post-meta">:house: default <code>{{- usage.default -}}</code></div>
-{%- endif -%}
+    {%- if usage.default -%}
+        <dt>:house: default</dt><dd><code>{{- usage.default -}}</code></dd>
+    {%- endif -%}
 
-{%- if usage.examples[0] -%}
-    <div class="post-meta" style="display:flex; justify-content:flex-start; align-items:flex-start;">:bulb: examples&nbsp;
-    <pre>
-    {%- for example in usage.examples -%}
-        {{- example -}}
-        {%- unless forloop.last -%}<br/>{%- endunless -%}
-    {%- endfor -%}
-    </pre>
-    </div>
+    {%- if usage.examples[0] -%}
+        <dt>:bulb: examples</dt>
+        <dd><pre>{%- for example in usage.examples -%}
+            {{- example -}}
+            {%- unless forloop.last -%}<br/>{%- endunless -%}
+        {%- endfor -%}</pre></dd>
+    {%- endif -%}
+    </dl>
 {%- endif -%}
