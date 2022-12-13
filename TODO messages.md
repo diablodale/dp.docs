@@ -1,59 +1,6 @@
 
 
 
-
-
-#### Color Space Joints #
-
-Color space joint messages do not provide depth or orientation.
-
-```sh
-# @skeletonformat 0
-/skelcolor/userid/jointname column row confidence
-
-# @skeletonformat 1
-skelcolor userid jointname column row confidence
-```
-
-* `userid`, `jointname`, and `confidence` are the same as written above in skeleton space
-* `column, row` are long integers that represent the column and row in the colormap image
-
-Examples
-
-```sh
-# @skeletonformat 0
-/skelcolor/2/r_shoulder 975 758 0.5
-
-# @skeletonformat 1
-skelcolor 2 r_shoulder 975 758 0.5
-```
-
-#### Depth Space Joints #
-
-Depth space joint messages do not provide orientation.
-
-```sh
-# @skeletonformat 0
-/skeldepth/userid/jointname column row depth confidence
-
-# @skeletonformat 1
-skeldepth userid jointname column row depth confidence
-```
-
-* `userid`, `jointname`, and `confidence` are the same as written above in skeleton space
-* `column, row` are long integers that represent the column and row in the depthmap image
-* `depth` is the depth at that column, row pixel
-
-Examples
-
-```sh
-# @skeletonformat 0 @distmeter 0
-/skeldepth/2/r_shoulder 105 342 3712 0.5
-
-# @skeletonformat 1 @distmeter 1
-skeldepth 2 r_shoulder 105 342 3.712 0.5 
-```
-
 ### Body Properties # 
 `@bodyprop=1` will enable output of body properties: restricted, handstate, and lean. These properties provide information about the appearance or state of a tracked body and the confidence of that result. The results and confidence may vary. You may need to filter or smooth them. Note, `@flipx` does not affect the lean values. Max route friendly @skeletonformat=1 is also supported.
 

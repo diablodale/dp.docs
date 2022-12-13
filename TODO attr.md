@@ -145,12 +145,6 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 * 1 = XYZ: The real-world XYZ location of the voxel in meters as float32
 * 2 = XYZW: The real-world XYZW location of the voxel in meters as float32. W is always 1.0. This format is sometimes useful when transforming the pointcloud with matrix math or OpenGL shaders.
 
-`skelcolor [off]` Choice of skeleton/joint tracking output via OSC/route on the 5th outlet in colormap coordinates where 0=off, 1=joints.
-
-`skeldepth [off]` Choice of skeleton/joint tracking output via OSC/route on the 5th outlet in depthmap coordinates where 0=off, 1=joints.
-
-`skeleton [off]` Choice of skeleton/joint tracking output via OSC/route on the 5th outlet in real-world coordinates where 0=off, 1=joints, and 2=joints+orientation of joints.
-
 `unique [off]` Choice on/off to limit output of depth, color, IR, or playermap matrices to be 0=always output on a bang or 1=only output when unique. Therefore, if you set this value to be on (1), it is possible for you to bang the object yet not have matrices output. This is **much** more efficient than using a jit.change object.
 
 ### Visual Adjustment #
