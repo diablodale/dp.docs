@@ -11,9 +11,9 @@ RUN apt update && \
 # bundle add webrick
 # bundle exec jekyll serve
 
-COPY Gemfile Gemfile.lock /docs/
+COPY Gemfile Gemfile.lock /dp.docs/
 RUN umask 000 && \
-    cd /docs && \
+    cd /dp.docs && \
     bundle install
 
 CMD tail -f /dev/null

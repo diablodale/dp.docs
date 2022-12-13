@@ -29,7 +29,7 @@ skelcolor userid jointname column row confidence
 * `userid`, `jointname`, and `confidence` are the same as [@skeleton](skeleton.md) output
 * `column, row` are integers that represent the column and row in the colormap image
 
-Examples
+### Examples
 
 ```sh
 # @skeletonformat 0
