@@ -8,7 +8,7 @@ layout: home
   {%- include build-collection-products.html -%}
   {%- for product in products -%}
   <div class="archive-group">
-    <h3 id="{{ product | slugize }}" class="category-head">{{- product -}}</h3>
+    <h2 id="{{ product | slugize }}" class="category-head">{{- product -}}</h2>
     <dl>
     {%- for page in site.max -%}
       {%- if page.products contains product -%}

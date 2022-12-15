@@ -10,7 +10,7 @@ usage:
   examples:
     - "@soundinfooutput 1"
 ---
-Enables output of real-time sound loudness, position, and confidence
+Real-time sound loudness, position, and confidence output on the fifth outlet.
 
 * 0 = off
 * 1 = output at [`@soundinfo`](soundinfo.md) attribute

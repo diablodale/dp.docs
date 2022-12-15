@@ -7,7 +7,7 @@
 {%- if products[0] -%}
 <span class="post-meta">:electric_plug:
 {% for product in products -%}
-<a href="{{site.baseurl}}/products/#{{- product | slugize -}}"><code>{{- product | downcase -}}</code></a>
+<a href="{{site.baseurl}}/#{{- product | slugize -}}"><code>{{- product | downcase -}}</code></a>
 {%- unless forloop.last -%}&nbsp;{%- endunless -%}
 {%- endfor -%}
 </span>

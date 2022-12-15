@@ -10,7 +10,7 @@ usage:
     - "@skeldepth 1"
 ---
 
-Enable skeleton joint output from the fifth outlet in depthmap coordinates.
+Skeleton joint output from the fifth outlet in depthmap coordinates.
 This output does not provide orientation.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).

@@ -14,7 +14,7 @@ usage:
     - "@colormap rgb"
 ---
 
-Enable color image output in choice of pixel format on the second outlet.
+Color image output in choice of pixel format on the second outlet.
 
 * 0 or off = no color output
 * 1 or argb = color with byte order (alpha red green blue)

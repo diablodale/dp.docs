@@ -17,4 +17,4 @@ sentences, "new game please" and "new game", a non-ambiguous recognition
 would be "new game please."
 
 The value of this attribute must be less than or equal to
-[`@silencevague`]({% link _max/attributes/silencevague.md %}).
+[`@silencevague`](silencevague.md).

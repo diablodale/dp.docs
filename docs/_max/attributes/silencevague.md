@@ -17,4 +17,4 @@ vague or ambiguous. For example, in a grammar which has two sentences,
 be "new game."
 
 The value of this attribute must be greater than
-[`@silenceprecise`]({% link _max/attributes/silenceprecise.md %}).
+[`@silenceprecise`](silenceprecise.md).

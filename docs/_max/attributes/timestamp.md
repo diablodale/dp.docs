@@ -12,7 +12,7 @@ usage:
     - "@timestamp 1"
 ---
 
-Add timestamps to skeleton and matrix data as microseconds
+Timestamps for skeleton and matrix data as microseconds
 since the [Epoch](https://en.wikipedia.org/wiki/Unix_time).
 
 Jitter matrix outlets (depth, color, ir, player, and optional pointcloud) will

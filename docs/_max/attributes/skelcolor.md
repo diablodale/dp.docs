@@ -10,7 +10,7 @@ usage:
     - "@skelcolor 1"
 ---
 
-Enable skeleton joint output from the fifth outlet in colormap coordinates.
+Skeleton joint output from the fifth outlet in colormap coordinates.
 This output does not provide z-depth or orientation.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
