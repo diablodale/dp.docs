@@ -1,0 +1,19 @@
+---
+title: Microsoft Kinect -- 2nd generation, XBox One
+products:
+  - dp.kinect2
+categories:
+  - sensors
+---
+
+## Technical Documents
+
+[System requirements](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782036(v=ieb.10))
+
+[Sensor specifications](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782025(v=ieb.10))
+
+[Color data](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782033(v=ieb.10)#color-frame-source)
+
+[Depth data](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782033(v=ieb.10)#depth-frame)
+
+[Coordinate spaces](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn785530(v=ieb.10)) and [orientation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn799273(v=ieb.10)#joint-normals)

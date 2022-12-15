@@ -76,10 +76,17 @@ exclude:
 collections:
   max:
     output: true
+  hardware:
+    output: true
 
 defaults:
   - scope:
-      path: "*/attributes"
+      path: "_max/attributes"
       type: max
     values:
       layout: attribute
+  - scope:
+      path: "_hardware"
+      type: hardware
+    values:
+      layout: hardware

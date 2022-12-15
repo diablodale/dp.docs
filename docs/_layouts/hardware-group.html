@@ -1,0 +1,14 @@
+---
+layout: page
+---
+{{ content -}}
+<div id="archives">
+  {%- assign pages_by_cat = site.hardware | where:"categories",page.slug -%}
+  {%- for item in pages_by_cat -%}
+  <div class="archive-group">
+    <h3 id="{{- item.slug | slugize -}}">
+        <a href="{{- item.url | relative_url -}}">{{- item.title -}}</a>
+    </h3>
+  </div>
+  {%- endfor -%}
+</div>
