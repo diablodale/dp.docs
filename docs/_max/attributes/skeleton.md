@@ -1,6 +1,6 @@
 ---
 products:
-  - dp.kinect1
+  - dp.kinect
   - dp.kinect2
   - dp.kinect3
   - dp.oak

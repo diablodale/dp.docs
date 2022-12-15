@@ -1,13 +1,10 @@
-<!-- no known way to create/modify global site var/config; therefore can't cache these -->
+{%- comment -%}
+<!-- This create an array of discovered product names -->
+<!-- no known way to create/modify a global site var/config; therefore can't cache the result -->
+{%- endcomment -%}
 
-{% assign products = '' | split: '' %}
-{% for collection in site.collections %}
-    {% for page in collection.docs %}
-        {% for product in page.products %}
-            {% unless products contains product %}
-                {% assign arrayForm = product | split: '@%[' %}
-                {% assign products = products | concat: arrayForm %}
-            {% endunless %}
-        {% endfor %}
-    {% endfor %}
-{% endfor %}
+{%- for collection in site.collections -%}
+    {%- assign collection_products = collection.docs | map: 'products' | compact -%}
+    {%- assign products = products | concat: collection_products -%}
+{%- endfor -%}
+{%- assign products = products | uniq | sort_natural -%}
