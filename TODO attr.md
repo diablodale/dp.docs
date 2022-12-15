@@ -116,11 +116,6 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
   * `/lean/2 0.2 0.3 1.0` skeleton 2 is leaning slightly right, slightly forward, and Kinect is very confident
   * `/lean/2 -0.5 0.0 0.5` skeleton 2 is leaning left and Kinect is only somewhat confident
 
-`colormap [off]` Choice of color format to be output on the 2nd outlet where 0=off, 1=ARGB, 3=YUV, 4=RGB, and 5=RGBA.
-* **Please note** that all known versions of Max 5, 6, and 7 incorrectly process and display YUV data. You will have shifts in color/tint, saturation, and brightness. This is a core Max bug that I have asked Cycling74 repeatedly to fix. There is no workaround. If you need high color fidelity, then avoid YUV within Max.
-* Format 4 (RGB) and 5 (RGBA) are often useful when sending color information to OpenGL.
-
-`colormapres [1920x1080]` Choice of resolution for colormap is fixed on the v2 Kinect hardware. If you need other resolutions, you can use objects like jit.matrix to resize or crop them.
 
 `colortype [char]` Choice of number format to represent color components: char or float32. The Microsoft drivers for the Kinect provide char (i.e. 8-bit) values for color components. The float32 type is available for CPU efficiency not more Kinect color accuracy. This is due to dp.kinect2's efficient pixel processing; it can provide you the float32 values more efficiently than your patch converting later. The memory size of a float32 jitter matrix is 4x larger than char. The benefit of using float32 may be more apparent if you later process the color image with filters, shaders, OpenGL, etc.
 
