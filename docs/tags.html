@@ -7,25 +7,22 @@ search_exclude: true
 ---
 
 <div id="archives">
-  {% include collection-tags.html %}
-  {% for tag in collection-tags %}
+{%- include collection-tags.html -%}
+{%- for tag in collection-tags -%}
   <div class="archive-group">
-    <div id="#{{ tag | slugize }}"></div>
-    <p></p>
-
-    <h3 class="category-head">{{ tag }}</h3>
-    <a name="{{ tag | slugize }}"></a>
-
-    {% for collection in site.collections %}
-      {% for page in collection.docs %}
-        {% if page.tags contains tag %}
+    <div id="#{{- tag | slugize -}}"></div>
+    <h3 class="category-head">{{- tag -}}</h3>
+    <a name="{{- tag | slugize -}}"></a>
+    {%- for collection in site.collections -%}
+      {%- for item in collection.docs -%}
+        {%- if item.tags contains tag -%}
           <article class="archive-item">
-            <h4><a href="{{ site.baseurl }}{{ page.url }}">{{page.title}}</a></h4>
-            {{ page.excerpt }}
+            <h4><a href="{{- site.baseurl -}}{{- item.url -}}">{{- item.title -}}</a></h4>
+            {{ item.excerpt }}
           </article>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
   </div>
-{% endfor %}
+{%- endfor -%}
 </div>

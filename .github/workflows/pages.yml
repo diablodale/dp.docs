@@ -28,6 +28,9 @@ concurrency:
 jobs:
   # Build job
   build:
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,14 +47,14 @@ jobs:
         with:
           enablement: false # don't change repo settings to on/off GH pages
       - name: debug output
-        run: >
+        run: >-
           echo "base_url = ${{ steps.pages.outputs.base_url }}" &&
           echo "origin = ${{ steps.pages.outputs.origin }}" &&
           echo "host = ${{ steps.pages.outputs.host }}" &&
           echo "base_path = ${{ steps.pages.outputs.base_path }}"
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: >
+        run: >-
           bundle exec jekyll build
           --source ./docs/
           --destination ./docs/_site
