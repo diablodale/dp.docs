@@ -45,9 +45,16 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - jekyll-relative-links
+  - jekyll-link-attributes
 permalink: pretty
 relative_links:
   collections: true
+external_links:
+  enabled: true
+  rel: external nofollow noopener
+  target: _top
+  exclude:
+    - https://hidale.com(?:/.*)?
 
 # Exclude from processing.
 # The following items will not be processed, by default.

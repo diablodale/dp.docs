@@ -8,6 +8,13 @@ GIT
       jekyll-seo-tag (>= 2.0)
       rake (>= 12.3.1)
 
+GIT
+  remote: https://github.com/twinsunllc/jekyll-link-attributes.git
+  revision: 6669401e43f8f5b5ebf5b1660613f216ebf118a0
+  ref: 6669401e43f8f5b5ebf5b1660613f216ebf118a0
+  specs:
+    jekyll-link-attributes (1.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -104,6 +111,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3)
   jekyll-feed (~> 0.12)
+  jekyll-link-attributes!
   jekyll-relative-links (~> 0.6.1)
   jekyll-sitemap (~> 1.4)
   jemoji (~> 0.12.0)

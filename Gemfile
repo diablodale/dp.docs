@@ -14,6 +14,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
   gem "jemoji", "~> 0.12.0"
   gem "jekyll-relative-links", "~> 0.6.1"
+  gem "jekyll-link-attributes", github: "twinsunllc/jekyll-link-attributes", ref: "6669401e43f8f5b5ebf5b1660613f216ebf118a0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
