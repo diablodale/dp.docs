@@ -1,5 +1,6 @@
 ---
-title: Luxonis OAK -- 1st generation
+parent: Sensors
+title: Luxonis OAK v1
 products:
   - dp.oak
 categories:

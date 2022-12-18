@@ -1,0 +1,6 @@
+{% if page.toc_heading == nil -%}
+    <h2 class="text-delta">Table of contents</h2>
+{%- elsif page.toc_heading == empty -%}
+{%- else -%}
+    {{- page.toc_heading -}}
+{%- endif %}

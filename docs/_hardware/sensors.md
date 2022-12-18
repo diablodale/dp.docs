@@ -1,7 +1,9 @@
 ---
-layout: hardware-group
+layout: page
+has_children: true
+toc_heading: "Search :mag: at the top of this page may also be used."
 ---
-Here can be found general information and links regarding sensor hardware.
+Below is general information on hardware related to the software we provide.
 Manufacturers are responsible for their hardware and its documentation.
 Some manufacturers fail to provide adequate documentation.
 

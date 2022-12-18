@@ -1,5 +1,6 @@
 ---
-title: Microsoft Kinect -- 1st generation, XBox 360
+parent: Sensors
+title: Microsoft Kinect v1, XBox 360
 products:
   - dp.kinect
 categories:

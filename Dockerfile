@@ -3,12 +3,11 @@ FROM ruby:3.1.3
 
 RUN apt update && \
     apt install build-essential && \
-    gem install jekyll bundler
+    gem install bundler
 
 # jekyll new --skip-bundle .
 # do initial edit of Gemfile
-# bundle install
-# bundle add webrick
+# cd into docs then onetime do: bundle exec just-the-docs rake search:init
 # bundle exec jekyll serve
 
 COPY Gemfile Gemfile.lock /dp.docs/

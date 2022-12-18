@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hidale Software Docs
+title: Hidale Docs
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Interactive multimedia art, software engineering, and participatory experiences
@@ -35,7 +35,8 @@ host: 0.0.0.0
 #livereload: true # Reload a page automatically on the browser when its content is edited.
 
 # Build settings
-theme: minima
+theme: just-the-docs
+ignore_theme_config: true
 page_excerpts: true
 strict_front_matter: true
 plugins:
@@ -44,6 +45,7 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - jekyll-relative-links
+permalink: pretty
 relative_links:
   collections: true
 
@@ -65,6 +67,16 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # specific to the theme website:
+  - bin/
+  - lib/
+  - "*.gemspec"
+  - "*.gem"
+  - LICENSE.txt
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README.md
 
 #header_pages:
 #  - dp.kinect-tags-cats.md
@@ -85,8 +97,78 @@ defaults:
       type: max
     values:
       layout: attribute
+      # BUGBUG defining JTD nav parent here breaks leftnav https://github.com/just-the-docs/just-the-docs/issues/1063
   - scope:
-      path: "_hardware"
+      path: "_hardware/sensors"
       type: hardware
     values:
       layout: hardware
+
+# Just the Docs configuration ###################################################
+search_enabled: true
+# TODO consider splitting "dp.kinect" into two parts with https://lunrjs.com/guides/core_concepts.html#text-processing
+
+heading_anchors: true
+nav_sort: case_insensitive
+nav_external_links:
+  - title: Store and main website
+    url: https://hidale.com
+    hide_icon: false
+
+nav_footer_custom: (c) 2022 Dale Phurrough. All rights reserved.
+#footer_content: sample footer content
+#ga_tracking:
+#ga_tracking_anonymize_ip: true
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/diablodale/dp.docs" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+color_scheme: dark
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+  ignore:
+    envs: all
+
+just_the_docs:
+  collections:
+    max:
+      name: Max plugins
+      # Exclude the collection from the navigation, default=false
+      # nav_exclude: true
+      # Fold the collection in the navigation, default=false
+      # nav_fold: true
+      # Exclude the collection from the search, default=false
+      # search_exclude: true
+    hardware:
+      name: Hardware information

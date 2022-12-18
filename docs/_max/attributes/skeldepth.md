@@ -1,4 +1,5 @@
 ---
+parent: Attributes
 products:
   - dp.kinect2
 categories:

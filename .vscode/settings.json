@@ -1,5 +1,15 @@
 {
     "markdownlint.config": {
         "MD033": false, // no-inline-html
-    }
+    },
+    "todo-tree.filtering.includeGlobs": [
+        "**/*.html",
+        "**/*.yaml",
+        "**/*.yml",
+        "**/*.md",
+        "**/*.sh",
+        "**/*.js",
+        "**/*.dockerfile",
+        "Dockerfile",
+    ]
 }

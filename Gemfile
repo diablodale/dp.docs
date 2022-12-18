@@ -1,22 +1,16 @@
-source "https://rubygems.org"
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-#gem "jekyll", "~> 4.3.1"
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5.1"
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 227", group: :jekyll_plugins
+source 'https://rubygems.org'
+
+gem "jekyll", "~> 4.3" # installed by `gem jekyll`
+# gem "webrick"        # required when using Ruby >= 3 and Jekyll <= 4.2.2
+
+# gem "just-the-docs", "0.4.0.rc3" # currently the latest pre-release
+# BUGBUG below is fix for dup external links https://github.com/just-the-docs/just-the-docs/issues/1062
+gem "just-the-docs", github: "just-the-docs/just-the-docs", ref: "6d9d41359c46882d9b64a446d5a83fac5b3e20a7"
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-seo-tag", "~> 2.8"
+  #gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-sitemap", "~> 1.4"
   gem "jemoji", "~> 0.12.0"
   gem "jekyll-relative-links", "~> 0.6.1"
@@ -35,5 +29,3 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-
-gem "webrick", "~> 1.7"

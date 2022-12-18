@@ -1,5 +1,6 @@
 ---
-title: Microsoft Kinect -- 2nd generation, XBox One
+parent: Sensors
+title: Microsoft Kinect v2, XBox One
 products:
   - dp.kinect2
 categories:
