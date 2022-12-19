@@ -113,6 +113,12 @@ defaults:
       layout: attribute
       # BUGBUG defining JTD nav parent here breaks leftnav https://github.com/just-the-docs/just-the-docs/issues/1063
   - scope:
+      path: "_max/tutorials"
+      type: max
+    values:
+      layout: tutorial
+      # BUGBUG defining JTD nav parent here breaks leftnav https://github.com/just-the-docs/just-the-docs/issues/1063
+  - scope:
       path: "_hardware/sensors"
       type: hardware
     values:

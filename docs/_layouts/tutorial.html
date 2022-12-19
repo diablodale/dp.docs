@@ -1,13 +1,12 @@
 ---
-layout: default
+layout: page
 ---
 <article>
   <header>
     <div style="display:flex; justify-content:space-between; align-items: center;">
-      <h1>{{- page.title | escape }}</h1>
+      <h1>{{- page.title | capitalize_title | escape -}}</h1>
       {% include products.html products=page.products %}
     </div>
-    <img alt="{{- page.title | escape -}}" src="{{- site.baseurl -}}/assets/hardware/{{- page.categories[0] -}}/{{- page.slug -}}.jpg" />
   </header>
   {{ content }}
 </article>

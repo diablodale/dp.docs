@@ -1,18 +1,13 @@
 ---
 layout: default
 ---
-<article class="post">
-
-  <header class="attribute-header">
+<article>
+  <header>
     <div style="display:flex; justify-content:space-between; align-items: center;">
-      <h1 class="post-title">@{{- page.slug | escape }} attribute</h1>
-      {% include products.html %}
+      <h1>@{{- page.slug | escape }} attribute</h1>
+      {% include products.html products=page.products %}
     </div>
-    {% include usage.html %}
+    {% include usage.html usage=page.usage layout=page.layout %}
   </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
+  {{ content }}
 </article>
