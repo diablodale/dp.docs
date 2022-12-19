@@ -129,7 +129,7 @@ nav_external_links:
     url: https://hidale.com
     hide_icon: false
 
-nav_footer_custom: (c) 2022 Dale Phurrough. All rights reserved.
+nav_footer_custom: "&copy; 2022 Dale Phurrough"
 #footer_content: sample footer content
 #ga_tracking:
 #ga_tracking_anonymize_ip: true
