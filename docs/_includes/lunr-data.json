@@ -1,0 +1,30 @@
+{%- if include.page.usage -%}
+
+{%- capture newline %}
+{% endcapture -%}
+
+{%- if include.page.usage.values -%}
+
+    {%- if include.page.usage.values.first -%}
+        {%- capture flat_content -%}
+            {%- for value in include.page.usage.values -%}
+                {{ value[0] }}
+                {{ value[1] }}
+            {% endfor -%}
+        {%- endcapture -%}
+    {%- else -%}
+        {% assign flat_content = include.page.usage.values %}
+    {%- endif -%}
+    "uvalues": "{{ flat_content | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip }}",
+{%- endif -%}
+
+{%- if include.page.usage.examples -%}
+    {%- capture flat_content -%}
+        {%- for example in include.page.usage.examples -%}
+            {{ example }}
+        {% endfor -%}
+    {%- endcapture %}
+    "uexamples": "{{ flat_content | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip }}",
+{%- endif -%}
+
+{%- endif -%}
