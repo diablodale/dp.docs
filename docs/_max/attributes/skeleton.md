@@ -9,7 +9,7 @@ categories:
   - visual
 usage:
   signature: "{0 | 1 | 2}"
-  default: "off"
+  values: "off"
   examples:
     - "@skeleton 1"
 ---

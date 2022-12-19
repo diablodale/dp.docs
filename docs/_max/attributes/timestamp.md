@@ -7,7 +7,7 @@ categories:
   - physical
 usage:
   signature: "{0 | 1}"
-  default: "0"
+  values: "0"
   examples:
     - "@timestamp 0"
     - "@timestamp 1"

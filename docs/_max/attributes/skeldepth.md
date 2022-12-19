@@ -6,7 +6,7 @@ categories:
   - visual
 usage:
   signature: "{0 | 1}"
-  default: "off"
+  values: "off"
   examples:
     - "@skeldepth 1"
 ---

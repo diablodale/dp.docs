@@ -8,8 +8,10 @@ products:
 categories:
   - visual adjustment
 usage:
-  signature: "{0 | 1}"
-  default: "0 = OSC"
+  signature: "int"
+  values:
+    "0": "OSC protocol"
+    "1": "native Max messages"
   examples:
     - "@skeletonformat 1  <-- choose the native Max format"
 ---

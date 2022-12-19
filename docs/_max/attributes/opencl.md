@@ -7,7 +7,7 @@ categories:
   - physical
 usage:
   signature: "{GPU_NAME_SUBSTRING | GPU_INDEX}"
-  default: "off"
+  values: "off"
   examples:
     - "@opencl intel"
     - "@opencl amd"

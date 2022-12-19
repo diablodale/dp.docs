@@ -7,7 +7,7 @@ categories:
   - audio
 usage:
   signature: "ENERGY_NORM ANGLE_DEGREES CONFIDENCE_NORM"
-  default: "0. 0. 0."
+  values: "0. 0. 0."
   examples:
     - "@soundinfo 0.34 -15.2 0.74"
 ---

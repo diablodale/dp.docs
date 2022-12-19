@@ -7,7 +7,7 @@ categories:
   - audio
 usage:
   signature: "{0 | 1 | 2}"
-  default: "0"
+  values: "0 (default)"
   examples:
     - "@soundinfooutput 1"
 ---

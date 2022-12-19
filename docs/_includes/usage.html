@@ -11,7 +11,7 @@
 {%- endif -%}
 
 {%- if usage -%}
-    <dl class="post-meta">
+    <dl style="display:inline-grid;grid-template:none;margin-block-end:0em;">
     {%- if usage.signature -%}
         <dt>:information_source: signature</dt>
         <dd><code>{%- if layout == "attribute" -%}@{%- endif -%}
@@ -19,8 +19,20 @@
         </code></dd>
     {%- endif -%}
 
-    {%- if usage.default -%}
-        <dt>:house: default</dt><dd><code>{{- usage.default -}}</code></dd>
+    {%- if usage.values -%}
+        <dt>:house: values</dt>
+        <dd>
+        {%- if usage.values.first -%}
+            <dl style="display:inline-grid;grid-template:none;margin-block-end:0em;">
+                {%- for value in usage.values -%}
+                    <dt><code>{{- value[0] -}}</code></dt>
+                    <dd>{{- value[1] | replace:"(default)","<span class='label'>default</span>" -}}</dd>
+                {%- endfor -%}
+            </dl>
+        {%- else -%}
+            {{- usage.values | replace:"(default)","<span class='label'>default</span>" -}}
+        {%- endif -%}
+        </dd>
     {%- endif -%}
 
     {%- if usage.examples[0] -%}

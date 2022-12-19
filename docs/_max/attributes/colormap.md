@@ -8,21 +8,19 @@ products:
 categories:
   - visual
 usage:
-  signature: "{0 | 1 | 3 | 4 | 5 | off | argb | uyvy | rgb | rgba}"
-  default: "off"
+  signature: "{int | off | argb | uyvy | rgb | rgba}"
+  values:
+    "0 or off": no color output (default)
+    "1 or argb": color with byte order (alpha red green blue)
+    "3 or uyvy": color with Max uyvy; technically (YCbCr)
+    "4 or rgb": color with byte order (red green blue)
+    "5 or rgba": color with byte order (red green blue alpha)  
   examples:
     - "@colormap 1"
     - "@colormap rgb"
 ---
 
 Color image output in choice of pixel format on the second outlet.
-
-* 0 or off = no color output
-* 1 or argb = color with byte order (alpha red green blue)
-* 3 or uyvy = color in Max's uyvy; technically it is (YCbCr)
-* 4 or rgb = color with byte order (red green blue)
-* 5 or rgba = color with byte order (red green blue alpha)
-
 rgb (4) and rgba (5) are often useful when sending color information to OpenGL.
 
 > :warning: All known versions of Max incorrectly process and display uyvy data.

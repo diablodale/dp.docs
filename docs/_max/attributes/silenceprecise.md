@@ -7,7 +7,7 @@ categories:
   - audio
 usage:
   signature: "MILLISECONDS"
-  default: "OS specific"
+  values: "OS specific"
   examples:
     - "@silenceprecise 800"
 ---
