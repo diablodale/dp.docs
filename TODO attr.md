@@ -1,16 +1,5 @@
 dp.kinect2 supports a normal compliment of Max attributes plus the following. They are grouped here in the same way they are visibly grouped in the Max inspector. Defaults are within brackets [] after the attribute name below, for example: `myattributename [off]`
 
-### Audio and Speech #
-
-`speechadapt [on]` Enables constant adaptation of speech recognition to adjust for the current speaker(s). This can cause problems over time in noisy environments or where there are a great number of speakers (in a kiosk environment, for example). For these scenarios and long recognition sessions (a few hours or more), it may be beneficial to turn off adaptation of the acoustic model. This will prevent recognition accuracy from degrading over time and lessen memory usage.
-
-`speechconf [normal]` Your choice (high, normal, no filter) of what speech to be recognized. Your selection and better will be output. For example, the default (normal) will output speech it recognized as having normal confidence or high confidence.
-
-`grammarfile []` The path to the speech recognition grammar file. It is an [GRXML](http://msdn.microsoft.com/en-us/library/hh361658%28v=office.14%29.aspx) file as defined by the [W3C standards](http://www.w3.org/TR/speech-grammar/). The Kinect recognition engine is tuned for command/response type grammars and does not support real-time dictation.
-
-`speechlocale [en-us]` The Kinect supports multiple languages for speech recognition. Set this attribute to an installed language pack combination, for example: fr-fr, de-de, en-gb, ja-jp, es-es. The US English (en-us) language pack is included with the standard Kinect driver setup. You can download [additional language packs](http://go.microsoft.com/fwlink/?LinkID=248679).
-
-`speech [off]` Enables speech recognition and, optionally, speech interference information. All speech recognition or interference information will be output on the OSC/skeleton outlet.
 
 ### Face Tracking #
 Below are the attributes related to face tracking. Please also reference the [face tracking message output](https://github.com/diablodale/dp.kinect2/wiki/Message-based-Data#face-tracking) to understand more details on the output.

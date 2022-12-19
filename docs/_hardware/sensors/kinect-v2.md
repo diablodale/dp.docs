@@ -18,3 +18,5 @@ categories:
 [Depth data](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782033(v=ieb.10)#depth-frame)
 
 [Coordinate spaces](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn785530(v=ieb.10)) and [orientation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn799273(v=ieb.10)#joint-normals)
+
+[Speech recognition language packs](http://go.microsoft.com/fwlink/?LinkID=248679)
