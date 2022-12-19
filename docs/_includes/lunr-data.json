@@ -15,7 +15,7 @@
     {%- else -%}
         {% assign flat_content = include.page.usage.values %}
     {%- endif -%}
-    "uvalues": "{{ flat_content | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip }}",
+    "uvalues": {{ flat_content | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
 {%- endif -%}
 
 {%- if include.page.usage.examples -%}
@@ -24,7 +24,7 @@
             {{ example }}
         {% endfor -%}
     {%- endcapture %}
-    "uexamples": "{{ flat_content | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip }}",
+    "uexamples": {{ flat_content | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
 {%- endif -%}
 
 {%- endif -%}
