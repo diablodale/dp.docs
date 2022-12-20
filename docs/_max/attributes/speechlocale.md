@@ -1,5 +1,4 @@
 ---
-parent: Attributes
 products:
   - dp.kinect
   - dp.kinect2

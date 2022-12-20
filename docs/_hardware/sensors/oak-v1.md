@@ -1,5 +1,4 @@
 ---
-parent: Sensors
 title: Luxonis OAK v1
 products:
   - dp.oak

@@ -107,22 +107,23 @@ collections:
 
 defaults:
   - scope:
-      path: "_max/attributes"
+      path: "_max/attributes/"
       type: max
     values:
       layout: attribute
-      # BUGBUG defining JTD nav parent here breaks leftnav https://github.com/just-the-docs/just-the-docs/issues/1063
+      parent: Attributes
   - scope:
-      path: "_max/tutorials"
+      path: "_max/tutorials/"
       type: max
     values:
       layout: tutorial
-      # BUGBUG defining JTD nav parent here breaks leftnav https://github.com/just-the-docs/just-the-docs/issues/1063
+      parent: Tutorials
   - scope:
-      path: "_hardware/sensors"
+      path: "_hardware/sensors/"
       type: hardware
     values:
       layout: hardware
+      parent: Sensors
 
 # Just the Docs configuration ###################################################
 search_enabled: true

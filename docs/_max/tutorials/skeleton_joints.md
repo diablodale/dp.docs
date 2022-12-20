@@ -1,6 +1,5 @@
 ---
 title: Skeleton Joint Changes Color
-parent: Tutorials
 products:
   - dp.kinect
   - dp.kinect2

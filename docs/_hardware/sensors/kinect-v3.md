@@ -1,5 +1,4 @@
 ---
-parent: Sensors
 title: Microsoft Kinect v3, Azure
 products:
   - dp.kinect3

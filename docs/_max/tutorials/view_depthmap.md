@@ -1,6 +1,5 @@
 ---
 title: View Sensor Depthmap
-parent: Tutorials
 products:
   - dp.kinect
   - dp.kinect2
