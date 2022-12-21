@@ -7,19 +7,25 @@ title: Home
 nav_order: 1
 permalink: /
 ---
-<div id="archives">
-  {%- include build-collection-products.html -%}
-  {%- for product in products -%}
-  <div class="archive-group">
-    <h2 id="{{ product | slugize }}" class="category-head">{{- product -}}</h2>
-    <dl>
-    {%- for page in site.max -%}
-      {%- if page.products contains product -%}
-        <dt><a href="{{ site.baseurl }}{{ page.url }}">@{{- page.title | downcase -}}</a></dt>
-        <dd>{{- page.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
-      {%- endif -%}
-    {%- endfor -%}
-    </dl>
-  </div>
-  {%- endfor -%}
-</div>
+
+# {{ site.title }}
+
+{{ site.tagline }}
+
+## Get started
+
+<ul>
+<li><a href="https://hidale.com">Downloads, trials, licenses</a></li>
+<li>Setup
+{%- include build-collection-products.html -%}
+{%- for product in products -%}
+{%- if forloop.first -%}<ul>{%- endif -%}
+<li><a href="max/{{ product | slugize }}/#setup">{{- product -}}</a></li>
+{%- if forloop.last -%}</ul>{%- endif -%}
+{%- endfor -%}
+</li>
+</ul>
+
+## Learn
+
+* [Tutorials](/_max/tutorials.md)

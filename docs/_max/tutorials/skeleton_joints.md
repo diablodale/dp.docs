@@ -7,7 +7,7 @@ products:
   - dp.oak
 ---
 
-This tutorial will teach you how to get the real-world (x, y, z) position
+Learn how to get the real-world (x, y, z) position
 of your left hand relative to your sensor. Then, use that hand position
 to change the color of a panel.
 

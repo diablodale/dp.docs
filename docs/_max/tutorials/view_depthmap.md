@@ -7,7 +7,7 @@ products:
   - dp.oak
 ---
 
-This tutorial will teach you a simple way to view a depthmap from your sensor.
+Learn how to view a depthmap from your sensor.
 A depthmap is an image that represents the distance to surfaces as seen from your sensor.
 Below we will display this depthmap as a monochrome image.
 

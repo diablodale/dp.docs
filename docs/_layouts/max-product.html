@@ -19,10 +19,26 @@ with your Windows computer.
 
 {{- content -}}
 
-<p><a href="https://hidale.com/shop/{{- page.title | slugify -}}/">Downloads and license purchase at the store</a></p>
+<h2 id="download">Downloads and licenses</h2>
+
+<a href="https://hidale.com/shop/{{- page.title | slugify -}}/">Downloads and license purchase at the store</a>
+
+<h2>Setup</h2>
+
+<a href="https://github.com/diablodale/{{- page.title -}}/wiki">Setup, registration, hardware requirements</a>
+
+<h2>Tutorials</h2>
+<dl>
+{%- for item in site.max -%}
+  {%- if item.products contains page.title and item.layout == "tutorial" -%}
+  <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title -}}</a></dt>
+  <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
+  {%- endif -%}
+{%- endfor -%}
+</dl>
 
 <hr/>
-Search :mag: at the top of this page may also be used.
+Search :mag: at the top of this page is useful to find attributes and message methods.
 
 <h2>Attributes</h2>
 <dl>
@@ -39,16 +55,6 @@ Search :mag: at the top of this page may also be used.
 {%- for item in site.max -%}
   {%- if item.products contains page.title and item.layout == "method" -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title | downcase -}}</a></dt>
-  <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
-  {%- endif -%}
-{%- endfor -%}
-</dl>
-
-<h2>Tutorials</h2>
-<dl>
-{%- for item in site.max -%}
-  {%- if item.products contains page.title and item.layout == "tutorial" -%}
-  <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}
 {%- endfor -%}
