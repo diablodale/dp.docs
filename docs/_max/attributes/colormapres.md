@@ -7,8 +7,7 @@ products:
 categories:
   - visual
 usage:
-  signature: "{int | WIDTHxHEIGHT}"
-  #values: "varies by sensor"
+  signature: "{INT | WIDTHxHEIGHT}"
   values:
     '2': 640x480
     '3': 1280x960
@@ -32,3 +31,10 @@ except a period `.`
 > [hardware documentation](/_hardware/sensors.md) for your
 > sensor to learn the supported resolution(s). Max objects like
 > jit.matrix can scale or crop output to any resolution.
+
+## Azure Kinect Performance
+
+Microsoft does not provide low-latency full HD (1920x1080) color output on
+the Azure Kinect. Instead, they only provide one low-latency color output
+at basic HD (1280x720) resolution. When low-latency color output is needed
+on the Azure Kinect, I recommend 1280x720 resolution.

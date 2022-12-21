@@ -18,3 +18,10 @@ categories:
 
 [Coordinate spaces](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn785530(v=ieb.10)) and [orientation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh973073(v=ieb.10)) documentation is from previous Kinect sensors.
 Microsoft failed to provide documentation for Azure Kinect.
+
+## Performance
+
+Microsoft does not provide low-latency full HD (1920x1080) color output on
+the Azure Kinect. Instead, they only provide one low-latency color output
+at basic HD (1280x720) resolution. When low-latency color output is needed
+on the Azure Kinect, I recommend 1280x720 resolution.

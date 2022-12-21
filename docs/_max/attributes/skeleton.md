@@ -7,8 +7,11 @@ products:
 categories:
   - visual
 usage:
-  signature: "{0 | 1 | 2}"
-  values: "off"
+  signature: "INT"
+  values:
+    "0": "off (default)"
+    "1": "joints"
+    "2": "joints and orientation"
   examples:
     - "@skeleton 1"
 ---
@@ -16,11 +19,7 @@ Skeleton, joint, and user tracking output on the fifth outlet.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
 
-* 0 = off
-* 1 = joints
-* 2 = joints + orientation
-
-> :memo: Some sensors may not support orientation output
+> :memo: Some sensors may not support `2` orientation output
 
 ## User Identification
 

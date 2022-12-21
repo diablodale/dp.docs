@@ -5,8 +5,10 @@ products:
 categories:
   - physical
 usage:
-  signature: "{0 | 1}"
-  values: "0"
+  signature: "INT"
+  values:
+    "0": "off (default)"
+    "1": "on"
   examples:
     - "@timestamp 0"
     - "@timestamp 1"

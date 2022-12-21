@@ -6,12 +6,13 @@ categories:
   - audio
 usage:
   signature: "ENERGY_NORM ANGLE_DEGREES CONFIDENCE_NORM"
-  values: "0. 0. 0."
+  values: "float float float (read only)"
   examples:
     - "@soundinfo 0.34 -15.2 0.74"
 ---
 
-Real-time sound loudness, position angle, and confidence
+Real-time sound loudness, position angle, and confidence float values
+are calculated and available for read-only.
 
 * Loudness/energy [0.0 - 1.0] of the sound
 * Position angle (horizontal in degrees) to the sound in

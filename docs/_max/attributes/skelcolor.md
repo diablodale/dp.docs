@@ -4,8 +4,10 @@ products:
 categories:
   - visual
 usage:
-  signature: "{0 | 1}"
-  values: "off"
+  signature: "INT"
+  values:
+    "0": "off (default)"
+    "1": "output joints in colormap coordinates"
   examples:
     - "@skelcolor 1"
 ---
@@ -14,9 +16,6 @@ Skeleton joint output from the fifth outlet in colormap coordinates.
 This output does not provide z-depth or orientation.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
-
-* 0 = off
-* 1 = joints in colormap coordinates
 
 ```sh
 # @skeletonformat 0

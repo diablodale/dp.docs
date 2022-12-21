@@ -5,16 +5,16 @@ products:
 categories:
   - audio
 usage:
-  signature: "{0 | 1 | 2}"
-  values: "0 (default)"
+  signature: "INT"
+  values:
+    "0": "off (default)"
+    "1": "output at `@soundinfo` attribute"
+    "2": "output at `@soundinfo` attribute and message output"
   examples:
     - "@soundinfooutput 1"
 ---
-Real-time sound loudness, position, and confidence output on the fifth outlet.
-
-* 0 = off
-* 1 = output at [`@soundinfo`](soundinfo.md) attribute
-* 2 = output at @soundinfo attribute + message sent out from message/OSC outlet
+Real-time sound loudness, position, and confidence message output
+on the fifth outlet. [`@soundinfo`](soundinfo.md) must also be enabled.
 
 Information about the sound heard by the sensor occurs by enabling `@soundinfooutput`.
 When set to `2`, the data is also output as a message on every bang.

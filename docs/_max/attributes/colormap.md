@@ -7,7 +7,7 @@ products:
 categories:
   - visual
 usage:
-  signature: "{int | off | argb | uyvy | rgb | rgba}"
+  signature: "{INT | off | argb | uyvy | rgb | rgba}"
   values:
     "0 or off": no color output (default)
     "1 or argb": color with byte order (alpha red green blue)

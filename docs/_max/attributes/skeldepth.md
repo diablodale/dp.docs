@@ -4,8 +4,10 @@ products:
 categories:
   - visual
 usage:
-  signature: "{0 | 1}"
-  values: "off"
+  signature: "INT"
+  values:
+    "0": "off (default)"
+    "1": "output joints in depthmap coordinates"
   examples:
     - "@skeldepth 1"
 ---
@@ -14,9 +16,6 @@ Skeleton joint output from the fifth outlet in depthmap coordinates.
 This output does not provide orientation.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
-
-* 0 = off
-* 1 = joints in depthmap coordinates
 
 ```sh
 # @skeletonformat 0

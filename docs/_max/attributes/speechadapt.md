@@ -5,7 +5,7 @@ products:
 categories:
   - audio
 usage:
-  signature: "int"
+  signature: "INT"
   values:
     "0": "off"
     "1": "on (default)"

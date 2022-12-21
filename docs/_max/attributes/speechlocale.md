@@ -5,9 +5,9 @@ products:
 categories:
   - audio
 usage:
-  signature: "language-territory"
+  signature: "LANGUAGE-TERRITORY"
   values:
-    "en-us": "(default)"
+    "en-us": "English-US (default)"
   examples:
     - "@speechlocale ja-jp"
     - "@speechlocale en-gb"
