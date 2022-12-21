@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/diablodale/just-the-docs.git
-  revision: ba7e2b8d0062cd38cb568c16347c348b25d63659
+  revision: 195677aeb2cb61424adf7a973cb4bcb5f27c8eb1
   branch: dp-release
   specs:
     just-the-docs (0.4.0.rc3)

@@ -19,7 +19,7 @@ usage:
 
 Select the color decoder used primarily for decoding MJPEG sensor data.
 This attribute is enabled for sensors with design limitations like
-Azure Kinect. Test and experiment to discover which method of
+[Azure Kinect](#azure-kinect). Test and experiment to discover which method of
 color decoding works best with your specific computing hardware.
 
 * `intelmedia` is the Intel Media SDK decompressor. If you have an Intel CPU
@@ -46,7 +46,7 @@ For example...
 I recommend testing to discover which settings meet your needs for hardware,
 latency, and throughput. You can have significant performance improvements! :smile:
 
-## Microsoft Azure Kinect
+## Azure Kinect
 
 The [@decodercolor](decodercolor.md) attribute is a result of Microsoft's
 Azure Kinect design. Microsoft does not provide low-latency 
@@ -65,9 +65,9 @@ is running as fast as possible, then color frames can not be processed any faste
 You may see this in Windows 10 Task Manager; one core may be at 100% while other
 cores are not busy.
 
-### Optional NVIDIA color decoder
+### NVIDIA decoder
 
-An additional color decoder can be enabled when an Azure Kinect sensor is used with
+An optional color decoder can be enabled when an Azure Kinect sensor is used with
 an NVIDIA GPU. Please note: this decoder **did not** demonstrate significant benefits
 during testing.
 
