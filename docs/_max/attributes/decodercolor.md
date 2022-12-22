@@ -34,7 +34,7 @@ color decoding works best with your specific computing hardware.
 
 ## Performance
 
-Use of multiple compute device for different tasks using the
+Enable multiple compute devices for different tasks using the
 attributes [@decodercolor](decodercolor.md), [@opencl](opencl.md), and [@skelcompute](skelcompute.md).
 For example...
 
