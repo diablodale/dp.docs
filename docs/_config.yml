@@ -43,7 +43,7 @@ host: 0.0.0.0
 
 # Build settings
 theme: just-the-docs
-ignore_theme_config: true
+ignore_theme_config: true  # important to use defaults of JTD's code and not JTD's _config.yml
 page_excerpts: true
 strict_front_matter: true
 plugins:
@@ -127,7 +127,9 @@ defaults:
 
 # Just the Docs configuration ###################################################
 search_enabled: true
-# TODO consider splitting "dp.kinect" into two parts with https://lunrjs.com/guides/core_concepts.html#text-processing
+search:
+  heading_level: 3 # default is 2
+  tokenizer_separator: /[\s\-/_]+/
 
 heading_anchors: true
 heading_anchors_autoid: true

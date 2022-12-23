@@ -29,3 +29,4 @@ permalink: /
 ## Learn
 
 * [Tutorials](/_max/tutorials.md)
+* [Attribute](/_max/attributes.md) reference

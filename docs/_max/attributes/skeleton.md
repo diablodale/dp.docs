@@ -100,7 +100,7 @@ Skeleton joint data is output when `@skeleton`, [`@skeldepth`](skeldepth.md), or
 This data is affected by the other attributes [`@distmeter`](distmeter.md), [`@flipx`](flipx.md), [`@align`](align.md),
 [`@position`](position.md), [`@quat`](quat.md), [`@rotate`](rotate.md), [`@rotatexyz`](rotatexyz.md), and [`@scale`](scale.md).
 
-### Joint names and diagrams
+### Joint names, diagrams, output order
 
 Most plugins support the same base list of 20 joints. Some plugin ML models provide additional
 joints. Some of those additional joints are output by those specific plugins.
@@ -223,7 +223,7 @@ skel 2 r_shoulder -1.204 2.053 3.712 0.5
 skel 2 r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
 ```
 
-### Depth-space and Color-space UV Coordinates
+### Depth-space and color-space UV coordinates
 
-Joint `uv` coordinates in depth-space [`@skeldepth`](skeldepth.md) or
-color-space [`@skelcolor`](skelcolor.md) are also available.
+Enable output of joint `uv` coordinates with attributes for
+depth-space [`@skeldepth`](skeldepth.md) or color-space [`@skelcolor`](skelcolor.md).
