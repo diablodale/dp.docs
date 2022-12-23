@@ -26,8 +26,12 @@ For example...
  * Flip and undistort frames on integrated Intel GPU `@opencl intel`
  * and the remaining features run on your CPU
 
-I recommend testing to discover which settings meet your needs for hardware,
-latency, and throughput. You can have significant performance improvements! :smile:
+Test to discover which settings meet your needs for hardware, latency, and throughput.
+You can have significant performance improvements! :smile:
+
+DirectML is built into Windows and requires no downloads. Other compute engines like
+CUDA and TensorRT have additional download requirements. Consult your plugin setup
+documentation for details.
 
 > :memo: The second parameter of `@skelcompute` is the name of the device or
 > the numeric index (starting with 0) of the device. *Name* of the device is recommended.
@@ -53,7 +57,7 @@ latency, and throughput. You can have significant performance improvements! :smi
   compute device, fp16 optimization, etc. When you change configuration, a new cache folder will be
   created and new optimizations cached. These cache folders can grow to be hundreds of megabytes.
 
-### Known Issues
+## Known Issues
 
 * Microsoft's Azure Kinect bug <https://github.com/microsoft/Azure-Kinect-Sensor-SDK/issues/1783>
   sometimes crashes Max when closing the application. It involves some combinations of compute choices.

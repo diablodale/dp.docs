@@ -41,7 +41,6 @@ OSC                        Max route
 /calib_success playerID    calib_success playerID
 
 # Examples
-
 /new_user 2                new_user 2
 /calib_success 2           calib_success 2
 /lost_user 2               lost_user 2
@@ -101,28 +100,75 @@ Skeleton joint data is output when `@skeleton`, [`@skeldepth`](skeldepth.md), or
 This data is affected by the other attributes [`@distmeter`](distmeter.md), [`@flipx`](flipx.md), [`@align`](align.md),
 [`@position`](position.md), [`@quat`](quat.md), [`@rotate`](rotate.md), [`@rotatexyz`](rotatexyz.md), and [`@scale`](scale.md).
 
-> :memo: Microsoft Kinect joint positions are available at
-> <https://docs.microsoft.com/en-us/previous-versions/windows/kinect/dn799273(v=ieb.10)> and
-> <https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj131025(v=ieb.10)#skeleton-position-and-tracking-state>.
-> The Kinect v1 documentation is better than Kinect v2. Also note, Microsoft Kinect sensor behavior for skeleton joint tracking
-> will select the six most engaged users in the field of view. This behavior is consistent (not random), yet at the same time
-> not driven by specific criteria. You can not manually select users for skeletal tracking.
+### Joint names and diagrams
 
-### Real-world Skeleton-space Joints
+Most plugins support the same base list of 20 joints. Some plugin ML models provide additional
+joints. Some of those additional joints are output by those specific plugins.
+
+Joints have consistent names with all plugins. `l_` means left. `r_` means right.
+
+|                        | dp.kinect<br/>[diagram](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj131025(v=ieb.10)#skeleton-position-and-tracking-state)      | dp.kinect2<br/>[diagram](https://docs.microsoft.com/en-us/previous-versions/windows/kinect/dn799273(v=ieb.10))     | dp.kinect3<br/>[diagram](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints#joint-hierarchy)     | dp.oak (MoveNet)<br/>[diagram](https://www.google.com/images?q=COCO+standard+17+body+keypoints) |
+| ---------------------: | ------------------ | ------------------ | ------------------ | ------------------ |
+| l_thumb, r_thumb       |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
+| l_hand_tip, r_hand_tip |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
+| l_hand, r_hand         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
+| l_wrist, r_wrist       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| l_elbow, r_elbow       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| l_shoulder, r_shoulder | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| l_foot, r_foot         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
+| l_ankle, r_ankle       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| l_knee, r_knee         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| l_hip, r_hip           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| l_ear, r_ear           |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| l_eye, r_eye           |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| nose                   |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| head                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| neck                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| c_shoulder             |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| torso                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| waist                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+
+#### Joint output order
+
+Plugins v1.3.20210818 and newer output joints in a reverse hierarchy. This order
+clarifies joint hierarchy, facilitates puppet animation, and supports additional
+joints for some ML models.
+
+```
+l_thumb  l_hand_tip  l_hand      l_wrist  l_elbow l_shoulder
+r_thumb  r_hand_tip  r_hand      r_wrist  r_elbow r_shoulder
+l_foot   l_ankle     l_knee      l_hip
+r_foot   r_ankle     r_knee      r_hip
+l_ear    l_eye       r_ear       r_eye    nose
+head     neck        c_shoulder  torso    waist
+```
+
+Plugins before v1.3.20210818 output joints in this order
+
+```
+waist       torso       neck     head
+l_shoulder  l_elbow     l_wrist  l_hand
+r_shoulder  r_elbow     r_wrist  r_hand
+l_hip       l_knee      l_ankle  l_foot
+r_hip       r_knee      r_ankle  r_foot
+c_shoulder  l_hand_tip  l_thumb  r_hand_tip  r_thumb
+```
+
+### Real-world XYZ Coordinates
 
 Real-world skeleton joint locations in meters [`@distmeter 1`](distmeter.md) or millimeters [`@distmeter 0`](distmeter.md).
 
 ```sh
-# OSC:                             @skeleton 1
+# OSC:                      @skeleton 1
 /skel/userid/jointname x y z confidence
 
-# OSC + orientation:               @skeleton 2
+# OSC + orientation:        @skeleton 2
 /skel/userid/jointname x y z confidence qx qy qz qw
 
-# Max native:                      @skeleton 1 @skeletonformat 1
+# Max native:               @skeleton 1 @skeletonformat 1
 skel userid jointname x y z confidence
 
-# Max native + orientation:        @skeleton 2 @skeletonformat 1
+# Max native + orientation: @skeleton 2 @skeletonformat 1
 skel userid jointname x y z confidence qx qy qz qw
 ```
 
@@ -135,31 +181,7 @@ skel userid jointname x y z confidence qx qy qz qw
   The confidence value is [0.0 - 1.0] with 1.0 indicating the highest confidence. This confidence can be
   used to filter data by your patch or automatically with [@posconfidence](posconfidence.md).
 
-Supported `jointname` for all output formats are:
-
-    head        neck     torso    waist
-    l_shoulder  l_elbow  l_wrist  l_hand
-    r_shoulder  r_elbow  r_wrist  r_hand
-    l_hip       l_knee   l_ankle  l_foot
-    r_hip       r_knee   r_ankle  r_foot
-
-#### Examples
-
-```sh
-# OSC:                            @skeleton 1 @distmeter 1
-/skel/2/r_shoulder -1.204 2.053 3.712 0.5
-
-# OSC + orientation:              @skeleton 2 @distmeter 1
-/skel/2/r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
-
-# Max native:                     @skeleton 1 @distmeter 1 @skeletonformat 1
-skel 2 r_shoulder -1.204 2.053 3.712 0.5
-
-# Max native + orientation:       @skeleton 2 @distmeter 1 @skeletonformat 1
-skel 2 r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
-```
-
-### Skeleton Joint Orientation
+#### Joint Orientation
 
 The orientation of real-world coordinates can be optionally enabled with `@skeleton 2`. It is output
 in your choice of four formats using [`@orientformat`](orientformat.md).
@@ -184,3 +206,24 @@ in a *hierarchical* rotation coordinate space. Details on the orientation data c
 
 > :memo: When migrating from jit.openni, the orientation data has changed. The rotations are *not*
 > relative to a T-pose. This change must be managed by your Max patch.
+
+#### Joint XYZ coordinate examples
+
+```sh
+# OSC:                            @skeleton 1 @distmeter 1
+/skel/2/r_shoulder -1.204 2.053 3.712 0.5
+
+# OSC + orientation:              @skeleton 2 @distmeter 1
+/skel/2/r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
+
+# Max native:                     @skeleton 1 @distmeter 1 @skeletonformat 1
+skel 2 r_shoulder -1.204 2.053 3.712 0.5
+
+# Max native + orientation:       @skeleton 2 @distmeter 1 @skeletonformat 1
+skel 2 r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
+```
+
+### Depth-space and Color-space UV Coordinates
+
+Joint `uv` coordinates in depth-space [`@skeldepth`](skeldepth.md) or
+color-space [`@skelcolor`](skelcolor.md) are also available.
