@@ -11,7 +11,7 @@ RUN apt update && \
 # bundle exec jekyll serve
 
 COPY Gemfile Gemfile.lock /dp.docs/
-RUN umask 000 && \
+RUN umask 002 && \
     cd /dp.docs && \
     bundle install
 

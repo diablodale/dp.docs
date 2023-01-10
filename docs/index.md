@@ -7,13 +7,13 @@ title: Home
 nav_order: 1
 permalink: /
 ---
-
-# {{ site.title }}
-
+{::options parse_block_html="true" /}
 {{ site.tagline }}
 
-## Get started
+<div style="display: flex; flex-wrap: wrap;">
+<div style="margin-right: 3em;">
 
+## :running_woman: Get started {#get-started}
 <ul>
 <li><a href="https://hidale.com">Downloads, trials, licenses</a></li>
 <li>Setup
@@ -25,8 +25,14 @@ permalink: /
 {%- endfor -%}
 </li>
 </ul>
+</div>
 
-## Learn
+<div style="margin-right: 3em;">
 
+## :open_book: Learn {#learn}
 * [Tutorials](/_max/tutorials.md)
 * [Attribute](/_max/attributes.md) reference
+  
+</div>
+
+</div>
