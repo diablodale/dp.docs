@@ -12,6 +12,5 @@ usage:
     - "@depthfps 10"
 ---
 
-Depth camera frame rate expressed as frames per second (Hz).
-Also controls color camera frame rate when your plugin
-has no @colorfps attribute.
+Depth camera native capture frame rate expressed as frames per second (Hz).
+Also controls color camera frame rate when your plugin has no `@colorfps` attribute.
