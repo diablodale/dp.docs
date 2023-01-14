@@ -11,5 +11,5 @@ usage:
     - "@undistortscale 0.4"
 ---
 
-Set scale factor of undistortion that was enabled
-with [`@undistort`](undistort.md).
+Scale factor for undistortion and cropping of unwanted/invalid pixels
+when enabled with [`@undistort`](undistort.md).

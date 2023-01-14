@@ -11,9 +11,9 @@ usage:
     - "@skelcompute directml        <- DirectML with first gpu"
     - "@skelcompute directml 1      <- DirectML with second gpu"
     - "@skelcompute directml intel  <- DirectML with gpu named intel"
-    - "@skelcompute cuda           <-- CUDA with the first NVIDIA gpu"
-    - "@skelcompute tensor         <-- TensorRT with the first NVIDIA gpu"
-    - "@skelcompute tensor_fp16    <-- TensorRT with the first NVIDIA gpu, 16-bit floating point"
+    - "@skelcompute cuda            <- CUDA with the first NVIDIA gpu"
+    - "@skelcompute tensor          <- TensorRT with the first NVIDIA gpu"
+    - "@skelcompute tensor_fp16     <- TensorRT with the first NVIDIA gpu, 16-bit floating point"
 ---
 
 Skeleton tracking compute engine and device.

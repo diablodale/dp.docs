@@ -19,7 +19,7 @@ usage:
 Distance output in meters `1` or millimeters `0`. This affects all distance
 output including depthmap, pointcloud, skeleton joints, floor, face tracking, etc.
 
-Some combinations of plugin settings might not use useful. For example,
+Some combinations of plugin settings may not be useful. For example,
 choosing `@depthmap 1 @type long` to output a depthmap matrix with long integers has
 few possible values. The only values that will appear in the matrix are
 0, 1, 2, 3, 4, 5, 6, 7, and 8; an integer has no fractional part and the default

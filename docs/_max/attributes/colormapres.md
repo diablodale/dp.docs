@@ -28,7 +28,7 @@ Specify the resolution width and height separated by any character
 except a period `.`
 
 > :memo: Not all sensors support all resolutions. Consult the
-> [hardware documentation](/_hardware/sensors.md) for your
+> [hardware documentation]({{- site.baseurl -}}/hardware/sensors/) for your
 > sensor to learn the supported resolution(s). Max objects like
 > jit.matrix can scale or crop output to any resolution.
 
