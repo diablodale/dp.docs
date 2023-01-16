@@ -27,16 +27,16 @@ This affects all data: depthmap, colormap, ir, playermap, pointcloud, etc.
 > :memo: Plugin versions v1.3.20210721 and newer support using string value names
 > like `color` and `off`.
 
+## Artifacts
 
-### Align artifacts
-
-> :warning: There will be slight artifacts around edges of objects because the two
+> :warning: There can be slight artifacts around edges of objects because the two
 > cameras (depth, color) on the sensor can not occupy the same physical place.
 > They have slightly different views causing one camera to see pixels while the other
 > camera can not see those same pixels.
 
-Below are examples of expected artifacts. Newer plugins usually have less
-artifacts due to improvements in hardware manufacturing and new code algorithms.
+Below are examples of artifacts. Newer plugins usually have less
+artifacts due to improvements in hardware manufacturing and features like
+[`@depthvis`](depthvis.md).
 
 ![Color black artifacts]({{- site.baseurl -}}/assets/max/attributes/align-artifacts-3.png)
 
