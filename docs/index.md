@@ -8,7 +8,14 @@ nav_order: 1
 permalink: /
 ---
 {::options parse_block_html="true" /}
-{{ site.tagline }}
+
+## New Documentation
+
+This new documentation site is a work-in-progress. It has the new
+features of [dp.kinect3](/_max/dp.kinect3.md) and [dp.oak](/_max/dp.oak.md).
+Some features are still being migrated from the good
+[dp.kinect2 documentation](https://github.com/diablodale/dp.kinect2/wiki#reference-documentation). Use this site and the dp.kinect2 site
+until the migration is complete.
 
 <div style="display: flex; flex-wrap: wrap;">
 <div style="margin-right: 3em;">
