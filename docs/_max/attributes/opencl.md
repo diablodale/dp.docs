@@ -21,18 +21,39 @@ usage:
 OpenCL device for image processing (e.g. flipx, undistort, align, etc.)
 using a GPU or accelerator compatible with OpenCL v1.2. An integrated GPU
 may perform well at these simple tasks as it shares memory with the CPU.
-Performance should be tested; it depends on the specific hardware and
-the image processing chosen.
+Performance depends on the specific hardware and the image processing
+chosen. It should be tested.
 
-OpenCV is used to implement this feature. OpenCV and Windows will automatically
-chose the default OpenCL device when enabled with `@opencl 1` or `@opencl default`.
-All OpenCL devices can be seen by looking at the `@opencl` attribute with
-an (attrui) or the Max Inspector.
+## GPU Sequence and Default
 
-> :memo: Numeric indices **and** default may change because the Windows Graphics Performance
-> Preference default is "Let Windows decide". Windows may decide to change the order of GPUs.
-> This index *is* consistent when you choose a Graphics Performance Preference. This
-> setting is in Windows settings, System, Display, Graphics settings.
+> :memo: Plugins v1.3.20221003 and newer support using GPU names,
+> e.g. `@opencl nvidia`. Use specific names to avoid the sequence
+> concerns below.
+
+OpenCL and Windows together will chose the default OpenCL device when
+enabled with `@opencl 1` or `@opencl default`. All OpenCL devices can be
+seen by looking at the `@opencl` attribute with an (attrui) or the Max Inspector.
+
+The default GPU and the sequence of GPUs may change because the Windows
+Graphics Performance Preference default is "Let Windows decide". Windows may
+decide to change the order of GPUs. This index *is* consistent when you choose
+a Graphics Performance Preference. This setting is in Windows settings, System,
+Display, Graphics settings.
+
+The default OpenCL device can be forced by setting the `OPENCV_OPENCL_DEVICE`
+environment variable in Windows.
+<https://github.com/opencv/opencv/wiki/OpenCL-optimizations#opencv-opencl-configuration-options>
+
+```
+<Platform>:<CPU|GPU|ACCELERATOR|nothing=GPU/CPU>:<DeviceName or ID>
+Examples:   Intel:GPU:
+            :GPU:1
+            AMD::Tahiti
+            Intel:CPU:
+            NVIDIA:GPU:0
+```
+
+## Known Issues
 
 > :warning:
 > Enabling `@opencl` on an Intel GPU may crash Max when you first start your sensor. This

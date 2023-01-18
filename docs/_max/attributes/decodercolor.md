@@ -7,10 +7,9 @@ categories:
 usage:
   signature: "{ DECODER_NAME | INDEX_INT }"
   values:
-    "intelmedia": "Intel Media SDK"
+    "intelmedia": "Intel GPU Quick Sync"
     "libyuv": "LibYuv Project"
     "nv12": "NV12 with OpenCV and IPP"
-    "nvjpeg": "NVIDIA nvJPEG"
     "winmf": "Windows Media Foundation"
   examples:
     - "@decodercolor winmf"
@@ -22,14 +21,12 @@ This attribute is enabled for sensors with design limitations like
 [Azure Kinect](#azure-kinect). Test and experiment to discover which method of
 color decoding works best with your specific computing hardware.
 
-* `intelmedia` is the Intel Media SDK decompressor. If you have an Intel CPU
-  with Intel Quick Sync/Graphics, then this decoder will use the hardware Quick
-  Sync accelerator.
+* `intelmedia` is the Intel decompressor that uses Intel GPU Quick Sync
+  hardware acceleration
 * `libyuv` is the libyuv decompression library and runs on the CPU
 * `nv12` is a hybrid decompressor using OpenCV and IPP and may
-  use both your CPU an GPU
-* `nvjpeg` is the nvJPEG decoder and hardware available in some NVIDIA GPUs
-* `winmf` is the Windows Media Foundation decoder built into Windows and
+  use both your CPU and GPU
+* `winmf` is the Windows Media Foundation decoder in Windows and
   may be hardware accelerated
 
 ## Performance
@@ -49,7 +46,7 @@ latency, and throughput. You can have significant performance improvements! :smi
 ## Azure Kinect
 
 The [@decodercolor](decodercolor.md) attribute is a result of Microsoft's
-Azure Kinect design. Microsoft does not provide low-latency 
+Azure Kinect design. Microsoft does not provide low-latency
 full HD (1920x1080) color output on the Azure Kinect. Instead, they only
 provide one low-latency color output at basic HD (1280x720) resolution.
 When low-latency color output is needed on the Azure Kinect,
@@ -65,7 +62,10 @@ is running as fast as possible, then color frames can not be processed any faste
 You may see this in Windows 10 Task Manager; one core may be at 100% while other
 cores are not busy.
 
-### NVIDIA decoder
+### NVIDIA decoder (removed) {#nvidia}
+
+> :warning: The NVIDIA nvJPEG decoder described below has been removed from
+> plugins v1.3.2023 and higher. Other color decoders perform better.
 
 An optional color decoder can be enabled when an Azure Kinect sensor is used with
 an NVIDIA GPU. Please note: this decoder **did not** demonstrate significant benefits
