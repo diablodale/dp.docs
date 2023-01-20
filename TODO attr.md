@@ -48,13 +48,7 @@ For example:
 
 ### Physical #
 
-`accel [0. -1. 0. 0.]` Four float vector (x, y, z, w) pointing in the direction of gravity in gravity units (where 1 unit = 9.81m/s^2). The coordinate system is centered on the sensor, and is a right-handed coordinate system with positive z in the direction the sensor is pointing at. In the default sensor rotation (horizontal, level placement), this will return the vector (0, -1.0, 0, 0). The w value of the Vector4 is always set to 0.0.
-
-`colorfocal [hardware dependent]` Color camera focal length in pixels.
-
 `colorfov [hardware dependent]` Color camera field of view in degrees as a list of three floats: horizontal, vertical, diagonal.
-
-`depthfocal [hardware dependent]` Depth camera focal length in pixels.
 
 `depthfov [hardware dependent]` Depth camera field of view in degrees as a list of three floats: horizontal, vertical, diagonal.
 
