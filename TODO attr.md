@@ -48,12 +48,6 @@ For example:
 
 ### Physical #
 
-`colorfov [hardware dependent]` Color camera field of view in degrees as a list of three floats: horizontal, vertical, diagonal.
-
-`depthfov [hardware dependent]` Depth camera field of view in degrees as a list of three floats: horizontal, vertical, diagonal.
-
-`depthintrinsics [hardware dependent]` Depth camera intrinsics as a list of seven floats defined at https://msdn.microsoft.com/en-us/library/microsoft.kinect.kinect.cameraintrinsics.aspx
-
 `elevation [0]` Get the physical elevation angle in degrees of the Kinect relative to the horizon.
 
 `floor [0. 0. 0. 0. 0. 0.]` List of 6 floats representing the floor clipping plane. Its values are affected by `@flip` and `@distmeter`. For compatibility with jit.openni, the first 3 describe the x, y, z coordinates for a point on the plane and the second 3 are the i, j, k of a vector normal to the plane. These same values are output with the floor OSC message. An example of usage is to send the x, y, z point coordinates to the `@position` attribute on a jit.anim.node and the i, j, k normal vector to the `@lookat` attribute on that same jit.anim.node.
