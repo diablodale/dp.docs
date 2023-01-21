@@ -14,7 +14,7 @@ usage:
 
 Depth camera intrinsics for [`dp.kinect2`](../../dp.kinect2/) as a list of
 [seven floats](https://msdn.microsoft.com/en-us/library/microsoft.kinect.kinect.cameraintrinsics.aspx).
-The `RADIAL_K` parameters model radial distortion using the
+Read-only. The `RADIAL_K` parameters model radial distortion using the
 [Brown–Conrady and Division models](https://en.wikipedia.org/wiki/Distortion_%28optics%29#Software_correction).
 
 Focal length X
