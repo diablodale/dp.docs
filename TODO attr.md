@@ -48,8 +48,6 @@ For example:
 
 ### Physical #
 
-`elevation [0]` Get the physical elevation angle in degrees of the Kinect relative to the horizon.
-
 `floor [0. 0. 0. 0. 0. 0.]` List of 6 floats representing the floor clipping plane. Its values are affected by `@flip` and `@distmeter`. For compatibility with jit.openni, the first 3 describe the x, y, z coordinates for a point on the plane and the second 3 are the i, j, k of a vector normal to the plane. These same values are output with the floor OSC message. An example of usage is to send the x, y, z point coordinates to the `@position` attribute on a jit.anim.node and the i, j, k normal vector to the `@lookat` attribute on that same jit.anim.node.
 
 Natively, the Kinect SDK describes the clipping plane as an equation. Given the floor output of 6 floats, you can derive the native Kinect SDK values as follows:
@@ -93,14 +91,7 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
   * `/lean/2 0.2 0.3 1.0` skeleton 2 is leaning slightly right, slightly forward, and Kinect is very confident
   * `/lean/2 -0.5 0.0 0.5` skeleton 2 is leaning left and Kinect is only somewhat confident
 
-
-`colortype [char]` Choice of number format to represent color components: char or float32. The Microsoft drivers for the Kinect provide char (i.e. 8-bit) values for color components. The float32 type is available for CPU efficiency not more Kinect color accuracy. This is due to dp.kinect2's efficient pixel processing; it can provide you the float32 values more efficiently than your patch converting later. The memory size of a float32 jitter matrix is 4x larger than char. The benefit of using float32 may be more apparent if you later process the color image with filters, shaders, OpenGL, etc.
-
-`depthmap [off]` Choice of depthmap to be output on the 1st outlet where 0=off, 1=depth, and 2=depth+player indices.
-
 `depthmapres [640x480]` Choice of resolution for the depthmap where 0=80x60, 1=320x240, and 2=640x480. Not all resolutions are supported given Kinect hardware capabilities.
-
-`type [long]` choice of number format for depthmap matrix: long, float32, or float64.
 
 `flooronbang [off]` Choice on/off to output the `@floor` attribute values via OSC/route outlet for every bang. More efficient than querying the attribute if you need the data on every bang.
 
@@ -109,8 +100,6 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 `irmap [off]` Choice on/off of infrared (IR) matrix data to be output on the 3rd outlet. Kinect v1 hardware does not have enough bandwidth to output color and IR data at the same time.
 
 `irmapres [640x480]` Choice of resolution for the IR matrix where 0=80x60, 1=320x240, and 2=640x480. Not all resolutions are supported given Kinect hardware.
-
-`playermap [off]` Choice on/off of playermap matrix data to be output on the 4th outlet. `@depthmap` must be 2=depth+indices to output this matrix.
 
 `pointcloud [off]` Choice of pointcloud format to be output on the optional 5th outlet where 0=off, 1=XYZ, 2=XYZW.
 * 0 = off: Pointcloud output is off by default. You must [enable the optional 5th outlet](Matrix-Based-Data#opengl-point-cloud-optional-outlet-5).

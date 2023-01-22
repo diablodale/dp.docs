@@ -20,7 +20,9 @@ usage:
 ---
 
 Color image output in choice of pixel format on the second outlet.
-Values `4 or rgb` and `5 or rgba` are often useful when sending color information to OpenGL.
+Values `4 or rgb` and `5 or rgba` are often useful when sending color information
+to OpenGL. This pixel format combined with [`@colortype`](colortype.md) together define
+the exact memory layout of color data.
 
 > :memo: Plugin versions v1.3.20210429 and newer support using value names like `rgb` and `argb`.
 
