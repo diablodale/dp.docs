@@ -44,7 +44,7 @@ All of these factors result in data loss or old data.
 6. What happens to 33ms old data "alpha"? :thinking:
 7. Host computer waits 33ms
 8. Host computer samples the sensor and finds no new data :no_entry_sign:
-9. 1 picosecond later, the sensor has new data "gamma"
+9. 1 picosecond later, the sensor has new data "zeta"
 
 ## async
 

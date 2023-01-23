@@ -7,9 +7,8 @@ products:
   - dp.oak
 ---
 
-Learn how to view a depthmap from your sensor.
-A depthmap is an image that represents the distance to surfaces as seen from your sensor.
-Below we will display this depthmap as a monochrome image.
+Learn how to view a depthmap from your sensor as a monochrome image.
+A depthmap represents the distance to surfaces at every pixel from your sensor.
 
 > :memo: This tutorial uses the [`dp.kinect2`](../../dp.kinect2/) plugin. Substitute the
 > name of your own sensor plugin. For example, if you have an OAK sensor, type `dp.oak` instead.

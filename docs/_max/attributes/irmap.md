@@ -19,7 +19,7 @@ Infrared (IR) image output on the third outlet. This, resolution
 [`@irmapres`](irmapres.md), and IR value type [`@irtype`](irtype.md)
 together define the memory layout of IR data.
 
-A gamma function can be applied with [`@irgamma`](irgamma.md).
+Gamma correction is applied with [`@irgamma`](irgamma.md).
 
 > :memo: [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) hardware
 > does not have enough USB bandwidth to output color and infrared data at the same time.
