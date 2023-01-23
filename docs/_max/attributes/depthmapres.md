@@ -9,19 +9,20 @@ categories:
 usage:
   signature: "{INT | WIDTHxHEIGHT}"
   values:
+    '0': 80x60
+    '1': 320x240
     '2': 640x480
-    '3': 1280x960
+    #'3': 1280x960
     '4': 512x424
-    '5': 1920x1080
+    #'5': 1920x1080
     'WIDTHxHEIGHT': WIDTH columns and HEIGHT rows
   examples:
-    - "@colormapres 3"
-    - "@colormapres 5"
-    - "@colormapres 1920x1080    <-- full HD"
-    - "@colormapres 3840x2160    <-- 4K"
+    - "@depthmapres 1"
+    - "@depthmapres 512x512   <-- Kinect Azure wide fov binned"
+    - "@depthmapres 1280x720  <-- HD"
 ---
 
-Resolution of color image that was enabled with [`@colormap`](colormap.md)
+Resolution of depth image that was enabled with [`@depthmap`](depthmap.md).
 
 `WIDTHxHEIGHT` can be used with plugin versions v1.3.20200813 or newer.
 Specify the resolution width and height separated by any character
@@ -31,10 +32,3 @@ except a period `.`
 > [hardware documentation]({{- site.baseurl -}}/hardware/sensors/) for your
 > sensor to learn the supported resolution(s). Max objects like
 > jit.matrix can scale or crop plugin output to any resolution.
-
-## Azure Kinect Performance
-
-Microsoft does not provide low-latency full HD (1920x1080) color output on
-the Azure Kinect. Instead, they only provide one low-latency color output
-at basic HD (1280x720) resolution. When low-latency color output is needed
-on the Azure Kinect, I recommend 1280x720 resolution.

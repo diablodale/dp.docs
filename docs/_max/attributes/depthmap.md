@@ -16,8 +16,9 @@ usage:
     - "@depthmap 1"
 ---
 
-Depth output on the first outlet. This combined with depth number [`@type`](type.md)
-together define the exact memory layout of depth data.
+Depth output on the first outlet. This combined with resolution
+[`@depthmapres`](depthmapres.md) and depth value type [`@type`](type.md) define
+the memory layout of depth data.
 
 > :memo: [dp.kinect](../../dp.kinect/) requires `@depthmap 2` to calculate the
 > [`@playermap`](playermap.md).

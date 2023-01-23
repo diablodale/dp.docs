@@ -13,8 +13,9 @@ usage:
 ---
 
 Depth visibility filter removes [double images and edge artifacts](align.md#artifacts)
-in image matrices. The depth visibility threshold default
-is 50mm to identify obstructed pixels and remove them in common situations. Set
-`@depthvis 0` to remove this filter or simulate [dp.kinect](../../dp.kinect/) behavior.
+in image matrices. The default of 50mm identifies and removes obstructed pixels
+in common situations.
+
+Set `@depthvis 0` to disable this filter or simulate [dp.kinect](../../dp.kinect/) behavior.
 
 > :memo: Plugin versions v1.2.20200629 and newer support this feature.

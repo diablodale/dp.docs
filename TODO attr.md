@@ -91,57 +91,13 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
   * `/lean/2 0.2 0.3 1.0` skeleton 2 is leaning slightly right, slightly forward, and Kinect is very confident
   * `/lean/2 -0.5 0.0 0.5` skeleton 2 is leaning left and Kinect is only somewhat confident
 
-`depthmapres [640x480]` Choice of resolution for the depthmap where 0=80x60, 1=320x240, and 2=640x480. Not all resolutions are supported given Kinect hardware capabilities.
-
 `flooronbang [off]` Choice on/off to output the `@floor` attribute values via OSC/route outlet for every bang. More efficient than querying the attribute if you need the data on every bang.
-
-`irtype [long]` Choice of the number format for the infrared (IR) matrix output. Available options are char, long, float32, or float64. Choosing char results in a loss of precision.
-
-`irmap [off]` Choice on/off of infrared (IR) matrix data to be output on the 3rd outlet. Kinect v1 hardware does not have enough bandwidth to output color and IR data at the same time.
-
-`irmapres [640x480]` Choice of resolution for the IR matrix where 0=80x60, 1=320x240, and 2=640x480. Not all resolutions are supported given Kinect hardware.
-
-`pointcloud [off]` Choice of pointcloud format to be output on the optional 5th outlet where 0=off, 1=XYZ, 2=XYZW.
-* 0 = off: Pointcloud output is off by default. You must [enable the optional 5th outlet](Matrix-Based-Data#opengl-point-cloud-optional-outlet-5).
-* 1 = XYZ: The real-world XYZ location of the voxel in meters as float32
-* 2 = XYZW: The real-world XYZW location of the voxel in meters as float32. W is always 1.0. This format is sometimes useful when transforming the pointcloud with matrix math or OpenGL shaders.
 
 `unique [off]` Choice on/off to limit output of depth, color, IR, or playermap matrices to be 0=always output on a bang or 1=only output when unique. Therefore, if you set this value to be on (1), it is possible for you to bang the object yet not have matrices output. This is **much** more efficient than using a jit.change object.
 
 ### Visual Adjustment #
 
-`align [off]` Choice of alignment between the color image and the depthmap/IR/playermap/pointcloud where 0=none, 1=color to depth, 2=depth to color. There will be some slight artifacts around edges of objects because the two cameras (depth, color) on the Kinect can not occupy the same physical place; therefore they have slightly different views causing one camera to see pixels while the other camera can not see those same pixels.
-* 1 = color to depth: This will align all data and downsample them to be the same as the depthmap resolution of 512x424
-* 2 = depth to color: This will align all data and upsample them to be the same as the colormap HD resolution of 1920x1080
-
-`depthonlyplayers [0 = off]` Filter matrix output to have values only for those people tracked. This attribute is a bitmap value `0 - 15` allowing any combination of the four matrix outputs to be filtered. In the table below, the `x` means the data of that column is filtered.
-
-|    | depth | color | infrared | pointcloud |
-| -: | :---: | :---: | :------: | :--------: |
-|  **0** |   |   |   |   |
-|  **1** | x |   |   |   |
-|  **2** |   | x |   |   |
-|  **3** | x | x |   |   |
-|  **4** |   |   | x |   |
-|  **5** | x |   | x |   |
-|  **6** |   | x | x |   |
-|  **7** | x | x | x |   |
-|  **8** |   |   |   | x |
-|  **9** | x |   |   | x |
-| **10** |   | x |   | x |
-| **11** | x | x |   | x |
-| **12** |   |   | x | x |
-| **13** | x |   | x | x |
-| **14** |   | x | x | x |
-| **15** | x | x | x | x |
-
-`depthvis [50]` Filtering of colormap when downscaling with `@align 1` to remove double images along edges of objects. Double images are due to the depth and color cameras not being in the exact same location. Therefore, edges of seen objects are not identically seen by both cameras and often pixels are obstructed. This obstruction sometimes causes double images when not filtered by this feature or `@depthonlyplayers`. This filter defaults to a reasonable value of 50 (millimeters) to identify obstructed pixels and removes them in common situations. Set `@depthvis 0` for the original unfiltered behavior.
-
-`distmeter [on]` Choice on/off for all distance measurements to be in 0=millimeters or 1=meters.
-
 `flipx [off]` Choice on/off to enable flipping/negating the X axis values for all data output.
-
-`irgamma [1.0]` A value from 0.0 to +max which applies a traditional gamma adjustment to the irmap values. This could be used to brighten dim areas of the infrared image without overexposing the entire image.
 
 `orientformat [1 = quaternion absolute]` Choice of [skeleton joint orientation format/coordinates](Message-based-Data#skeleton-joints) where 0=quaternion in hierarchical coordinates, 1=quaternion in absolute coordinates, 2=4x4 rotation matrix in hierarchical coordinates, and 3=4x4 rotation matrix in absolute coordinates. You must set `@skeleton=2 (joints+orientation)` to receive the orientation data in your chosen format.
 
@@ -149,14 +105,4 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 
 `position [0.0 0.0 0.0]` 3D origin of all Kinect data in the form: [x y z]. The attribute `translate` is deprecated and is only supported for backward compatibility.
 
-`quat [0.0 0.0 0.0 1.0]` Rotation of all Kinect data as a quaternion in the form: [i j k w].
-
-`rotate [0.0 0.0 0.0 1.0]` Angle of rotation (in degrees) and the xyz vector about which all Kinect data is rotated in the form: [angle x y z].
-
-`rotatemethod [off]` Choice of rotation applied to all Kinect data based on the physical rotation of the Kinect. It can be 0=off, 1=simple elevation, or 2=gravity by multiple axes. This rotation is combined with rotations from jit.anim.node, @quat, @rotate, and @rotatexyz.
-
-`rotatexyz [0.0 0.0 0.0]` Rotation of all Kinect data as the concatenation of rotations (in degrees) about the positive x, y, and z axes in the form: [xrot yrot zrot]. Also known as Euler angles. The order of rotation is y then z then x.
-
 `scale [1.0 1.0 1.0]` 3D scaling factor of all Kinect data in the form: [x y z].
-
-`smoothing [0.5 0.5 0.5 0.05 0.04]` Five floats representing your choice of smoothing for skeleton data. The default is tuned for gesture recognition in games (some smoothing, little latency, and only filters out small jitters). These values **may not** be best for your needs. Please [read the detail Microsoft provides](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh855623(v=ieb.10)) which includes other suggested values for specific scenarios and the [whitepaper on data smoothing](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj131429(v=ieb.10)).

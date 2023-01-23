@@ -21,9 +21,9 @@ This type combined with [`@depthmap`](depthmap.md) together define the exact mem
 layout of depth data. The values for depth are affected by [`@distmeter`](distmeter.md)
 and some combinations may not be useful.
 
-`long` is a signed integer. 32-bit integer with Max 32-bit. 64-bit integer
-with Max 64-bit.
+* `long` values are signed integers; 32-bit with Max 32-bit, 64-bit with Max 64-bit
+* `float32` and `float64` values [0.0...1.0] are for computation efficiency;
+  not increased accuracy
 
-Almost always, this depth type is available for computation efficiency; not more
-depth accuracy. The plugin can convert sensor data to any type efficiently.
-Consider how the depth data is later consumed to choose the best data type.
+The plugin can convert sensor data to supported types efficiently.
+Consider how the data is later consumed to choose the best data type.

@@ -20,9 +20,9 @@ usage:
 Align data to the perspective of the depth or color camera.
 This affects all data: depthmap, colormap, ir, playermap, pointcloud, etc.
 
-* off: data is left to its native alignment; usually based on its original source
-* depth: align all data and downsample them to be the same resolution as the depthmap
-* color: align all data and upsample them to be the same resolution as the colormap
+* off: native alignment based on original sensor sources
+* depth: align all data and resolutions to be the same resolution as the depthmap
+* color: align all data and resolutions to be the same resolution as the colormap
 
 > :memo: Plugin versions v1.3.20210721 and newer support using string value names
 > like `color` and `off`.
@@ -34,9 +34,11 @@ This affects all data: depthmap, colormap, ir, playermap, pointcloud, etc.
 > They have slightly different views causing one camera to see pixels while the other
 > camera can not see those same pixels.
 
-Below are examples of artifacts. Newer plugins usually have less
-artifacts due to improvements in hardware manufacturing and features like
-[`@depthvis`](depthvis.md).
+Newer plugins have less artifacts with [`@depthvis`](depthvis.md)
+and [`@depthonlyplayers`](depthonlyplayers.md) filtering, and improvements
+in sensor manufacturing.
+
+Below are examples of possible artifacts without filtering.
 
 ![Color black artifacts]({{- site.baseurl -}}/assets/max/attributes/align-artifacts-3.png)
 

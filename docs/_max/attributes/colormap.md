@@ -21,10 +21,13 @@ usage:
 
 Color image output in choice of pixel format on the second outlet.
 Values `4 or rgb` and `5 or rgba` are often useful when sending color information
-to OpenGL. This pixel format combined with [`@colortype`](colortype.md) together define
-the exact memory layout of color data.
+to OpenGL. This pixel format, resolution [`@colormapres`](colormapres.md), and
+[`@colortype`](colortype.md) together define the memory layout of color data.
 
 > :memo: Plugin versions v1.3.20210429 and newer support using value names like `rgb` and `argb`.
+
+> :memo: [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) hardware
+> does not have enough USB bandwidth to output color and infrared data at the same time.
 
 > :warning: All known versions of Max incorrectly process and display
 >  ***all*** image data. Max will slightly shift tint, color,
