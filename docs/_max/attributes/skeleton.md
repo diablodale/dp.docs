@@ -154,7 +154,7 @@ r_hip       r_knee      r_ankle  r_foot
 c_shoulder  l_hand_tip  l_thumb  r_hand_tip  r_thumb
 ```
 
-### Joint location real-world XYZ coordinates
+### Joint location real-world XYZ coordinates {#joint-location}
 
 Real-world skeleton joint locations in meters [`@distmeter 1`](distmeter.md) or millimeters [`@distmeter 0`](distmeter.md).
 

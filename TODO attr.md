@@ -94,11 +94,3 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 `flooronbang [off]` Choice on/off to output the `@floor` attribute values via OSC/route outlet for every bang. More efficient than querying the attribute if you need the data on every bang.
 
 `unique [off]` Choice on/off to limit output of depth, color, IR, or playermap matrices to be 0=always output on a bang or 1=only output when unique. Therefore, if you set this value to be on (1), it is possible for you to bang the object yet not have matrices output. This is **much** more efficient than using a jit.change object.
-
-### Visual Adjustment #
-
-`posconfidence [0.5]` Sets the confidence filter for skeleton positions. The confidence of a skeleton position must be this value or higher. There are only three possible confidence values [0.0, 0.5, 1.0] from the Kinect hardware. Therefore, the default allows only values of normal and high confidence.
-
-`position [0.0 0.0 0.0]` 3D origin of all Kinect data in the form: [x y z]. The attribute `translate` is deprecated and is only supported for backward compatibility.
-
-`scale [1.0 1.0 1.0]` 3D scaling factor of all Kinect data in the form: [x y z].

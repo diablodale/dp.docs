@@ -15,3 +15,6 @@ usage:
 Rotate data by an angle (degrees) around an xyz vector in the form: `angle x y z`.
 This is always synchronized with the attributes [`@quat`](quat.md)
 and [`@rotatexyz`](rotatexyz.md).
+
+This `@rotate` is compatible with Max
+[jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node).

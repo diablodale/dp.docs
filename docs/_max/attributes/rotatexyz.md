@@ -17,5 +17,8 @@ Rotate data by [Euler angles](https://en.wikipedia.org/wiki/Euler_angles)
 This is always synchronized with the attributes [`@quat`](quat.md)
 and [`@rotate`](rotate.md).
 
+This `@rotatexyz` is compatible with Max
+[jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node).
+
 > :memo: Some combinations of Euler angles will result in unworkable
 > rotations known as [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).

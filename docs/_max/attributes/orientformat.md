@@ -18,7 +18,7 @@ usage:
     - "@orientformat mat-abs"
 ---
 
-Skeleton joint orientation as quaternion or 4x4 matrix, in hierarchical or absolute
+Skeleton joint orientation as quaternion, 4x4 matrix, hierarchical, or absolute
 rotation. Set [`@skeleton 2`](skeleton.md) to output these orientation values.
 
 Orientation is output as quaternion (4 floats) or 4x4 rotation matrix (16 floats).

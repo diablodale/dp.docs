@@ -15,3 +15,6 @@ usage:
 Rotate data by a [quaternion](https://en.wikipedia.org/wiki/Quaternion) in the
 form: `i j k w`. This is always synchronized with the attributes [`@rotate`](rotate.md)
 and [`@rotatexyz`](rotatexyz.md).
+
+This `@quat` is compatible with Max
+[jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node).

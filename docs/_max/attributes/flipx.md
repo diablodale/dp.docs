@@ -15,5 +15,4 @@ usage:
     - "@flipx 1"
 ---
 
-Flip or negate X-axis values of all output (matrix images,
-joint positions, floor, etc.)
+Flip or negate X-axis values of output (matrix images, joint positions, floor, etc.)
