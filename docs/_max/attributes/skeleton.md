@@ -33,12 +33,12 @@ depthmap pixels, and sound location/association.
 
 The three messages output are
 
-```sh
-OSC                        Max route                
+```python
+OSC                        Max native                
 -------------------------------------------------
 /new_user playerID         new_user playerID
-/lost_user playerID        lost_user playerID
 /calib_success playerID    calib_success playerID
+/lost_user playerID        lost_user playerID
 
 # Examples
 /new_user 2                new_user 2
@@ -70,8 +70,8 @@ to have full skeletal tracking as indicated by a `calib_success` message. This e
 roughly track a person's location when there is interference or because the sensor was already
 skeletal tracking its maximum number of people.
 
-```sh
-OSC                                       Max route
+```python
+OSC                                       Max native
 -----------------------------------------------------------------------------
 /user/playerID x y z q                    user playerID x y z q
 
@@ -154,22 +154,16 @@ r_hip       r_knee      r_ankle  r_foot
 c_shoulder  l_hand_tip  l_thumb  r_hand_tip  r_thumb
 ```
 
-### Real-world XYZ Coordinates
+### Joint location real-world XYZ coordinates
 
 Real-world skeleton joint locations in meters [`@distmeter 1`](distmeter.md) or millimeters [`@distmeter 0`](distmeter.md).
 
-```sh
-# OSC:                      @skeleton 1
-/skel/userid/jointname x y z confidence
-
-# OSC + orientation:        @skeleton 2
-/skel/userid/jointname x y z confidence qx qy qz qw
-
+```python
 # Max native:               @skeleton 1 @skeletonformat 1
 skel userid jointname x y z confidence
 
-# Max native + orientation: @skeleton 2 @skeletonformat 1
-skel userid jointname x y z confidence qx qy qz qw
+# OSC protocol:             @skeleton 1
+/skel/userid/jointname x y z confidence
 ```
 
 * `userid` is an integer which represents a user id, the same user/player id as described in previous sections
@@ -181,49 +175,22 @@ skel userid jointname x y z confidence qx qy qz qw
   The confidence value is [0.0 - 1.0] with 1.0 indicating the highest confidence. This confidence can be
   used to filter data by your patch or automatically with [@posconfidence](posconfidence.md).
 
-#### Joint Orientation
+#### Examples
 
-The orientation of real-world coordinates can be optionally enabled with `@skeleton 2`. It is output
-in your choice of four formats using [`@orientformat`](orientformat.md).
-
-```sh
-# Max native + quaternion orientation: @skeleton 2 @skeletonformat 1 @orientformat 0
-skel userid jointname x y z confidence qx qy qz qw
-
-# Max native + quaternion orientation: @skeleton 2 @skeletonformat 1 @orientformat 2
-skel userid jointname x y z confidence m11 m12 m13 m14 m21 m22 m23 m24 m31 m32 m33 m34 m41 m42 m43 m44
-```
-
-This orientation data is output in your choice of a quaternion (4 floats) or 4x4 rotation matrix (16 floats).
-If you were to look at the 3x3 rotation matrix within the 4x4, the first three are the direction of the
-joint's +X axis given as a 3-vector in the chosen coordinate space, the second three are the +Y axis
-direction, and the third three are the +Z axis direction.
-
-The coordinate space for this orientation data is in your choice of *absolute* world coordinate space or
-in a *hierarchical* rotation coordinate space. Details on the orientation data can be found at
-<https://docs.microsoft.com/en-us/previous-versions/windows/kinect/dn799273(v=ieb.10)#joint-normals> and
-<https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh973073(v=ieb.10)>.
-
-> :memo: When migrating from jit.openni, the orientation data has changed. The rotations are *not*
-> relative to a T-pose. This change must be managed by your Max patch.
-
-#### Joint XYZ coordinate examples
-
-```sh
-# OSC:                            @skeleton 1 @distmeter 1
-/skel/2/r_shoulder -1.204 2.053 3.712 0.5
-
-# OSC + orientation:              @skeleton 2 @distmeter 1
-/skel/2/r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
-
-# Max native:                     @skeleton 1 @distmeter 1 @skeletonformat 1
+```python
+# Max native:        @skeleton 1 @distmeter 1 @skeletonformat 1
 skel 2 r_shoulder -1.204 2.053 3.712 0.5
 
-# Max native + orientation:       @skeleton 2 @distmeter 1 @skeletonformat 1
-skel 2 r_shoulder -1.204 2.053 3.712 0.5 0.586775 0.469815 0.567755 -0.335593
+# OSC protocol:      @skeleton 1 @distmeter 1
+/skel/2/r_shoulder -1.204 2.053 3.712 0.5
 ```
 
-### Depth-space and color-space UV coordinates
+### Joint Orientation
 
-Enable output of joint `uv` coordinates with attributes for
-depth-space [`@skeldepth`](skeldepth.md) or color-space [`@skelcolor`](skelcolor.md).
+Joint orientation output is enabled with `@skeleton 2` and its format with [`@orientformat`](orientformat.md).
+Formats available are quaternion or 4x4 matrix, in hierarchical or absolute rotation.
+
+### Joint depth-space and color-space UV coordinates
+
+Joint `UV` coordinate output is available in depth-space [`@skeldepth`](skeldepth.md)
+and color-space [`@skelcolor`](skelcolor.md).

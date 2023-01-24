@@ -26,7 +26,7 @@ When set to `2`, the data is also output as a message on every bang.
 * Confidence value of the estimated angle [0.0 - 1.0], with 1.0 indicating
   the highest confidence
 
-```
+```python
 soundinfo ENERGY ANGLE CONF
 
 soundinfo 0.673 25.0 0.8
@@ -39,7 +39,7 @@ indicates a correlation between heard sound and tracked bodies. This message wil
 list all tracked bodies which the sensor believes are correlated with the heard sound.
 It could be used to determine who is engaging with the sensor or who is speaking.
 
-```sh
+```python
 soundbodies BodyId1 [BodyId2...]
 BodyIdX... where X is the same numeric id from the [`@skeleton`](skeleton.md) messages
 

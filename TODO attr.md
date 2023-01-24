@@ -97,10 +97,6 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 
 ### Visual Adjustment #
 
-`flipx [off]` Choice on/off to enable flipping/negating the X axis values for all data output.
-
-`orientformat [1 = quaternion absolute]` Choice of [skeleton joint orientation format/coordinates](Message-based-Data#skeleton-joints) where 0=quaternion in hierarchical coordinates, 1=quaternion in absolute coordinates, 2=4x4 rotation matrix in hierarchical coordinates, and 3=4x4 rotation matrix in absolute coordinates. You must set `@skeleton=2 (joints+orientation)` to receive the orientation data in your chosen format.
-
 `posconfidence [0.5]` Sets the confidence filter for skeleton positions. The confidence of a skeleton position must be this value or higher. There are only three possible confidence values [0.0, 0.5, 1.0] from the Kinect hardware. Therefore, the default allows only values of normal and high confidence.
 
 `position [0.0 0.0 0.0]` 3D origin of all Kinect data in the form: [x y z]. The attribute `translate` is deprecated and is only supported for backward compatibility.

@@ -26,7 +26,7 @@ The speech recognition does support multiple simultaneous languages.
 US English is installed with the official drivers.
 [Additional language packs](http://go.microsoft.com/fwlink/?LinkID=248679) are available.
 
-```sh
+```python
 # @skeletonformat 0
 /speech/recognize/ruleid tag conf srconf heardwords
 /speech/error/interfere problem

@@ -17,7 +17,7 @@ This output does not provide z-depth or orientation.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
 
-```sh
+```python
 # @skeletonformat 0
 /skelcolor/userid/jointname column row confidence
 
@@ -30,7 +30,7 @@ skelcolor userid jointname column row confidence
 
 ### Examples
 
-```sh
+```python
 # @skeletonformat 0
 /skelcolor/2/r_shoulder 975 758 0.5
 
