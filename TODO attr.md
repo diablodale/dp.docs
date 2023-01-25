@@ -48,16 +48,6 @@ For example:
 
 ### Physical #
 
-`floor [0. 0. 0. 0. 0. 0.]` List of 6 floats representing the floor clipping plane. Its values are affected by `@flip` and `@distmeter`. For compatibility with jit.openni, the first 3 describe the x, y, z coordinates for a point on the plane and the second 3 are the i, j, k of a vector normal to the plane. These same values are output with the floor OSC message. An example of usage is to send the x, y, z point coordinates to the `@position` attribute on a jit.anim.node and the i, j, k normal vector to the `@lookat` attribute on that same jit.anim.node.
-
-Natively, the Kinect SDK describes the clipping plane as an equation. Given the floor output of 6 floats, you can derive the native Kinect SDK values as follows:
-
-    Ax + By + Cz + D = 0
-    A = i value of the normal vector; negate if `@flipx = 1` 
-    B = j value of the normal vector 
-    C = k value of the normal vector 
-    D = -y value of the point on the plane; in meters or mm by `@distmeter`
-
 `gravrot [off]` Enable or disable rotation of the Kinect relative to gravity to be sent out the OSC/skeleton output on every bang. The output is a message of 4 floats representing an angle of rotation in degrees around a vector (a, x, y, z). An example of usage is to set the `@rotate` attribute on a jit.anim.node to these values.
 
 `hardware [unknown]` Identifies the model of Kinect hardware attached where 0=unknown, 1=Kinect for XBox, 2=Kinect for Windows, 3=Kinect v2 for Windows. This value is not always specific and may require the Kinect to be open and operating.
@@ -69,7 +59,5 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 `verbose [off]` Enable or disable verbose error and warning messages to be output in the Max window to aid debugging.
 
 ### Visual #
-
-`flooronbang [off]` Choice on/off to output the `@floor` attribute values via OSC/route outlet for every bang. More efficient than querying the attribute if you need the data on every bang.
 
 `unique [off]` Choice on/off to limit output of depth, color, IR, or playermap matrices to be 0=always output on a bang or 1=only output when unique. Therefore, if you set this value to be on (1), it is possible for you to bang the object yet not have matrices output. This is **much** more efficient than using a jit.change object.
