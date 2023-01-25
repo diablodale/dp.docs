@@ -1,29 +1,4 @@
 
-
-
-### Body Properties # 
-`@bodyprop=1` will enable output of body properties: restricted, handstate, and lean. These properties provide information about the appearance or state of a tracked body and the confidence of that result. The results and confidence may vary. You may need to filter or smooth them. Note, `@flipx` does not affect the lean values. Max route friendly @skeletonformat=1 is also supported.
-
-    OSC                                           Max route  
-    ------------------------------------------------------------------    
-    /restricted/id isrestricted confidence        restricted id isrestricted confidence
-    /handstate/id/left thehandstate confidence    handstate id left thehandstate confidence
-    /handstate/id/right state confidence          handstate id right state confidence
-    /lean/id lean_x lean_y confidence             lean id lean_x lean_y confidence
-
-* `id` is a long integer matching a tracked skeleton
-* `isrestricted` is an integer (0=false, 1=true) representing if the body is restricted from a full range of motion
-* `thehandstate` is a string representing one of the five [hand states](http://msdn.microsoft.com/en-us/library/dn799273#ID4EOC) of: unknown, nottracked, open, closed, lasso
-* `lean_x` and `lean_y` are floats representing [left, right, forward, and backward leaning](http://msdn.microsoft.com/en-us/library/dn785526.aspx) of the body. The values range between -1.0 (left or back) and 1.0 (right or front) in both directions, where 1.0 roughly corresponds to 45 degrees of lean.
-* `confidence` is a floating point number representing the confidence result. The value is [0.0, 0.5, 1.0] with 1.0 indicating the highest confidence
-
-For example:
-* `/restricted/2 1 1.0` skeleton 2 appears restricted from full motion and Kinect is very confident
-* `/handstate/2/left open 1.0` left hand on skeleton 2 appears to be open and Kinect is very confident
-* `/handstate/2/right lasso 0.5` right hand on skeleton 2 appears to be a lasso and Kinect is only somewhat confident
-* `/lean/2 0.2 0.3 1.0` skeleton 2 is leaning slightly right, slightly forward, and Kinect is very confident
-* `/lean/2 -0.5 0.0 0.5` skeleton 2 is leaning left and Kinect is only somewhat confident
-
 ### Floor #
 Floor identification occurs when `@skeleton` is enabled and the values stabilize over time. Once the floor is identified by the Kinect, you will begin receiving floor messages if `@flooronbang` is enabled. The floor values are influenced by the `@distmeters` and `@flipx` attributes.
 

@@ -70,27 +70,6 @@ Natively, the Kinect SDK describes the clipping plane as an equation. Given the 
 
 ### Visual #
 
-`bodyprop [off]` Enables output of body properties: restricted, handstate, and lean. These properties provide information about the appearance or state of a tracked body and the confidence of that result. The results and confidence may vary. You may need to filter or smooth them. Note, `@flipx` does not affect the lean values.
-
-    OSC below (max route friendly @skeletonformat=1 is also supported)
-    --------------------------------------------------------------------    
-    /restricted/id isrestricted confidence
-    /handstate/id/left thehandstate confidence
-    /handstate/id/right state confidence
-    /lean/id lean_x lean_y confidence
-
-* `id` is a long integer matching a tracked skeleton
-* `isrestricted` is an integer (0=false, 1=true) representing if the body is restricted from a full range of motion
-* `thehandstate` is a string representing one of the five [hand states](http://msdn.microsoft.com/en-us/library/dn799273#ID4EOC) of: unknown, nottracked, open, closed, lasso
-* `lean_x` and `lean_y` are floats representing [left, right, forward, and backward leaning](http://msdn.microsoft.com/en-us/library/dn785526.aspx) of the body. The values range between -1.0 (left or back) and 1.0 (right or front) in both directions, where 1.0 roughly corresponds to 45 degrees of lean.
-* `confidence` is a floating point number representing the confidence result. The value is [0.0, 0.5, 1.0] with 1.0 indicating the highest confidence  
-* For example:  
-  * `/restricted/2 1 1.0` skeleton 2 appears restricted from full motion and Kinect is very confident
-  * `/handstate/2/left open 1.0` left hand on skeleton 2 appears to be open and Kinect is very confident
-  * `/handstate/2/right lasso 0.5` right hand on skeleton 2 appears to be a lasso and Kinect is only somewhat confident
-  * `/lean/2 0.2 0.3 1.0` skeleton 2 is leaning slightly right, slightly forward, and Kinect is very confident
-  * `/lean/2 -0.5 0.0 0.5` skeleton 2 is leaning left and Kinect is only somewhat confident
-
 `flooronbang [off]` Choice on/off to output the `@floor` attribute values via OSC/route outlet for every bang. More efficient than querying the attribute if you need the data on every bang.
 
 `unique [off]` Choice on/off to limit output of depth, color, IR, or playermap matrices to be 0=always output on a bang or 1=only output when unique. Therefore, if you set this value to be on (1), it is possible for you to bang the object yet not have matrices output. This is **much** more efficient than using a jit.change object.

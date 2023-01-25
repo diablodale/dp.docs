@@ -28,11 +28,11 @@ joint's +X axis given as a 3-vector in the chosen coordinate space, the second t
 
 ```python
 # Max native, quaternion absolute orientation: @skeleton 2 @skeletonformat 1 @orientformat 1
-skel userid jointname x y z confidence qx qy qz qw
+skel playerId jointname x y z confidence qx qy qz qw
 skel 1 l_shoulder -0.211094 -0.01427 0.813303 1. 0.789475 -0.596378 0.044726 -0.138065
 
 # Max native, matrix absolute orientation: @skeleton 2 @skeletonformat 1 @orientformat 3
-skel userid jointname x y z confidence m11 m12 m13 m14 m21 m22 m23 m24 m31 m32 m33 m34 m41 m42 m43 m44
+skel playerId jointname x y z confidence m11 m12 m13 m14 m21 m22 m23 m24 m31 m32 m33 m34 m41 m42 m43 m44
 skel 1 l_shoulder -0.211094 -0.01427 0.813303 1. 0.255383 -0.965115 -0.057734 0. -0.85392 -0.197149 -0.481615 0. 0.453432 0.172296 -0.874479 0. 0. 0. 0. 1.
 ```
 

@@ -38,8 +38,8 @@ to change the color of a panel.
     to provide you with the data you request. The messages with joint locations start with `skel`.
 12. Connect the fifth outlet of dp.kinect2 to the first inlet of route.
 13. Create a zl object with the arguments `slice 1`. The zl object has many features; see the
-    Max documentation to learn about it. We will use it to slice off and ignore the numeric id
-    associated with all the data for a person. We do not need the id for this tutorial.
+    Max documentation to learn about it. We will use it to slice off and ignore the numeric playerId
+    associated with all the data for a person. We do not need the playerId for this tutorial.
 14. Connect the first outlet of route to the first inlet of zl.
 15. Create another route object with the argument `l_hand`. This route object will be used
     to isolate and only pass the message for the left hand. If you prefer, you can

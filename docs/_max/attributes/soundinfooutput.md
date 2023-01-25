@@ -29,22 +29,24 @@ When set to `2`, the data is also output as a message on every bang.
 ```python
 soundinfo ENERGY ANGLE CONF
 
+# examples
 soundinfo 0.673 25.0 0.8
 soundinfo 0.577 19.0 0.7
 ```
 
-When `@soundinfooutput 2` and [`@skeleton`](skeleton.md)
-is enabled, an additional message `soundbodies` is output. This message
-indicates a correlation between heard sound and tracked bodies. This message will
-list all tracked bodies which the sensor believes are correlated with the heard sound.
-It could be used to determine who is engaging with the sensor or who is speaking.
+When both `@soundinfooutput 2` and [`@skeleton`](skeleton.md) is enabled,
+an additional message `soundbodies` is output. This message
+indicates a correlation between heard sound and tracked skeletons. This message
+will list all [playerIDs of tracked skeletons](skeleton.md#user-identification)
+which the sensor believes are correlated with the heard sound.
+It can be used to determine who is engaging with the sensor or who is speaking.
 
 ```python
-soundbodies BodyId1 [BodyId2...]
-BodyIdX... where X is the same numeric id from the [`@skeleton`](skeleton.md) messages
+# integers are the same playerID used throughout skeleton tracking messages
+soundbodies integer1 [integer2...]
 
-# Examples
-soundbodies 4              body 4 is correlated with sound
-soundbodies 3 1            bodies 3 and 1 are correlated with sound
-soundbodies 1 2 3 4 5 6    bodies 1, 2, 3, 4, 5, and 6 are correlated with sound
+# examples
+soundbodies 4              playerID 4 is correlated with sound
+soundbodies 3 1            playerIDs 3 and 1 are correlated with sound
+soundbodies 1 2 3 4 5 6    playerIDs 1, 2, 3, 4, 5, and 6 are correlated with sound
 ```

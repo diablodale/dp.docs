@@ -19,13 +19,13 @@ Output format (native Max messages, OSC protocol, etc.) is determined by
 
 ```python
 # @skeletonformat 0
-/skeldepth/userid/jointname column row depth confidence
+/skeldepth/playerId/jointname column row depth confidence
 
 # @skeletonformat 1
-skeldepth userid jointname column row depth confidence
+skeldepth playerId jointname column row depth confidence
 ```
 
-* `userid`, `jointname`, and `confidence` are the same as [`@skeleton`](skeleton.md) output
+* `playerId`, `jointname`, and `confidence` are the same as [`@skeleton`](skeleton.md) output
 * `column, row` are integers that represent the column and row in the depthmap image
 * `depth` is z-depth at that pixel in units chosen by [`@distmeter`](distmeter.md)
 

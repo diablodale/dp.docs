@@ -19,13 +19,13 @@ Output format (native Max messages, OSC protocol, etc.) is determined by
 
 ```python
 # @skeletonformat 0
-/skelcolor/userid/jointname column row confidence
+/skelcolor/playerId/jointname column row confidence
 
 # @skeletonformat 1
-skelcolor userid jointname column row confidence
+skelcolor playerId jointname column row confidence
 ```
 
-* `userid`, `jointname`, and `confidence` are the same as [@skeleton](skeleton.md) output
+* `playerId`, `jointname`, and `confidence` are the same as [@skeleton](skeleton.md) output
 * `column, row` are integers that represent the column and row in the colormap image
 
 ### Examples
