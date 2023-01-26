@@ -113,6 +113,12 @@ defaults:
       layout: attribute
       parent: Attributes
   - scope:
+      path: "_max/methods/"
+      type: max
+    values:
+      layout: method
+      parent: Methods
+  - scope:
       path: "_max/tutorials/"
       type: max
     values:

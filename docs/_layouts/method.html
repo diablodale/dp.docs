@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article>
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items: center;">
+      <h1>{{- page.slug | escape }} method</h1>
+      {% include products.html products=page.products %}
+    </div>
+    {% include usage.html usage=page.usage layout=page.layout %}
+  </header>
+  {{ content }}
+</article>
