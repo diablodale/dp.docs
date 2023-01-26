@@ -52,6 +52,4 @@ For example:
 
 `hardware [unknown]` Identifies the model of Kinect hardware attached where 0=unknown, 1=Kinect for XBox, 2=Kinect for Windows, 3=Kinect v2 for Windows. This value is not always specific and may require the Kinect to be open and operating.
 
-`idkinect [unknown]` Identifies the USB id for the specific Kinect associated with this specific dp.kinect2. This enables multiple Kinect v2's to be used on a single Windows computer once Microsoft supports multiple use. You can retrieve a list of possible USB ids by sending the message `getusbidlist` to dp.kinect2.
-
 `imageuntwist [off]` Needed degrees of rotation to rotate (re-orient) the depth, color, and ir maps so that pixels at the top are away from gravity and pixels at the bottom are towards gravity. An example of usage is to set the `@theta` attribute of jit.rota to this value (converted to radians) and then send the color image matrix from dp.kinect2 to jit.rota. This message sent out the OSC/skeleton output on every bang
