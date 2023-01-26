@@ -61,7 +61,8 @@ The newest sensor data at the highest frame rate is available when the plugin
 is triggered at the [Nyquist rate](https://en.wikipedia.org/wiki/Nyquist_rate).
 Trigger the plugin at twice the sensor's raw data capability. For example,
 if the sensor hardware outputs raw data at 30 Hz, then the plugin should be
-triggered with a `bang` at 60 Hz using a clock like `(qmetro 60 hz)`
+triggered with a `bang` at 60 Hz using a clock like `(qmetro 60 hz)`. Use
+[`@unique 1`](unique.md) to remove duplicate data.
 
 ## sequent
 

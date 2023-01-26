@@ -55,9 +55,3 @@ For example:
 `idkinect [unknown]` Identifies the USB id for the specific Kinect associated with this specific dp.kinect2. This enables multiple Kinect v2's to be used on a single Windows computer once Microsoft supports multiple use. You can retrieve a list of possible USB ids by sending the message `getusbidlist` to dp.kinect2.
 
 `imageuntwist [off]` Needed degrees of rotation to rotate (re-orient) the depth, color, and ir maps so that pixels at the top are away from gravity and pixels at the bottom are towards gravity. An example of usage is to set the `@theta` attribute of jit.rota to this value (converted to radians) and then send the color image matrix from dp.kinect2 to jit.rota. This message sent out the OSC/skeleton output on every bang
-
-`verbose [off]` Enable or disable verbose error and warning messages to be output in the Max window to aid debugging.
-
-### Visual #
-
-`unique [off]` Choice on/off to limit output of depth, color, IR, or playermap matrices to be 0=always output on a bang or 1=only output when unique. Therefore, if you set this value to be on (1), it is possible for you to bang the object yet not have matrices output. This is **much** more efficient than using a jit.change object.
