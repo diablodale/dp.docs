@@ -48,8 +48,6 @@ For example:
 
 ### Physical #
 
-`gravrot [off]` Enable or disable rotation of the Kinect relative to gravity to be sent out the OSC/skeleton output on every bang. The output is a message of 4 floats representing an angle of rotation in degrees around a vector (a, x, y, z). An example of usage is to set the `@rotate` attribute on a jit.anim.node to these values.
-
 `hardware [unknown]` Identifies the model of Kinect hardware attached where 0=unknown, 1=Kinect for XBox, 2=Kinect for Windows, 3=Kinect v2 for Windows. This value is not always specific and may require the Kinect to be open and operating.
 
 `imageuntwist [off]` Needed degrees of rotation to rotate (re-orient) the depth, color, and ir maps so that pixels at the top are away from gravity and pixels at the bottom are towards gravity. An example of usage is to set the `@theta` attribute of jit.rota to this value (converted to radians) and then send the color image matrix from dp.kinect2 to jit.rota. This message sent out the OSC/skeleton output on every bang

@@ -17,7 +17,7 @@ usage:
     - "@rotatemethod 2"
 ---
 
-Rotate data to compensate for physical rotation of the sensor. This compensation
+Rotate data to compensate for gravity. This compensation
 is combined with rotations from jit.anim.node, [`@quat`](quat.md), [`@rotate`](rotate.md),
 and [`@rotatexyz`](rotatexyz.md).
 
