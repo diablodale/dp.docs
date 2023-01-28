@@ -7,7 +7,7 @@ categories:
 usage:
   signature: "GRAVROT_BOOLEAN"
   values:
-    "0": no gravrot output (default)
+    "0": no gravrot messages (default)
     "1": output gravrot messages
   examples:
     - "@gravrot 1"

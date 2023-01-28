@@ -45,9 +45,3 @@ For example:
 * `/face/2/lefteyeclosed 0 1.0` face on skeleton 2 has the left eye open and Kinect is very confident
 * `/face/2/lookingaway 1 1.0` face on skeleton 2 is looking away and Kinect is very confident
 * `/face/2/lookingaway 1 0.5` face on skeleton 2 is probably partially looking away and Kinect is only somewhat confident
-
-### Physical #
-
-`hardware [unknown]` Identifies the model of Kinect hardware attached where 0=unknown, 1=Kinect for XBox, 2=Kinect for Windows, 3=Kinect v2 for Windows. This value is not always specific and may require the Kinect to be open and operating.
-
-`imageuntwist [off]` Needed degrees of rotation to rotate (re-orient) the depth, color, and ir maps so that pixels at the top are away from gravity and pixels at the bottom are towards gravity. An example of usage is to set the `@theta` attribute of jit.rota to this value (converted to radians) and then send the color image matrix from dp.kinect2 to jit.rota. This message sent out the OSC/skeleton output on every bang
