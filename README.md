@@ -6,11 +6,13 @@ at <https://docs.hidale.com>.
 
 ## Contributing
 
-Contributions, PRs, and bugfixes are welcome.
-Please be kind and constructive in your communications.
-We reserve our right to deny contributions.
+Please follow our guidelines of [CONTRIBUTING.md](CONTRIBUTING.md). In short...
 
-Often on each page of the documentation is a link to easily
+* Contributions, PRs, and corrections are welcome. Thank you! 🙂
+* Please be kind and constructive.
+* We reserve our right to deny contributions.
+
+Often on each page of <https://docs.hidale.com> is a link to easily
 "Edit this page on GitHub".
 
 ## License
