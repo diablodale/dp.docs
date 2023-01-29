@@ -29,3 +29,6 @@ gravrot 16.798854 0.147311 0. 0.98909
 /gravrot a x y z
 /gravrot 16.798854 0.147311 0. 0.98909
 ```
+
+> :memo: This feature is only supported on sensors with an
+> [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit).

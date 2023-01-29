@@ -19,3 +19,6 @@ system with positive Z in the direction the sensor lens is pointing. When a sens
 is perfectly horizontal and level on Earth, this will return the vector `0. -1. 0.`.
 
 > :memo: Plugins older than v1.3 return a four-value vector `x y z 0`.
+
+> :memo: This feature is only supported on sensors with an
+> [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit).
