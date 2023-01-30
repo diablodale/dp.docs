@@ -1,71 +1,5 @@
 
-### Floor #
-Floor identification occurs when `@skeleton` is enabled and the values stabilize over time. Once the floor is identified by the Kinect, you will begin receiving floor messages if `@flooronbang` is enabled. The floor values are influenced by the `@distmeters` and `@flipx` attributes.
-
-    OSC                     Max route  
-    -----------------------------------------  
-    /floor x y z i j k      floor x y z i j k
-
-* `x, y, z` are floating point numbers and are coordinates for a point on the plane
-* `i, j, k` are floating point numbers and are of a vector normal to the plane
-* Natively, the Kinect SDK describes the clipping plane as the equation Ax + By + Cz + D = 0. Given the floor output of 6 floats, you can derive the native values:  
-A = the i value given your choice of `@flipx`  
-B = the j value  
-C = the k value  
-D = negative of y value in meters or mm
-
-Examples:
-
-    OSC                                     Max route  
-    ----------------------------------------------------------------------------  
-    /floor 0.0 -925.7 0.0 0.12 0.97 0.047   floor 0.0 -925.7 0.0 0.12 0.97 0.047
-
-An example of using this data is to position a jit.gl.gridshape plane using a jit.anim.node. Connect the node to the gridshape. Then set the `@position` of the node to be the `x, y, z` values and the `@direction` of the node to be the `i, j, k` values.
-
-It is not necessary to enable `@flooronbang` to get this floor data in a message. These same values are available from the `@floor` attribute. It can be queried using the standard Max mechanism of prepending "get" on the attribute, `getfloor`, and sending that message to the 1st inlet. Its result will be output via the dumpout outlet. 
-
 ### Face Tracking #
-Face tracking occurs when `@faces` is enabled with a value of `1`. The Kinect v2 supports tracking faces on all tracked skeletons. Data for face tracking is output on the OSC/route message outlet and most is affected by `@flipx`, `@distmeter` and `@skeletonformat` values; where they are not, it will be specifically noted. Face data is not rotated by gravity or elevation; you will need to do that yourself with jit.anim.node or custom calculations.
-
-**Some face features (shape units, hidef 2D points, 3D model, and face colors) require a fully captured/modeled face. This full capture is: a) drastically slow compared to the Kinect v1; b) large facial hair tends to interfere; and c) requires the face to be rotated slowly in four directions. The status of this capture can be seen with the `modelstatus` message.**
-
-`@faces=1` will always output the bounding box around the face in color/depth pixel coordinates and the 3D pose of the face in the real-world location. You must enable this or all other face tracking options will be ignored.
-
-    OSC                                                  Max route  
-    -----------------------------------------------------------------------------------------------------  
-    /face/id/bounds left top right bottom                face id bounds left top right bottom  
-    /face/id/boundsdepth left top right bottom           face id boundsdepth left top right bottom  
-    /face/id/pose scale xrot yrot zrot xtrn ytrn ztrn    face id pose scale xrot yrot zrot xtrn ytrn ztrn  
-    /face/id/modelstatus collection capture              face id modelstatus collection capture
-
-* `bounds` has color coordinates and `boundsdepth` has depth coordinates
-* `left` is a long integer that represents the leftmost X coordinate of the bounding box
-* `top` is a long integer that represents the topmost Y coordinate of the bounding box
-* `right` is a long integer that represents the rightmost X coordinate of the bounding box
-* `bottom` is a long integer that represents the bottomost Y coordinate of the bounding box
-* `scale` is a float where 1.0 means that it is equal in size to the loaded 3D model (in the model space)
-* `xrot`, `yrot`, `zrot` are floats of Euler rotation angles in degrees of rotation around X, Y, and Z axis
-* `xtrn`, `ytrn`, `ztrn` are floats of 3D translations on the X, Y, and Z axis in real-world space
-* `collection` is a long integer bitfield that represents the [collection needs](https://msdn.microsoft.com/en-us/library/microsoft.kinect.face.facemodelbuildercollectionstatus.aspx)
-* `capture` is a long integer that represents the [capture status](https://msdn.microsoft.com/en-us/library/microsoft.kinect.face.facemodelbuildercapturestatus.aspx)
-
-**2D Face Points**  
-`@face2dpoints` enables output of 2D points in color camera coordinate space that describe the face. It is one of the following values: 0=disabled, 1=Kinect v1 hidef points, 2=Kinect v2 basic points, 3=Kinect v2 hidef points. At this time, `1=Kinect v1 hidef points` are not available on dp.kinect2. Only values 2 and 3 are available.
-
-* 2: Kinect v2 basic points are the (x,y) coordinates of [these 5 basic face points](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.facepointtype.aspx) listed in the same order.  
-* 3: Kinect v2 hidef points are the (x,y) coordinates of [these defailed face points](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.highdetailfacepoints.aspx) listed in the same order. These require a fully captured face; see `modelstatus` message.
-
-The output of OSC is below with the Max route format `@skeletonformat=1` following the same pattern as previous examples.
-
-    OSC below (@skeletonformat=1 is also supported)    Max route
-    ----------------------------------------------------------------------------------------------  
-    /face/id/points2d x1 y1 x2 y2 x3 y3 ...            face id points2d x1 y1 x2 y2 x3 y3 ...
-    /face/id/points2ddepth x1 y1 x2 y2 x3 y3 ...       face id points2ddepth x1 y1 x2 y2 x3 y3 ...
-
-* `points2d` has color coordinates and `points2ddepth` has depth coordinates
-* `x1` and `y1` are long integers and represent the x,y coordinate in color space of point 1 of the face
-* `x2` and `y2` are long integers and represent the x,y coordinate in color space of point 2 of the face
-* As an example, if you select `2=Kinect v2 basic points` there are 5 points, therefore 10 integers will be output
 
 **Face Shape and Animation Units**  
 `@facesuau` will enable animation unit (AU) and shape unit (SU) output for tracked faces. There are three values: `0=disabled, 1=Kinectv1 AU/SU, 2=Kinectv2 AU/SU.` You can smooth these values with `@facesuausmooth`. The output format is the same with dp.kinect and dp.kinect2. _However_, the meaning of the v1 and v2 AU/SUs are different. [v1 is documented](https://github.com/diablodale/dp.kinect/wiki/Message-based-Data#face-tracking) with dp.kinect.  Microsoft did not make the Kinect v2 backwards compatible with v1 and they did not follow the Candide-3 face model. The model with the Kinect v2 and therefore with dp.kinect2 is a Microsoft proprietary model. At this time, there is only brief Microsoft documentation:
@@ -98,7 +32,7 @@ Output examples
 
 This 3D face data is available in several formats:
 
-3) `@face3dmodel=3` will output the `triangles` list describing counterclockwise triangles. Each triangle is a group of 9 values representing three 3D vertices; each vertex being an xyz coordinate
+1) `@face3dmodel=3` will output the `triangles` list describing counterclockwise triangles. Each triangle is a group of 9 values representing three 3D vertices; each vertex being an xyz coordinate
    ```
    OSC below (@skeletonformat=1 is also supported)
    --------------------------------------------------------------------    
@@ -109,7 +43,7 @@ This 3D face data is available in several formats:
    * `t1_v3_x`, `t1_v3_y`, `t1_v3_z` are floats representing the x, y, z coordinates in local face coordinate space for the third vertex of the triangle
    * the above grouping of 9 repeats to describe all triangles in the model
 
-4) `@face3dmodel=4` will output a long list of indices and then a long list of 3D points in that index order. Each triangle is described by three index values representing the three vertices in counterclockwise order. The index value is used as a lookup to find the index'th 3D point in the second list. The second list is a series of 3D points; each point being an xyz coordinate. A single 3D point will likely be referenced by its index more than one time because the triangles in the face model will share vertices.
+2) `@face3dmodel=4` will output a long list of indices and then a long list of 3D points in that index order. Each triangle is described by three index values representing the three vertices in counterclockwise order. The index value is used as a lookup to find the index'th 3D point in the second list. The second list is a series of 3D points; each point being an xyz coordinate. A single 3D point will likely be referenced by its index more than one time because the triangles in the face model will share vertices.
    ```
    OSC below (@skeletonformat=1 is also supported)  
    --------------------------------------------------------------------  
@@ -122,11 +56,11 @@ This 3D face data is available in several formats:
    * `v1_x`, `v1_y`, `v1_z` represent the x, y, z coordinate for a 3D point in local face coordinate space
    * `v2_x`, `v2_y`, `v2_z` represent the x, y, z coordinate for another 3D point in local face coordinate space
    * The above pattern of 3D points is repeated until all 3D points needed to create the model are output.
-5) Not supported on the Kinect v2.
-6) Not supported on the Kinect v2.
-7) `@face3dmodel=7` will output a single 3-plane float32 matrix describing counterclockwise triangles with each triangle defined by sequential groups of three cells (xyz as the three planes) of the matrix representing the triangle's three 3D vertices. Other than it being stored in a matrix, the data is the same as (3) above.
+3) Not supported on the Kinect v2.
+4) Not supported on the Kinect v2.
+5) `@face3dmodel=7` will output a single 3-plane float32 matrix describing counterclockwise triangles with each triangle defined by sequential groups of three cells (xyz as the three planes) of the matrix representing the triangle's three 3D vertices. Other than it being stored in a matrix, the data is the same as (3) above.
 
-8) `@face3dmodel=8` will output two matrices; first the indices used as a lookup to find the index'th 3D point of the second matrix to create triangles. The second matrix is a 3-plane float32 matrix with each cell describing an xyz point in 3D space. This may be a more efficient format than (7) because the indices matrix will only be sent once since the triangle relationships do not change. The 3D points matrix will update often since the vertices' xyz position on a face changes with every movement. A single 3D point will likely be referenced by its index more than one time because the triangles in the face model will share vertices. Other than it being stored in a matrix, the data is the same as (4) above.
+6) `@face3dmodel=8` will output two matrices; first the indices used as a lookup to find the index'th 3D point of the second matrix to create triangles. The second matrix is a 3-plane float32 matrix with each cell describing an xyz point in 3D space. This may be a more efficient format than (7) because the indices matrix will only be sent once since the triangle relationships do not change. The 3D points matrix will update often since the vertices' xyz position on a face changes with every movement. A single 3D point will likely be referenced by its index more than one time because the triangles in the face model will share vertices. Other than it being stored in a matrix, the data is the same as (4) above.
 
 **Face Colors (skin and hair)**  
 `@facecolors=1` will enable output of face skin and hair color. Microsoft's technology derives the face and hair color by building a complete 3D model for the face and understanding the colors of that model. This 3D model process is described above.

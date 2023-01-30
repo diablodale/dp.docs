@@ -4,13 +4,6 @@ dp.kinect2 supports a normal compliment of Max attributes plus the following. Th
 ### Face Tracking #
 Below are the attributes related to face tracking. Please also reference the [face tracking message output](https://github.com/diablodale/dp.kinect2/wiki/Message-based-Data#face-tracking) to understand more details on the output.
 
-`faces [0]` Kinect v2 can track up to six faces. When enabled, it will output messages related to the 2D bounding box of the face, rotation, translation, and the scale relative to the standard face model.
-
-`face2dpoints [0]` Enables output of 2D points in color camera coordinate space that describe the face. It is one of the following values: 0=disabled, 1=Kinect v1 detailed points, 2=Kinect v2 basic points, 3=Kinect v2 detailed points. At this time, `1=Kinect v1 detailed points` are not available on dp.kinect2. Only values 2 and 3 are available.
-
-* 2: Kinect v2 basic points are the (x,y) coordinates of [these basic face points](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.facepointtype.aspx) listed in the same order.  
-* 3: Kinect v2 detailed points are the (x,y) coordinates of [these defailed face points](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.highdetailfacepoints.aspx) listed in the same order.
-
 `facesuau [0]` Enables animation unit (AU) and shape unit (SU) output for tracked faces. There are three values: 0=disabled, 1=Kinectv1 AU/SU, 2=Kinectv2 AU/SU. The output format is the same with dp.kinect and dp.kinect2. _However_, the meaning of the v1 and v2 AU/SUs are different. [v1 is documented](https://github.com/diablodale/dp.kinect/wiki/Message-based-Data#face-tracking) with dp.kinect.  Microsoft did not make the Kinect v2 backwards compatible with v1 and they did not follow the Candide-3 face model. The model with the Kinect v2 and therefore with dp.kinect2 is a Microsoft proprietary model. At this time, there is only brief Microsoft documentation:
 * [Animation Units for Kinect v2](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.faceshapeanimations.aspx)
 * [Shape Units for Kinect v2](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.faceshapedeformations.aspx)
