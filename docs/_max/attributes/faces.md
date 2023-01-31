@@ -85,7 +85,7 @@ collection
 capture
 : integer [capture status](#capture-status)
 
-## Face Model
+## Face model
 
 Some Kinect v2 face output (shape units, hidef 2D points, 3D model, and face color)
 requires a fully captured and modeled face.
