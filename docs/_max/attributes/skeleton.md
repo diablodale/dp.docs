@@ -19,7 +19,7 @@ Skeleton, joint, and user tracking output on the fifth outlet.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
 
-> :memo: Some sensors may not support `2` orientation output
+> :memo: Some sensors may not support orientation output `@skeleton 2`.
 
 ## User Identification
 
@@ -59,8 +59,8 @@ they were lost. This lack of full skeletal tracking could be because of interfer
 was already skeletal tracking its maximum number of people. After receiving this message, the playerId may
 be reused by the sensor for a new person.
 
-If you are migrating from jit.openni, the additional messages calib_pose, calib_start, calib_fail,
-exit_user, and reenter_user are not supported.
+The following legacy messages are not supported: calib_pose, calib_start, calib_fail,
+exit_user, and reenter_user.
 
 ## User Location
 
@@ -79,12 +79,17 @@ OSC                                       Max native
 /user/2 42.1323 -100.8237 1984.348 0      user 2 42.1323 -100.8237 1984.348 0
 ```
 
-* `playerId` is an long integer and is the same unique playerID from the matching user identification message
-* `x, y, z` are floating point numbers representing the real-world location of the person's center of mass
-  relative to the sensor sensor. Their values are influenced by the attributes
+playerId
+: same integer used for a [tracked skeleton](#user-identification)
+
+x, y, z
+: floats of the real-world XYZ location of the person's center of mass
+  relative to the sensor. Their values are influenced by the attributes
   [`@distmeter`](distmeter.md), [`@flipx`](flipx.md), [`@rotatemethod`](rotatemethod.md), and
   [`@translate`](translate.md).
-* `q` is an integer bit field that indicates the quality of the person's location. It is possible to
+
+q
+: integer bit field that indicates the quality of the person's location. It is possible to
   have no, one, or multiple quality bit flags at the same time. The bit flags are summed together.
   Quality bit flag values are:  
   1 = Part of the player's body is out of frame to the camera's right.  
@@ -100,7 +105,7 @@ Skeleton joint data is output when `@skeleton`, [`@skeldepth`](skeldepth.md), or
 This data is affected by the other attributes [`@distmeter`](distmeter.md), [`@flipx`](flipx.md), [`@align`](align.md),
 [`@position`](position.md), [`@quat`](quat.md), [`@rotate`](rotate.md), [`@rotatexyz`](rotatexyz.md), and [`@scale`](scale.md).
 
-### Joint names, diagrams, output order
+### Joint names, diagrams, output order {#joint-names}
 
 Most plugins support the same base list of 20 joints. Some plugin ML models provide additional
 joints. Some of those additional joints are output by those specific plugins.
@@ -166,14 +171,22 @@ skel playerId jointname x y z confidence
 /skel/playerId/jointname x y z confidence
 ```
 
-* `playerId` is an integer which represents a user's playerID, the same playerID described above
-* `jointname` is one of the strings listed below; these are the same joint names as used by jit.openni
-* `x, y, z` are floating point numbers and their values are affected by [`@distmeter`](distmeter.md),
+playerId
+: same integer used for a [tracked skeleton](#user-identification)
+
+jointname
+: one of the [joint names](#joint-names)
+
+x, y, z
+: floats of the real-world XYZ location of the joint relative to the sensor.
+  These are affected by [`@distmeter`](distmeter.md),
   [`@flipx`](flipx.md), [`@align`](align.md), [`@position`](position.md), [`@quat`](quat.md),
-  [`@rotate`](rotate.md), [`@rotatexyz`](rotatexyz.md), and [`@scale`](scale.md)
-* `confidence` is a floating point number representing the sensor's confidence in the data values.
-  The confidence value is [0.0 - 1.0] with 1.0 indicating the highest confidence. This confidence can be
-  used to filter data by your patch or automatically with [@posconfidence](posconfidence.md).
+  [`@rotate`](rotate.md), [`@rotatexyz`](rotatexyz.md), and [`@scale`](scale.md).
+
+confidence
+: normalized float `[0.0..1.0]` for the confidence of the joint.
+  `1.0` indicates the highest confidence. This confidence can be used to filter data
+  by your patch or automatically with [@posconfidence](posconfidence.md).
 
 #### Examples
 
