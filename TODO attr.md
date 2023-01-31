@@ -4,12 +4,6 @@ dp.kinect2 supports a normal compliment of Max attributes plus the following. Th
 ### Face Tracking #
 Below are the attributes related to face tracking. Please also reference the [face tracking message output](https://github.com/diablodale/dp.kinect2/wiki/Message-based-Data#face-tracking) to understand more details on the output.
 
-`facesuau [0]` Enables animation unit (AU) and shape unit (SU) output for tracked faces. There are three values: 0=disabled, 1=Kinectv1 AU/SU, 2=Kinectv2 AU/SU. The output format is the same with dp.kinect and dp.kinect2. _However_, the meaning of the v1 and v2 AU/SUs are different. [v1 is documented](https://github.com/diablodale/dp.kinect/wiki/Message-based-Data#face-tracking) with dp.kinect.  Microsoft did not make the Kinect v2 backwards compatible with v1 and they did not follow the Candide-3 face model. The model with the Kinect v2 and therefore with dp.kinect2 is a Microsoft proprietary model. At this time, there is only brief Microsoft documentation:
-* [Animation Units for Kinect v2](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.faceshapeanimations.aspx)
-* [Shape Units for Kinect v2](http://msdn.microsoft.com/en-us/library/microsoft.kinect.face.faceshapedeformations.aspx)
-
-`facesuausmooth [0. 0. 0. 0. 0.]` are five floats representing a [holt double smoothing algorithm](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh855623(v=ieb.10)). This is the same smoothing algorithm that is applied to the joints with `@smoothing`. The default is no AU smoothing `0.0 0.0 0.0 0.0 0.0`.
-
 `face3dmodel [0]` Enables output of a detailed 3D model of the face in local face coordinate space. Microsoft provides [little documentation](https://msdn.microsoft.com/en-us/library/dn785525.aspx) on this model. It does create a very detailed face when the mesh is drawn. This mesh is not the same as the simpler Candide-3 face model available with the Kinect v1 sensor. There are several formats in which this model can be provided to your patch. Examples of these formats are [described in this face tracking section](Message-based-Data#face-tracking).
 * 0 = Disabled.
 * 3 = Output a list describing counterclockwise triangles with each triangle as a group of 9 values representing three 3D vertices.

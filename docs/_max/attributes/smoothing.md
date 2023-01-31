@@ -14,7 +14,7 @@ usage:
     - "@smoothing 0.1"
 ---
 
-Smoothing to apply to skeleton joint values with either a simplified one parameter factor or
+Smoothing for skeleton joint values with either a simplified one parameter factor or
 five parameter Holt double-exponential filter.
 
 * 1-parameter: simplified temporal smoothing factor where 0.0 is no smoothing
