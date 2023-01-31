@@ -53,7 +53,8 @@ lean_forward
   of a skeleton body. It is a continuous range from 45 degrees back lean `-1.0`, no lean `0.0`, to 45 degrees forward lean `1.0`.
 
 confidence
-: normalized floating point number `[0.0..1.0]` for the confidence of that property. `1.0` indicates the highest confidence
+: normalized float `[0.0..1.0]` for the confidence of that property.
+  `1.0` indicates the highest confidence
 
 ### Examples
 
