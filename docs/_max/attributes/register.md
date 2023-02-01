@@ -19,6 +19,8 @@ usage:
 
 Register a license or get the status of registration.
 
+Use [`unregister`](../methods/unregister.md) to unregister and remove a license.
+
 ## Register license {#register-license}
 
 A license must be registered to use all features of a plugin.
