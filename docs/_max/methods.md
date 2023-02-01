@@ -5,6 +5,11 @@ toc_heading: "Search :mag: at the top of this page may also be used."
 ---
 <h1>{{- page.title | escape -}}</h1>
 
+Our plugins support the normal compliment of Max and Jitter methods with
+messages like `getattributes`, `summary`, `getstate`, etc. The dumpout outlet
+follows normal Max conventions.
+
+Our plugins have additional methods that support our features.
 Below is a *combined* list of methods for *all* our Max plugins.
 All plugins do not support all methods.
 
