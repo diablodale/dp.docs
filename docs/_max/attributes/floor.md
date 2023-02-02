@@ -18,6 +18,14 @@ the values stabilize.
 
 Floor values are affected by [`@flipx`](flipx.md) and [`@distmeter`](distmeter.md).
 
+### Floor message
+
+Output `floor` messages on every bang by enabling [`@flooronbang`](flooronbang.md).
+When values is not needed often, they are also available directly
+from the `@floor` attribute. It can be queried using the standard Max mechanism
+of prepending "get" to the attribute name, `getfloor`, and sending that message
+to the plugin's 1st inlet. The `@floor` values will be output on the dumpout outlet.
+
 ```python
 # Max native:   @skeleton 1 @skeletonformat 1
 floor x y z i j k
@@ -28,13 +36,7 @@ floor 0.0 -925.7 0.0 0.12 0.97 0.047
 /floor 0.0 -925.7 0.0 0.12 0.97 0.047
 ```
 
-Output `floor` messages on every bang by enabling [`@flooronbang`](flooronbang.md).
-When values is not needed often, they are also available directly
-from the `@floor` attribute. It can be queried using the standard Max mechanism
-of prepending "get" to the attribute name, `getfloor`, and sending that message
-to the plugin's 1st inlet. The `@floor` values will be output on the dumpout outlet.
-
-### Examples
+### Example
 
 Render an OpenGL plane that visually matches the physical floor identified.
 

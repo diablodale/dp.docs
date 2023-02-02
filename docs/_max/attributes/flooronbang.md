@@ -14,4 +14,4 @@ usage:
 ---
 
 Output [`@floor`](floor.md) values as messages on every bang from the messages (fifth)
-output. More efficient than separately querying the `@floor` attribute on every bang.
+outlet. More efficient than separately querying the `@floor` attribute on every bang.
