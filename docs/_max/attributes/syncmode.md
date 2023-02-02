@@ -4,24 +4,21 @@ products:
 categories:
   - physical
 usage:
-  signature: "[-1000000 - 1000000]"
-  values: "0 (default)"
+  signature: "[0..1000000]"
+  values:
+    "off": no synchronization (default)
+    "wired-main": physical wire connection, main sensor
+    "wired-sub": physical wire connection, subordinate sensor
   examples:
-    - "@depthdelay 4000"
-    - "@depthdelay -800"
+    - "@syncmode wired-sub"
 ---
 
-Depth capture delay (microseconds) relative to color capture.
+Select sensor's role (main, subordinate) and medium (e.g. wired)
+in a synchronization group.
 
 Use to synchronize and coodinate multiple sensors with attributes including:
 [`depthdelay`](depthdelay.md), [`syncdelay`](syncdelay.md),
 [`syncmode`](syncmode.md), and [`idsensor`](idsensor.md).
-
-* Default `@depthdelay 0` means the depth and color images should
-  be time aligned.
-* `-fps_in_µs <= depthdelay <= fps_in_µs` where `fps_in_µs` is
-  [`@depthfps`](depthfps.md) frames per second converted to
-  microseconds
 
 ## dp.kinect3
 

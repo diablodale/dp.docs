@@ -11,7 +11,7 @@ usage:
     - "@depthconf 0.65"
 ---
 
-Filter depth pixels by the confidence of those pixel values.
+Filter depth pixels by the confidence of their depth value.
 The pixel confidence must be `@depthconf` value or higher.
 The pixel confidence and this filter are both normalized floats `[0.0..1.0]`.
 

@@ -11,5 +11,5 @@ usage:
     - "@anim u766000425"
 ---
 
-Parent [jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node) name.
-This enables the plugin to be part of a Max `jit.anim.node` hierarchy.
+Parent [jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node) name
+adds plugin to `jit.anim.node` hierarchy.

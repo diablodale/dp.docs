@@ -13,5 +13,5 @@ usage:
     - "@flooronbang 1"
 ---
 
-Output [`@floor`](floor.md) values as messages on every bang from the messages (fifth)
-outlet. More efficient than separately querying the `@floor` attribute on every bang.
+Output [`floor`](floor.md) plane as message on every bang from the fifth outlet.
+More efficient than separately querying the `@floor` attribute on every bang.
