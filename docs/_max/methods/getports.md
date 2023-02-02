@@ -6,41 +6,43 @@ categories:
   - physical
 usage:
   signature: "[ID1_STRING [ID2_STRING...]]"
-  values: ports id_string port status
+  values: ports ID_STRING PORT STATUS
   examples:
     - "ports 0000171696318 sync-out 0"
     - "ports 0000171696318 sync-in 1"
 ---
 
-Get status of sensor ports like those for synchronization.
+Get status of sensor ports; like those for synchronization.
+
+ID_STRING
+: same sensor identifiers from [`@idsensor`](../attributes/idsensor.md)
+  and [`getusbidlist`](getusbidlist.md)
+
+PORT
+: sensor-specific name of port
+
+STATUS
+: sensor-specific status of port
+
+### Examples
 
 ```python
 # send to first inlet of plugin for ports on default sensor
 getports
 
-# send to first inlet of plugin for ports on sensor 0000171696318
-getports 0000171696318
+# responses from dumpout: sync-out disconnected, sync-in connected
+ports 0000171696318 sync-out 0
+ports 0000171696318 sync-in 1
 
 # send to first inlet of plugin for ports on sensors 0000171696318 and 4580030408629
 getports 0000171696318 4580030408629
 
-######## dumpout response is: ports id_string port status ########
-# sync out port on sensor 0000171696318 is not connected
+# responses from dumpout
 ports 0000171696318 sync-out 0
-
-# sync in port on sensor 0000171696318 is connected
 ports 0000171696318 sync-in 1
+ports 4580030408629 sync-out 1
+ports 4580030408629 sync-in 0
 ```
-
-id_string
-: same sensor identifiers from [`@idsensor`](../attributes/idsensor.md)
-  and [`getusbidlist`](getusbidlist.md)
-
-port
-: sensor-specific name of port
-
-status
-: sensor-specific status of port
 
 ## dp.kinect3
 
@@ -48,10 +50,10 @@ status
 [synchronization ports](https://learn.microsoft.com/en-US/azure/Kinect-dk/multi-camera-sync)
 
 sync-out
-: synchronization pulse output; the VSync for the RGB camera
+: synchronization pulse output send; the VSync for the RGB camera
 
 sync-in
-: synchronization pulse receiver
+: synchronization pulse input receive
 
 with a status of
 

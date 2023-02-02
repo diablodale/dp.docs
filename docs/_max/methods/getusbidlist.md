@@ -7,6 +7,7 @@ products:
 categories:
   - physical
 usage:
+  signature: ""
   values: usbidlist [ID1_STRING [ID2_STRING...]]
   examples:
     - "usbidlist USB\\VID_045E&PID_02C2\\5&1C8A28AD&0&9"
