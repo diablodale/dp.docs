@@ -8,7 +8,7 @@ categories:
   - visual
 usage:
   signature: "RESOLUTION_INT"
-  values: sensor specific defaults
+  values: sensor specific default
 ---
 
 Resolution of infrared image enabled with [`@irmap`](irmap.md).

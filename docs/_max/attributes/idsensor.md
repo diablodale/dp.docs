@@ -6,7 +6,7 @@ categories:
   - physical
 usage:
   signature: "ID_STRING"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "@idsensor 14442C10C1A1C6D200"
 ---

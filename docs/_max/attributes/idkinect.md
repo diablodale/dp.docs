@@ -6,7 +6,7 @@ categories:
   - physical
 usage:
   signature: "ID_STRING"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "@idkinect USB\\VID_045E&PID_02C2\\5&1C8A28AD&0&9"
 ---

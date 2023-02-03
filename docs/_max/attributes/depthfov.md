@@ -8,7 +8,7 @@ categories:
   - physical
 usage:
   signature: "HORIZ_FLOAT VERT_FLOAT DIAG_FLOAT"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "depthfov 58.5 45.6 70.0"
 ---

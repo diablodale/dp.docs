@@ -8,7 +8,7 @@ categories:
   - visual adjustment
 usage:
   signature: "SMOOTH_FLOAT1 [SMOOTH_FLOAT2 SMOOTH_FLOAT3 SMOOTH_FLOAT4 SMOOTH_FLOAT5]"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "@smoothing 0.5 0.1 0.5 0.1 0.1"
     - "@smoothing 0.1"

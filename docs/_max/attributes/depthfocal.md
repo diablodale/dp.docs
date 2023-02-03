@@ -8,7 +8,7 @@ categories:
   - physical
 usage:
   signature: "FOCAL_FLOAT"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "depthfocal 285.63"
 ---

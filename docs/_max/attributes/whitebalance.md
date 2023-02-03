@@ -4,7 +4,7 @@ products:
   - dp.kinect3
   - dp.oak
 categories:
-  - color settings
+  - camera control
 usage:
   signature: "{ auto | [1000...12000]}"
   values:

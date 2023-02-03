@@ -3,7 +3,7 @@ products:
   - dp.kinect3
   - dp.oak
 categories:
-  - color settings
+  - camera control
 usage:
   signature: "{ auto | EXPOSURE_NUM } [{auto | ISO_INTEGER }]"
   values:

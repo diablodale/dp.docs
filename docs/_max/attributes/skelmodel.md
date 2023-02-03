@@ -6,7 +6,7 @@ categories:
   - physical
 usage:
   signature: "PATH_STRING"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "@skelmodel c:\\models\\dnn_model_2_0_op11.onnx"
     - "@skelmodel movenet_multipose_lightning_1_int32_op15_H160_W256.onnx"

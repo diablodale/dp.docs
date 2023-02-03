@@ -3,7 +3,7 @@ redirect_to: /max/attributes/whitebalance/#dpkinect
 products:
   - dp.kinect
 categories:
-  - color settings
+  - camera control
 ---
 
 Automatic white balance. Deprecated.

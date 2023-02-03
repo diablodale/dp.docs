@@ -7,7 +7,7 @@ categories:
   - physical
 usage:
   signature: "FOCAL_X FOCAL_Y PP_X PP_Y RADIAL_K1 RADIAL_K2 RADIAL_K3"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "depthintrinsics 365.1 365.1 254.9 205.6 -0.283 0.0991 0.0976"
 ---

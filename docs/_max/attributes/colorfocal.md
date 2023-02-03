@@ -8,7 +8,7 @@ categories:
   - physical
 usage:
   signature: "FOCAL_FLOAT"
-  values: sensor specific defaults
+  values: sensor specific default
   examples:
     - "colorfocal 531.15"
 ---

@@ -3,7 +3,7 @@ redirect_to: /max/attributes/colorexposure/#dpkinect
 products:
   - dp.kinect
 categories:
-  - color settings
+  - camera control
 ---
 
 Automatic color exposure. Deprecated.
