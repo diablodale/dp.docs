@@ -11,8 +11,8 @@ usage:
     "auto": automatic white balance (default)
     "[1000...12000]": white temperature (Kelvin)
   examples:
-    - "@whitebalance 4000"
     - "@whitebalance auto"
+    - "@whitebalance 4000"
 ---
 
 [White balance](https://en.wikipedia.org/wiki/Color_balance) in degrees Kelvin temperature
@@ -27,6 +27,7 @@ Newer sensors and plugins usually have more flexible ranges.
 
 ## dp.kinect
 
-[`dp.kinect`](../../dp.kinect/) is limited to 2700-6500 Kelvin. Its default is
-automatic white balance. To set a specific white temperature, disable automatic
-and then set the temperature, e.g. `@autowhitebalance 0 @whitebalance 4000`.
+[`dp.kinect`](../../dp.kinect/) white balance range is `[2700..6500]` Kelvin.
+Its default is automatic white balance. To set a specific white temperature,
+disable automatic and then set the temperature,
+e.g. `@autowhitebalance 0 @whitebalance 4000`.
