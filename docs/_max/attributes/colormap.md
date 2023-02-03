@@ -20,9 +20,12 @@ usage:
 ---
 
 Color image output in choice of pixel format on the second outlet.
+
 Values `4 or rgb` and `5 or rgba` are often useful when sending color information
 to OpenGL. This pixel format, resolution [`@colormapres`](colormapres.md), and
 [`@colortype`](colortype.md) together define the memory layout of color data.
+
+When banding or flickering is seen, try the [`@powerfreq`](powerfreq.md) filter.
 
 > :memo: Plugin versions v1.3.20210429 and newer support using value names like `rgb` and `argb`.
 

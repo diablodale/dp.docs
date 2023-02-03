@@ -9,18 +9,10 @@ permalink: /
 ---
 {::options parse_block_html="true" /}
 
-## New Documentation
-
-This new documentation site is a work-in-progress. It has the new
-features of [dp.kinect3](/_max/dp.kinect3.md) and [dp.oak](/_max/dp.oak.md).
-Some features are still being migrated from the good
-[dp.kinect2 documentation](https://github.com/diablodale/dp.kinect2/wiki#reference-documentation). Use this site and the dp.kinect2 site
-until the migration is complete.
-
 <div style="display: flex; flex-wrap: wrap;">
-<div style="margin-right: 3em;">
 
-## :running_woman: Get started {#get-started}
+<div style="margin-right: 3em;">
+<h2 id="get-started" style="margin-top: 0;">:running_woman: Get started</h2>
 <ul>
 <li><a href="https://hidale.com">Downloads, trials, licenses</a></li>
 <li>Setup
@@ -35,11 +27,21 @@ until the migration is complete.
 </div>
 
 <div style="margin-right: 3em;">
+<h2 id="learn" style="margin-top: 0;">:open_book: Learn</h2>
 
-## :open_book: Learn {#learn}
 * [Tutorials](/_max/tutorials.md)
 * [Attribute](/_max/attributes.md) reference
   
 </div>
-
 </div>
+
+## :dart: Updates
+
+The new documentation is almost complete 🙂
+
+* ~~Tutorials are complete~~
+* ~~Sensor hardware references are complete~~
+* ~~[dp.kinect3](/_max/dp.kinect3.md) and [dp.oak](/_max/dp.oak.md) attributes and methods are complete~~
+* Most [dp.kinect](/_max/dp.kinect.md) and [dp.kinect2](/_max/dp.kinect2.md) attributes and methods are
+  complete. Fill gaps with the previous documentation until we finish.
+* Setup instructions still need migration. Use the previous documentation.
