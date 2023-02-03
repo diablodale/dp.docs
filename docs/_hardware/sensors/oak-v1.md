@@ -2,8 +2,6 @@
 title: Luxonis OAK v1
 products:
   - dp.oak
-categories:
-  - sensors
 ---
 
 ## Technical Documents

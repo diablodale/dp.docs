@@ -2,8 +2,6 @@
 title: Microsoft Kinect v3, Azure
 products:
   - dp.kinect3
-categories:
-  - sensors
 ---
 
 ## Technical Documents

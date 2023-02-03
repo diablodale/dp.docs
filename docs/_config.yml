@@ -133,7 +133,7 @@ defaults:
       type: hardware
     values:
       layout: hardware
-      categories: hardware
+      categories: sensors
       parent: Sensors
 
 # Just the Docs configuration ###################################################

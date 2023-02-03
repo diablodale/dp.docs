@@ -2,8 +2,6 @@
 title: Microsoft Kinect v2, XBox One
 products:
   - dp.kinect2
-categories:
-  - sensors
 ---
 
 ## Technical Documents
