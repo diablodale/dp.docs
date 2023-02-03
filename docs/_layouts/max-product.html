@@ -10,10 +10,8 @@ layout: page
 <a href="https://cycling74.com/">Cycling '74 Max</a>
 development environment to use your
 {% for hw_item in page.compatible_hardware -%}
-  <a href="{{- site.baseurl -}}/hardware/{{- hw_item.slug -}}">
-  {{- hw_item.name -}}
-  </a>
-  {%- unless forloop.last -%}, {%- endunless -%}
+  <a href="{{- site.baseurl -}}/hardware/{{- hw_item.slug -}}">{{- hw_item.name -}}</a>
+{%- unless forloop.last %}, {% endunless -%}
 {%- endfor %}
 with your Windows computer.
 
@@ -30,7 +28,7 @@ with your Windows computer.
 <h2>Tutorials</h2>
 <dl>
 {%- for item in site.max -%}
-  {%- if item.products contains page.title and item.layout == "tutorial" -%}
+  {%- if item.categories contains "tutorial" and item.products contains page.title -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}
@@ -43,7 +41,7 @@ Search :mag: at the top of this page is useful to find attributes and message me
 <h2>Attributes</h2>
 <dl>
 {%- for item in site.max -%}
-  {%- if item.products contains page.title and item.layout == "attribute" -%}
+  {%- if item.categories contains "attribute" and item.products contains page.title -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">@{{- item.title | downcase -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}
@@ -53,7 +51,7 @@ Search :mag: at the top of this page is useful to find attributes and message me
 <h2>Methods</h2>
 <dl>
 {%- for item in site.max -%}
-  {%- if item.products contains page.title and item.layout == "method" -%}
+  {%- if item.categories contains "method" and item.products contains page.title -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title | downcase -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}

@@ -53,6 +53,7 @@ plugins:
   - jemoji
   - jekyll-relative-links
   - jekyll-link-attributes
+  - jekyll-redirect-from
 permalink: pretty
 relative_links:
   collections: true
@@ -111,24 +112,28 @@ defaults:
       type: max
     values:
       layout: attribute
+      categories: attribute
       parent: Attributes
   - scope:
       path: "_max/methods/"
       type: max
     values:
       layout: method
+      categories: method
       parent: Methods
   - scope:
       path: "_max/tutorials/"
       type: max
     values:
       layout: tutorial
+      categories: tutorial
       parent: Tutorials
   - scope:
       path: "_hardware/sensors/"
       type: hardware
     values:
       layout: hardware
+      categories: hardware
       parent: Sensors
 
 # Just the Docs configuration ###################################################

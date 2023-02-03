@@ -58,6 +58,8 @@ GEM
       webrick (~> 1.7)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-relative-links (0.6.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (2.2.0)
@@ -112,6 +114,7 @@ DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-feed (~> 0.12)
   jekyll-link-attributes!
+  jekyll-redirect-from (~> 0.16.0)
   jekyll-relative-links (~> 0.6.1)
   jekyll-sitemap (~> 1.4)
   jemoji (~> 0.12.0)
