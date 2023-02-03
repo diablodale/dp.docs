@@ -17,9 +17,8 @@ usage:
     - "@irtype float32"
 ---
 
-Infrared values in 8-bit unsigned integer, long signed integer, or
-32/64-bit normalized float. Enable infrared output
-with [`@irmap`](irmap.md).
+Infrared (IR) values in 8-bit unsigned integer, long signed integer, or
+32/64-bit normalized float. Enable IR output with [`@irmap`](irmap.md).
 
 * `char` values [0..255] are compact yet result in a slight loss of precision
 * `long` values are signed integers; 32-bit with Max 32-bit, 64-bit with Max 64-bit

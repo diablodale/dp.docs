@@ -17,16 +17,16 @@ usage:
     - "@colorexposure 16666 800   <- 16.6ms exposure, 800 iso"
 ---
 
-Color exposure in microseconds (µs) and ISO sensitivity.
+Color camera exposure in microseconds (µs) and ISO sensitivity.
 
 Each sensor model may have different exposure and ISO ranges.
 Newer sensors and plugins usually have more flexible ranges.
 
 * `auto` is the default; exposure and ISO is automatically chosen.
-* `[1..5000000]` exposure is the length of time the color sensor
+* `[1..5000000]` exposure is the length of time the color camera
   receives light to create one frame. Time is measured in
   microseconds, except for [dp.kinect](#dpkinect).
-* `[100..1600]` ISO is the sensitivity to light of the color sensor.
+* `[100..1600]` ISO is the sensitivity to light of the color camera.
 
 ## dp.kinect
 
