@@ -18,5 +18,5 @@
    registration name is usually _not your email address_.
 5. Click the register button and use the dialog box that appears to select
    your {{ page.title }} registration key (.dpreg file)
-6. You should see a successful registration in the Max console window. If not,
-   look at the Max console for any warnings or errors.
+6. You should see a successful registration. If not, please look at the Max console
+   for any warnings or errors.
