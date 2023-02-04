@@ -8,12 +8,13 @@ layout: page
 
 {{- page.title | strip | escape }} is a plugin for the
 <a href="https://cycling74.com/">Cycling '74 Max</a>
-development environment to use your
+development environment to use the
 {% for hw_item in page.compatible_hardware -%}
+  {%- if forloop.last and page.compatible_hardware.size > 1 %} and {% endif -%}
   <a href="{{- site.baseurl -}}/hardware/{{- hw_item.slug -}}">{{- hw_item.name -}}</a>
-{%- unless forloop.last %}, {% endunless -%}
+  {%- unless forloop.last or page.compatible_hardware.size < 3 %}, {% endunless -%}
 {%- endfor %}
-with your Windows computer.
+with a Windows computer.
 
 {{- content -}}
 
