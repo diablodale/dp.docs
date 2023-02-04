@@ -12,14 +12,14 @@ permalink: /
 <div style="display: flex; flex-wrap: wrap;">
 
 <div style="margin-right: 3em;">
-<h2 id="get-started" style="margin-top: 0;">:running_woman: Get started</h2>
+<h2 id="get-started" class="h-underline" style="margin-top: 0;">:running_woman: Get started</h2>
 <ul>
 <li><a href="https://hidale.com">Downloads, trials, licenses</a></li>
 <li>Setup
 {%- include build-collection-products.html -%}
 {%- for product in products -%}
 {%- if forloop.first -%}<ul>{%- endif -%}
-<li><a href="max/{{ product | slugize }}/#setup">{{- product -}}</a></li>
+<li><a href="max/{{ product | slugize }}/#get-started">{{- product -}}</a></li>
 {%- if forloop.last -%}</ul>{%- endif -%}
 {%- endfor -%}
 </li>
@@ -27,7 +27,7 @@ permalink: /
 </div>
 
 <div style="margin-right: 3em;">
-<h2 id="learn" style="margin-top: 0;">:open_book: Learn</h2>
+<h2 id="learn" class="h-underline" style="margin-top: 0;">:open_book: Learn</h2>
 
 * [Tutorials](/_max/tutorials.md)
 * [Attribute](/_max/attributes.md) reference
@@ -35,7 +35,7 @@ permalink: /
 </div>
 </div>
 
-## :dart: Updates
+<h2 id="updates" class="h-underline">:dart: Updates</h2>
 
 The new documentation is almost complete 🙂
 

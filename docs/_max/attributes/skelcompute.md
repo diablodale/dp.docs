@@ -8,12 +8,12 @@ usage:
   signature: "ENGINE_STRING [ DEVICE_SUBSTRING | INDEX_INT ]"
   values: "directml 0 (default)"
   examples:
-    - "@skelcompute directml        <- DirectML with first gpu"
-    - "@skelcompute directml 1      <- DirectML with second gpu"
-    - "@skelcompute directml intel  <- DirectML with gpu named intel"
-    - "@skelcompute cuda            <- CUDA with the first NVIDIA gpu"
-    - "@skelcompute tensor          <- TensorRT with the first NVIDIA gpu"
-    - "@skelcompute tensor_fp16     <- TensorRT with the first NVIDIA gpu, 16-bit floating point"
+    - "@skelcompute directml        <- DirectML, first gpu"
+    - "@skelcompute directml 1      <- DirectML, second gpu"
+    - "@skelcompute directml intel  <- DirectML, \"intel\" gpu"
+    - "@skelcompute cuda            <- CUDA, first NVIDIA gpu"
+    - "@skelcompute tensor          <- TensorRT, first NVIDIA gpu"
+    - "@skelcompute tensor_fp16     <- TensorRT, NVIDIA gpu, float16"
 ---
 
 Skeleton tracking compute engine and device.
@@ -21,10 +21,10 @@ Enable multiple compute devices for different tasks using attributes like
 [@skelcompute](skelcompute.md), [@decodercolor](decodercolor.md), and [@opencl](opencl.md).
 For example...
 
- * Track skeleton joints on the discrete NVIDIA GPU `@skelcompute nvidia`
- * Decode color frames on the Intel CPU harware decoder `@decodercolor intelmedia`
- * Flip and undistort frames on integrated Intel GPU `@opencl intel`
- * and the remaining features run on your CPU
+* Track skeleton joints on the discrete NVIDIA GPU `@skelcompute nvidia`
+* Decode color frames on the Intel CPU harware decoder `@decodercolor intelmedia`
+* Flip and undistort frames on integrated Intel GPU `@opencl intel`
+* and the remaining features run on your CPU
 
 Test to discover which settings meet your needs for hardware, latency, and throughput.
 You can have significant performance improvements! :smile:

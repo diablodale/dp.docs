@@ -6,7 +6,7 @@ layout: page
   <img alt="{{- page.compatible_hardware[0].name | escape -}}" src="{{- site.baseurl -}}/assets/hardware/{{- page.compatible_hardware[0].slug -}}.jpg"/>
 </header>
 
-{{- page.title | strip | escape }} is a plugin for the
+<p>{{- page.title | strip | escape }} is a plugin for the
 <a href="https://cycling74.com/">Cycling '74 Max</a>
 development environment to use the
 {% for hw_item in page.compatible_hardware -%}
@@ -15,18 +15,20 @@ development environment to use the
   {%- unless forloop.last or page.compatible_hardware.size < 3 %}, {% endunless -%}
 {%- endfor %}
 with a Windows computer.
+</p>
 
-{{- content -}}
-
-<h2 id="download">Downloads and licenses</h2>
+<h2 id="get-started" class="h-underline">:running_woman: Get started</h2>
+<h3 id="download">Downloads and licenses</h3>
 
 <a href="https://hidale.com/shop/{{- page.title | slugify -}}/">Downloads and license purchase at the store</a>
 
-<h2>Setup</h2>
+{{- content -}}
 
-<a href="https://github.com/diablodale/{{- page.title -}}/wiki">Setup, registration, hardware requirements</a>
+<h2 id="learn" class="h-underline">:open_book: Learn</h2>
+Use search <a href="#search-input">:mag:</a> at the top or all below to find
+tutorials, features, attributes, methods, and more.
 
-<h2>Tutorials</h2>
+<h3>Tutorials</h3>
 <dl>
 {%- for item in site.max -%}
   {%- if item.categories contains "tutorial" and item.products contains page.title -%}
@@ -36,10 +38,7 @@ with a Windows computer.
 {%- endfor -%}
 </dl>
 
-<hr/>
-Search :mag: at the top of this page is useful to find attributes and message methods.
-
-<h2>Attributes</h2>
+<h3>Attributes</h3>
 <dl>
 {%- for item in site.max -%}
   {%- if item.categories contains "attribute" and item.products contains page.title -%}
@@ -49,7 +48,7 @@ Search :mag: at the top of this page is useful to find attributes and message me
 {%- endfor -%}
 </dl>
 
-<h2>Methods</h2>
+<h3>Methods</h3>
 <dl>
 {%- for item in site.max -%}
   {%- if item.categories contains "method" and item.products contains page.title -%}
