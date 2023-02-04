@@ -18,4 +18,4 @@ All plugins do not support all feature methods.
 * Method documentation pages list supported plugins :electric_plug: at the top.
 * Click a plugin name in this documentation or the navigation menu. The plugin
   page lists all supported feature methods.
-* Right-click on the plugin's inlet in your Max patch. Max will list all methods for that plugin.
+* Right-click on the plugin's inlet in a Max patch. Max will list all methods for that plugin.

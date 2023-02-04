@@ -17,4 +17,4 @@ All plugins do not support all feature attributes.
 * Attribute documentation pages list supported plugins :electric_plug: at the top.
 * Click a plugin name in this documentation or the navigation menu. The plugin
   page lists all supported feature attributes.
-* Max Inspector lists attributes for your installed plugin
+* Max Inspector lists attributes for any plugin selected in a Max patch.
