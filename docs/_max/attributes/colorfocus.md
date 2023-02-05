@@ -17,11 +17,17 @@ usage:
 Color camera focus position; automatic or manual.
 
 Each sensor model may have a different color focus range that
-allows for near and far-focus. Many sensors (all Microsoft Kinect
-models, some OAK models, etc.) have fixed-focus color cameras.
+allows for near and far-focus. Many sensors, e.g. all Microsoft Kinect
+models, have fixed-focus color cameras.
 `@colorfocus` is ignored on fixed-focus cameras.
 
 * `auto` is the default; focus position is automatically chosen
 * `[0.0..1.0]` is a normalized float for a manual focus position;
   `0.0` is far-focus position, `1.0` is near-focus position.
   Values between are sensor-specific and may not be linear.
+
+## dp.oak
+
+Luxonis OAK sensors are available with [automatic or fixed-focus
+lenses](https://docs.luxonis.com/projects/hardware/en/latest/pages/guides/af_ff.html).
+Consider the trade-offs and benefits of each.

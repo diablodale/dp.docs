@@ -8,11 +8,17 @@
 
 ### Register
 
+{% if include.mutate contains "storetrial" -%}
+1. Visit <https://hidale.com/shop/{{- page.title | slugify -}}/> to get a no-cost license for pre-production releases.
+{%- else -%}
 1. You can evaluate {{ page.title }} with a two week free trial. When you like the plugin
    and want to use it more, please visit <https://hidale.com/shop/{{- page.title | slugify -}}/>
    to purchase a license from the store.
+{%- endif %}
 2. Open the help file or patch included within the {{ page.title }} download.
 3. Click the top-left `Register` tab.
+{% if include.mutate contains "storetrial" -%}3. Ignore the trial button.
+{% endif -%}
 4. Type your registration name in the field beside the register button. You
    received your registration name in an email from the online store. Hint: your
    registration name is usually _not your email address_.
