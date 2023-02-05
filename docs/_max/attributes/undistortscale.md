@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "[-1.0 - 1.0]"

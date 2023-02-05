@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "CONFIDENCE_FLOAT"

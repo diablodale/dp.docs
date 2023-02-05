@@ -1,7 +1,7 @@
 ---
 products:
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "COLOR_BOOLEAN"
@@ -16,8 +16,8 @@ Face and hair color for each tracked face. Output on the fifth outlet.
 [`@faces`](faces.md) must be enabled for this face tracking feature to function.
 It also requires a [captured face model](faces.md#face-model).
 
-Microsoft's [Kinect v2]({{- site.baseurl -}}/hardware/sensors/kinect-v2/) SDK
-used by [`dp.kinect2`](../../dp.kinect2/) derives the face and hair color
+Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
+used by [`dp.kinect2`](../dp.kinect2.md) derives the face and hair color
 by building a [face 3D model](face3dmodel.md#dpkinect2) and distinguishing
 the colors on that model. Results are affected by environment conditions,
 distance from the sensor, and often not high-quality.

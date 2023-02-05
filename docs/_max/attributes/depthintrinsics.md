@@ -3,7 +3,7 @@ products:
   - dp.kinect2
   #- dp.kinect3
   #- dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "FOCAL_X FOCAL_Y PP_X PP_Y RADIAL_K1 RADIAL_K2 RADIAL_K3"
@@ -12,7 +12,7 @@ usage:
     - "depthintrinsics 365.1 365.1 254.9 205.6 -0.283 0.0991 0.0976"
 ---
 
-Depth camera intrinsics for [`dp.kinect2`](../../dp.kinect2/) as a list of
+Depth camera intrinsics for [`dp.kinect2`](../dp.kinect2.md) as a list of
 [seven floats](https://msdn.microsoft.com/en-us/library/microsoft.kinect.kinect.cameraintrinsics.aspx).
 Read-only. The `RADIAL_K` parameters model radial distortion using the
 [Brown–Conrady and Division models](https://en.wikipedia.org/wiki/Distortion_%28optics%29#Software_correction).

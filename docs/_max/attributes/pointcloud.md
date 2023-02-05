@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual
 usage:
   signature: "{POINTCLOUD_STRING | POINTCLOUD_INT}"

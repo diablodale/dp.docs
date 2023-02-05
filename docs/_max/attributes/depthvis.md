@@ -3,7 +3,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "MILLIMETERS_INT"
@@ -16,6 +16,6 @@ Depth visibility filter removes [double images and edge artifacts](align.md#arti
 in image matrices. The default of 50mm identifies and removes obstructed pixels
 in common situations.
 
-Set `@depthvis 0` to disable this filter or simulate [dp.kinect](../../dp.kinect/) behavior.
+Set `@depthvis 0` to disable this filter or simulate [dp.kinect](../dp.kinect.md) behavior.
 
 > :memo: Plugin versions v1.2.20200629 and newer support this feature.

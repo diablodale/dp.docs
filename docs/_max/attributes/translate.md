@@ -1,7 +1,7 @@
 ---
 products:
   - dp.kinect
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "X_FLOAT Y_FLOAT Z_FLOAT"

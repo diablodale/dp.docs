@@ -3,7 +3,7 @@ products:
   - dp.kinect
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - camera control
 usage:
   signature: "{ auto | [1000...12000]}"
@@ -27,7 +27,7 @@ Newer sensors and plugins usually have more flexible ranges.
 
 ## dp.kinect
 
-[`dp.kinect`](../../dp.kinect/) white balance range is `[2700..6500]` Kelvin.
+[`dp.kinect`](../dp.kinect.md) white balance range is `[2700..6500]` Kelvin.
 Its default is automatic white balance. To set a specific white temperature,
 disable automatic and then set the temperature,
 e.g. `@autowhitebalance 0 @whitebalance 4000`.

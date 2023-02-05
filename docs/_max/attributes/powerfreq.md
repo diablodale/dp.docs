@@ -3,7 +3,7 @@ products:
   - dp.kinect
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - camera control
 usage:
   signature: "{ FILTER_INT | POWER_FREQUENCY }"
@@ -28,6 +28,6 @@ Reduce video banding and flicker related to regional
 
 ## dp.kinect3
 
-Microsoft [Azure Kinect]({{- site.baseurl -}}/hardware/sensors/kinect-v3/)
+Microsoft [Azure Kinect](../../_hardware/sensors/kinect-v3.md)
 sensor always applies a power frequency filter and can not be disabled.
 The default is 60 Hz. Change it to 50 Hz with `@powerfreq 50`.

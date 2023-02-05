@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "{ROTATE_STRING | ROTATE_INT}"
@@ -21,7 +21,7 @@ Rotate data to compensate for gravity. This compensation
 is combined with rotations from jit.anim.node, [`@quat`](quat.md), [`@rotate`](rotate.md),
 and [`@rotatexyz`](rotatexyz.md).
 
-> :memo: `@rotatemethod 1` by elevation is emulated in [dp.kinect2](../../dp.kinect2/)
+> :memo: `@rotatemethod 1` by elevation is emulated in [dp.kinect2](../dp.kinect2.md)
 > and removed from all v1.3 and newer plugins.
 
 > :memo: This feature is only supported on sensors with an

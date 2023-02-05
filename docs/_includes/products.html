@@ -1,7 +1,7 @@
 {%- if include.products[0] -%}
     <span>:electric_plug:
     {% for product in include.products -%}
-        <a href="{{site.baseurl}}/max/{{- product | slugize -}}/"><code>{{- product | downcase -}}</code></a>
+        <a href="{{site.baseurl}}/max/{{- product | slugify -}}"><code>{{- product | downcase -}}</code></a>
         {%- unless forloop.last -%}&nbsp;{%- endunless -%}
     {%- endfor -%}
     </span>

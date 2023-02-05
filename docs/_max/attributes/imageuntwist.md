@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - physical
 usage:
   signature: "UNTWIST_BOOLEAN"

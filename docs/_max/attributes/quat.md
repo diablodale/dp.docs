@@ -3,7 +3,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "I_FLOAT J_FLOAT K_FLOAT W_FLOAT"

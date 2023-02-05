@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - physical
 usage:
   signature: "ID_STRING"
@@ -19,9 +19,9 @@ Get the list of supported Kinect sensors with [`getusbidlist`](../methods/getusb
 
 Microsoft Kinect sensors have limitations
 
-* Microsoft's [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) SDK identifiers
+* Microsoft's [Kinect v1](../../_hardware/sensors/kinect-v1.md) SDK identifiers
   are USB connection strings. The identifiers change when the USB ports change.
-* Microsoft's [Kinect v2]({{- site.baseurl -}}/hardware/sensors/kinect-v2/) SDK only
+* Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK only
   supports one single Kinect v2 per host computer. Its identifier is always `defaultkinectid`.
 
 > :memo: Plugins v1.3.20210818 and newer use instead [`@idsensor`](idsensor.md)

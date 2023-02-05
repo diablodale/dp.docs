@@ -2,7 +2,7 @@
 redirect_to: /max/attributes/whitebalance/#dpkinect
 products:
   - dp.kinect
-categories:
+tags:
   - camera control
 ---
 

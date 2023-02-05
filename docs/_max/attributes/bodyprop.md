@@ -1,7 +1,7 @@
 ---
 products:
   - dp.kinect2
-categories:
+tags:
   - visual
 usage:
   signature: "BODYPROP_BOOLEAN"

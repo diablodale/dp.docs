@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "2DPOINTS_INT"
@@ -37,7 +37,7 @@ u1 v1 u2 v2 u3 v3...
 
 ### dp.kinect detailed points (1)
 
-[`dp.kinect`](../../dp.kinect/) with `@face2dpoints 1` enables output of 100 2D-points in color-space
+[`dp.kinect`](../dp.kinect.md) with `@face2dpoints 1` enables output of 100 2D-points in color-space
 that describe the face. The first 87 points are correctly shown in
 [Microsoft's documentation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj130970(v=ieb.10)#face-tracking-outputs).
 However, Microsoft is wrong about the last 13 points. The correct key points are
@@ -53,7 +53,7 @@ However, Microsoft is wrong about the last 13 points. The correct key points are
 
 ### dp.kinect2 basic points (2)
 
-[`dp.kinect2`](../../dp.kinect2/) with `@face2dpoints 2` enables output of 5 basic 2D-points that describe the face.
+[`dp.kinect2`](../dp.kinect2.md) with `@face2dpoints 2` enables output of 5 basic 2D-points that describe the face.
 Since there are 5 key points, the `points2d` and `points2ddepth` messages will both have 10 integers.
 
 ```
@@ -66,7 +66,7 @@ right mouth corner
 
 ### dp.kinect2 detailed points (3)
 
-[`dp.kinect2`](../../dp.kinect2/) with `@face2dpoints 3` enables output of 35 detailed 2D-points that describe the face.
+[`dp.kinect2`](../dp.kinect2.md) with `@face2dpoints 3` enables output of 35 detailed 2D-points that describe the face.
 These detailed points require a [face model](faces.md#face-model).
 Since there are 35 key points, the `points2d` and `points2ddepth` messages will both have 70 integers.
 

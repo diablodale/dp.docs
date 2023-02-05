@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "[ID1_STRING [ID2_STRING...]]"
@@ -46,7 +46,7 @@ ports 4580030408629 sync-in 0
 
 ## dp.kinect3
 
-[`dp.kinect3`](../../dp.kinect3/) has two
+[`dp.kinect3`](../dp.kinect3.md) has two
 [synchronization ports](https://learn.microsoft.com/en-US/azure/Kinect-dk/multi-camera-sync)
 
 sync-out

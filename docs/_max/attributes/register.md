@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - registration
 usage:
   signature: "REGISTRATION_NAME [DPREG_FILE]"
@@ -81,5 +81,5 @@ the Max Inspector, a Max [attrui](https://docs.cycling74.com/max7/refpages/attru
 or sending `getregister` to the first inlet of the plugin to receive
 a message for success `register 1` or failure `register 0` at dumpout.
 
-> :memo: [`dp.kinect`](../../dp.kinect/) does not support getting the value
+> :memo: [`dp.kinect`](../dp.kinect.md) does not support getting the value
 > of the `register` attribute.

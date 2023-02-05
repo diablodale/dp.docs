@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - physical
 usage:
   signature: X_FLOAT Y_FLOAT Z_FLOAT I_FLOAT J_FLOAT K_FLOAT
@@ -50,7 +50,7 @@ Render an OpenGL plane that visually matches the physical floor identified.
 
 ### dp.kinect, dp.kinect2 floor equation
 
-[`dp.kinect`](../../dp.kinect/) and [`dp.kinect2`](../../dp.kinect2/) use
+[`dp.kinect`](../dp.kinect.md) and [`dp.kinect2`](../dp.kinect2.md) use
 Microsoft Kinect SDKs that describe their floor clipping plane as an equation.
 
 ```

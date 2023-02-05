@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "X_FLOAT Y_FLOAT Z_FLOAT [0.0]"

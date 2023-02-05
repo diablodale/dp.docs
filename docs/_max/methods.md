@@ -3,7 +3,7 @@ layout: page
 has_children: true
 toc_heading: "Use search <a href=\"#search-input\">:mag:</a> at the top or all below to find tutorials, features, attributes, methods, and more."
 ---
-<h1>{{- page.title | escape -}}</h1>
+<h1 id="reference">:open_book: Method Reference</h1>
 
 Our plugins support the normal compliment of Max and Jitter methods with
 messages like `getattributes`, `summary`, `getstate`, etc. They also

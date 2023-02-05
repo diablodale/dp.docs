@@ -1,7 +1,7 @@
 ---
 products:
   - dp.oak
-categories:
+tags:
   - camera control
 usage:
   signature: "{ auto | EXPOSURE_INT } [{auto | ISO_INTEGER }]"

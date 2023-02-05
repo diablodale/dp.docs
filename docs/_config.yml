@@ -103,8 +103,11 @@ exclude:
 collections:
   max:
     output: true
+    permalink: /:collection/:slugified_categories/:name
+
   hardware:
     output: true
+    permalink: /:collection/:slugified_categories/:name
 
 defaults:
   - scope:
@@ -112,21 +115,21 @@ defaults:
       type: max
     values:
       layout: attribute
-      categories: attribute
+      categories: attributes
       parent: Attributes
   - scope:
       path: "_max/methods/"
       type: max
     values:
       layout: method
-      categories: method
+      categories: methods
       parent: Methods
   - scope:
       path: "_max/tutorials/"
       type: max
     values:
       layout: tutorial
-      categories: tutorial
+      categories: tutorials
       parent: Tutorials
   - scope:
       path: "_hardware/sensors/"

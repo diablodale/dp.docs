@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "FACES_INT"
@@ -29,8 +29,8 @@ The face 3D model can be scaled, translated, and rotated using [`face pose`](fac
 
 ### dp.kinect
 
-Microsoft's [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) SDK
-used by [`dp.kinect`](../../dp.kinect/) has
+Microsoft's [Kinect v1](../../_hardware/sensors/kinect-v1.md) SDK
+used by [`dp.kinect`](../dp.kinect.md) has
 [insufficient documentation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj130970(v=ieb.10)#face-tracking-outputs)
 for its face 3D model. Microsoft hints it is based on the [Candide-3 model](http://www.icg.isy.liu.se/candide/).
 
@@ -38,8 +38,8 @@ for its face 3D model. Microsoft hints it is based on the [Candide-3 model](http
 
 ### dp.kinect2
 
-Microsoft's [Kinect v2]({{- site.baseurl -}}/hardware/sensors/kinect-v2/) SDK
-used by [`dp.kinect2`](../../dp.kinect2/) has
+Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
+used by [`dp.kinect2`](../dp.kinect2.md) has
 [insufficient documentation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn785525(v=ieb.10)#face-model)
 for its face 3D model. The model has 1347 vertices that make 2630 triangles.
 It is not based on the Candide-3 model. It requires a [captured face model](faces.md#face-model).

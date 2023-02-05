@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   #- dp.kinect3
   #- dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "HORIZ_FLOAT VERT_FLOAT DIAG_FLOAT"

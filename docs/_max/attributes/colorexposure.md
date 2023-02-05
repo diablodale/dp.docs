@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - camera control
 usage:
   signature: "{ auto | EXPOSURE_NUM } [{auto | ISO_INTEGER }]"
@@ -30,7 +30,7 @@ Newer sensors and plugins usually have more flexible ranges.
 
 ## dp.kinect
 
-[`dp.kinect`](../../dp.kinect/) uses the old attribute `@exposure`
+[`dp.kinect`](../dp.kinect.md) uses the old attribute `@exposure`
 to set color exposure time. The default is automatic color exposure.
 To set a specific color exposure, disable automatic color exposure
 and then set the exposure, e.g. `@autoexposure 0 @exposure 166`.

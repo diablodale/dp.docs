@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "{ DECODER_NAME | INDEX_INT }"

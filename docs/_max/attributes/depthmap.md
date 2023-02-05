@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual
 usage:
   signature: "DEPTHOUT_INT"
@@ -20,5 +20,5 @@ Depth output on the first outlet. This combined with resolution
 [`@depthmapres`](depthmapres.md) and depth value type [`@type`](type.md) define
 the memory layout of depth data.
 
-> :memo: [dp.kinect](../../dp.kinect/) requires `@depthmap 2` to calculate the
+> :memo: [dp.kinect](../dp.kinect.md) requires `@depthmap 2` to calculate the
 > [`@playermap`](playermap.md).

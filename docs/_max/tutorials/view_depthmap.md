@@ -10,7 +10,7 @@ products:
 Learn how to view depth data (depthmap) as a monochrome image.
 A depthmap represents the distance to surfaces at every pixel from your sensor.
 
-> :memo: This tutorial uses the [`dp.kinect2`](../../dp.kinect2/) plugin. Substitute the
+> :memo: This tutorial uses the [`dp.kinect2`](../dp.kinect2.md) plugin. Substitute the
 > name of your own sensor plugin. For example, if you have an OAK sensor, type `dp.oak` instead.
 
 1. Create a new blank patch

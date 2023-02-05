@@ -32,7 +32,7 @@ tutorials, features, attributes, methods, and more.
 <h3>Tutorials</h3>
 <dl>
 {%- for item in site.max -%}
-  {%- if item.categories contains "tutorial" and item.products contains page.title -%}
+  {%- if item.categories contains "tutorials" and item.products contains page.title -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}
@@ -42,7 +42,7 @@ tutorials, features, attributes, methods, and more.
 <h3>Attributes</h3>
 <dl>
 {%- for item in site.max -%}
-  {%- if item.categories contains "attribute" and item.products contains page.title -%}
+  {%- if item.categories contains "attributes" and item.products contains page.title -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">@{{- item.title | downcase -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}
@@ -52,7 +52,7 @@ tutorials, features, attributes, methods, and more.
 <h3>Methods</h3>
 <dl>
 {%- for item in site.max -%}
-  {%- if item.categories contains "method" and item.products contains page.title -%}
+  {%- if item.categories contains "methods" and item.products contains page.title -%}
   <dt><a href="{{ site.baseurl }}{{ item.url }}">{{- item.title | downcase -}}</a></dt>
   <dd>{{- item.excerpt | strip_html | normalize_whitespace | truncate: 75 -}}</dd>
   {%- endif -%}

@@ -1,7 +1,7 @@
 ---
 products:
   - dp.kinect
-categories:
+tags:
   - audio
 usage:
   signature: "INT"

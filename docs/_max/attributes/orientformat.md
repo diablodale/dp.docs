@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "{FORMAT_STRING | FORMAT_INT}"
@@ -49,5 +49,5 @@ a *hierarchical* rotation coordinate space. Details on the orientation can be fo
 > :memo: When migrating from jit.openni, the orientation data has changed. The rotations are *not*
 > relative to a T-pose. This change must be managed by your Max patch.
 
-> :warning: [`dp.kinect`](../../dp.kinect/) default orientation format is
+> :warning: [`dp.kinect`](../dp.kinect.md) default orientation format is
 > `0` quaternion hierarchical

@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "SMOOTH_FLOAT1 [SMOOTH_FLOAT2 SMOOTH_FLOAT3 SMOOTH_FLOAT4 SMOOTH_FLOAT5]"

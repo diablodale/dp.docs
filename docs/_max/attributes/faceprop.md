@@ -1,7 +1,7 @@
 ---
 products:
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "FACEPROP_BOOLEAN"
@@ -16,7 +16,7 @@ Face properties for the appearance or state of a tracked face.
 Output on the fifth outlet. [`@faces`](faces.md) must be enabled for this face
 tracking feature to function.
 
-Microsoft's Kinect v2 SDK used by [`dp.kinect2`](../../dp.kinect2/) provides
+Microsoft's Kinect v2 SDK used by [`dp.kinect2`](../dp.kinect2.md) provides
 [details on these face properties](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782034(v=ieb.10)#face-properties).
 These properties may be noisy and benefit from a filter or smoothing.
 

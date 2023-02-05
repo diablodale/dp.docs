@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "FACES_INT"
@@ -23,12 +23,12 @@ Face messages and values are affected by [`@skeletonformat`](skeletonformat.md),
 rotated by gravity or elevation. Use [jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node)
 or custom calculations when that is needed.
 
-[`dp.kinect`](../../dp.kinect/) with Microsoft's [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) SDK
+[`dp.kinect`](../dp.kinect.md) with Microsoft's [Kinect v1](../../_hardware/sensors/kinect-v1.md) SDK
 tracks a maximum of two (2) faces on tracked skeletons. Yet, their SDK can track six skeletons.
 It is not possible for their SDK to track all faces on all skeletons.
 Use `@faces 2` to track the maximum two.
 
-[`dp.kinect2`](../../dp.kinect2/) with Microsoft's [Kinect v2]({{- site.baseurl -}}/hardware/sensors/kinect-v2/) SDK
+[`dp.kinect2`](../dp.kinect2.md) with Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
 can track faces on all tracked skeletons. Use `@faces 1` to track all faces.
 
 > :warning: Kinect v2 face [2D keypoints](face2dpoints.md), 3D model,

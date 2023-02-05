@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual adjustment
 usage:
   signature: "BITFIELD_INT"
@@ -21,7 +21,7 @@ Filter matrix pixels by tracked skeletons. Filtered pixels are zero-like.
 Possible values are a [4-bit field](#bitfield) represented as an integer [0..15] allowing
 all combinations of the four matrix outputs to be filtered.
 
-> :memo: [dp.kinect](../../dp.kinect/) plugin only filters depthmap
+> :memo: [dp.kinect](../dp.kinect.md) plugin only filters depthmap
 
 ## Filter bitfield values {#bitfield}
 

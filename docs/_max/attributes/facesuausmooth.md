@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "SMOOTH_FLOAT1 SMOOTH_FLOAT2 SMOOTH_FLOAT3 SMOOTH_FLOAT4 SMOOTH_FLOAT5"

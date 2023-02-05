@@ -1,7 +1,7 @@
 ---
 products:
   - dp.kinect3
-categories:
+tags:
   - physical
 usage:
   signature: "[0..1000000]"

@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - camera control
 usage:
   signature: "IRDOT_FLOAT"

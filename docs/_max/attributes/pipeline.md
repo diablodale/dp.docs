@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "PIPELINE_STRING"
@@ -69,7 +69,7 @@ triggered with a `bang` at 60 Hz using a clock like `(qmetro 60 hz)`. Use
 `sequent` creates output using one thread in sequence.
 Output is from the raw data gotten from the sensor with that raw data's timestamp.
 This is the behavior for plugins before version v1.3.20210105 including
-[dp.kinect](../../dp.kinect/) and [dp.kinect2](../../dp.kinect2/).
+[dp.kinect](../dp.kinect.md) and [dp.kinect2](../dp.kinect2.md).
 
 1. `bang` is the trigger
 2. Get raw data from the sensor

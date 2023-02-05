@@ -2,7 +2,7 @@
 products:
   - dp.kinect
   - dp.kinect2
-categories:
+tags:
   - face
 usage:
   signature: "SUAU_INT"
@@ -45,8 +45,8 @@ au1 au2...
 
 ### dp.kinect
 
-[`dp.kinect`](../../dp.kinect/) with Microsoft's
-[Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) SDK deforms the face
+[`dp.kinect`](../dp.kinect.md) with Microsoft's
+[Kinect v1](../../_hardware/sensors/kinect-v1.md) SDK deforms the face
 model using shape units (SU) and animation units (AU) roughly based on the
 [Candide-3 model](http://www.icg.isy.liu.se/candide/).
 
@@ -61,7 +61,7 @@ Details of Kinect v1 SDK SUs and AUs are in
 
 ### dp.kinect2
 
-Microsoft's [Kinect v2]({{- site.baseurl -}}/hardware/sensors/kinect-v2/) SDK
+Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
 face model is Microsoft-proprietary and has insufficient documentation.
 Microsoft did not align with the Candide-3 model or maintain any compatibility
 with Kinect v1.

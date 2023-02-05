@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   #- dp.oak
-categories:
+tags:
   - visual
 usage:
   signature: "PLAYEROUT_INT"
@@ -27,5 +27,5 @@ detected. This can be done automatically using [`@depthonlyplayers`](depthonlypl
 The depthmap, IR, playermap, and pointcloud matrices align with each
 other by default. Use [`@align`](align.md) to also align and match the color data.
 
-> :memo: [dp.kinect](../../dp.kinect/) requires [`@depthmap 2`](depthmap.md)
+> :memo: [dp.kinect](../dp.kinect.md) requires [`@depthmap 2`](depthmap.md)
 > to calculate this playermap.

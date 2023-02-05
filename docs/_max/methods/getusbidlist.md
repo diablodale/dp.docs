@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: ""
@@ -18,9 +18,9 @@ usage:
 Output supported sensor identifiers on the dumpout outlet. These
 identifiers are used with [`@idsensor`](../attributes/idsensor.md).
 
-* [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) hardware SDK identifiers
+* [Kinect v1](../../_hardware/sensors/kinect-v1.md) hardware SDK identifiers
   are USB connection strings. The identifiers change when the USB ports change.
-* [Kinect v2]({{- site.baseurl -}}/hardware/sensors/kinect-v2/) hardware SDK only
+* [Kinect v2](../../_hardware/sensors/kinect-v2.md) hardware SDK only
   supports one (1) Kinect per host computer. Its single identifier is always `defaultkinectid`.
 * Newer sensors use their internal serial number as the identifier.
 

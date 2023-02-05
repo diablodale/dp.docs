@@ -4,7 +4,7 @@ products:
   - dp.kinect2
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - visual
 usage:
   signature: "{INT | off | argb | uyvy | rgb | rgba}"
@@ -29,7 +29,7 @@ When banding or flickering is seen, try the [`@powerfreq`](powerfreq.md) filter.
 
 > :memo: Plugin versions v1.3.20210429 and newer support using value names like `rgb` and `argb`.
 
-> :memo: [Kinect v1]({{- site.baseurl -}}/hardware/sensors/kinect-v1/) hardware
+> :memo: [Kinect v1](../../_hardware/sensors/kinect-v1.md) hardware
 > does not have enough USB bandwidth to output color and infrared data at the same time.
 
 > :warning: All known versions of Max incorrectly process and display

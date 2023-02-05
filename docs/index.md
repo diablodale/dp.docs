@@ -16,7 +16,7 @@ permalink: /
 <ul>
 {%- include build-collection-products.html -%}
 {%- for product in products -%}
-<li><a href="max/{{ product | slugize }}/#get-started">{{- product -}}</a></li>
+<li><a href="max/{{ product | slugify }}">{{- product -}}</a></li>
 {%- endfor -%}
 </ul>
 </div>
@@ -26,6 +26,7 @@ permalink: /
 
 * [Tutorials](/_max/tutorials.md)
 * [Attribute](/_max/attributes.md) reference
+* [Method](/_max/methods.md) reference
   
 </div>
 

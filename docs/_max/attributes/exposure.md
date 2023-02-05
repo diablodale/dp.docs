@@ -2,7 +2,7 @@
 redirect_to: /max/attributes/colorexposure/#dpkinect
 products:
   - dp.kinect
-categories:
+tags:
   - camera control
 ---
 

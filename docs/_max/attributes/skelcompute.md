@@ -2,7 +2,7 @@
 products:
   - dp.kinect3
   - dp.oak
-categories:
+tags:
   - physical
 usage:
   signature: "ENGINE_STRING [ DEVICE_SUBSTRING | INDEX_INT ]"
