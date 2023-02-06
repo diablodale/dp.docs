@@ -1,5 +1,5 @@
 ---
-redirect_to: /max/attributes/colorexposure/#dpkinect
+redirect_to: /max/attributes/colorexposure#dpkinect
 products:
   - dp.kinect
 tags:

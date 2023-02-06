@@ -20,3 +20,6 @@ are calculated and available for read-only.
   The angle is relative to the z-axis, which is perpendicular to the sensor.
 * Confidence value of the estimated angle [0.0 - 1.0], with 1.0 indicating
   the highest confidence
+
+> :memo: [`dp.kinect`](../dp.kinect.md) constantly updates the attribute.
+> [`dp.kinect2`](../dp.kinect2.md) only updates when the plugin is banged.

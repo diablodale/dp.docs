@@ -1,5 +1,5 @@
 ---
-redirect_to: /max/attributes/whitebalance/#dpkinect
+redirect_to: /max/attributes/whitebalance#dpkinect
 products:
   - dp.kinect
 tags:

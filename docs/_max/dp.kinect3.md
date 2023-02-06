@@ -23,6 +23,8 @@ copies of Kinect drivers and files. There are three main groups:
 
 {% include plugin-setup-basic.md %}
 
+{% include plugin-setup-register.md %}
+
 ### Body Tracking Setup
 
 1. Download and install Microsoft's

@@ -29,7 +29,9 @@ of humans. This is different than infrared-laser technology in sensors like Micr
 Only [OAK Pro](https://docs.luxonis.com/projects/hardware/en/latest/pages/articles/oak-s2.html#pro-version)
 sensors have infrared laser dot projectors.
 
-{% include plugin-setup-basic.md mutate="storetrial" %}
+{% include plugin-setup-basic.md %}
+
+{% include plugin-setup-register.md mutate="storetrial" %}
 
 ### Body Tracking Setup
 
@@ -53,14 +55,12 @@ PoE devices need more time to be detected, startup, shut down, and restart.
 It is not unusual to need 5-8 seconds to find a PoE sensor.
 It is not unusual to need 20 seconds after stopping a PoE sensor for that same PoE sensor to be ready again.
 
-> :warning: I caution production use of Luxonis PoE sensors.
-> Issues under investigation include  
-> [PoE can't read data](https://github.com/luxonis/depthai-core/issues/406)  
-> [PoE fails after 6 connections](https://github.com/luxonis/depthai-core/issues/415)  
-> [PoE overloaded on CSS vpu](https://github.com/luxonis/depthai-core/issues/423)
-
 ### Known Issues
 
+* :warning: Luxonis [PoE](#poe) sensors may not meet some quality requirements  
+  [PoE can't read data](https://github.com/luxonis/depthai-core/issues/406)  
+  [PoE fails after 6 connections](https://github.com/luxonis/depthai-core/issues/415)  
+  [PoE overloaded on CSS vpu](https://github.com/luxonis/depthai-core/issues/423)
 * Each time you start Max and load {{ page.title }}, it may have extra lag/latency on
   the depth and color cameras. Stopping and restarting {{ page.title }} often removes the lag. Cause
   under investigation.
