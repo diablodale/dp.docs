@@ -12,33 +12,37 @@ of your left hand relative to your sensor. Then, use that hand position
 to change the color of a panel.
 
 > :memo: This tutorial uses the [`dp.kinect2`](../dp.kinect2.md) plugin. Substitute the
-> name of your own sensor plugin. For example, if you have an OAK sensor, type `dp.oak` instead.
+> name of your own sensor plugin. For example, if you have an OAK sensor,
+> type [`dp.oak`](../dp.oak.md) instead.
 
 1. Create a new blank patch
-2. Create a dp.kinect2 object in your patch with the arguments `@skeleton 1 @skeletonformat 1`.
+2. Create a dp.kinect2 object in your patch with the arguments
+   [`@skeleton 1 @skeletonformat 1`](../attributes/skeleton.md).
    This instructs the dp.kinect2 object to output joint locations and to use a native Max message
    format for that data. OSC format data is also supported and is the default for backwards
    compatibility.
 3. You should not have any red errors in your Max console window. You can view this console window
    using the Windows menu on the toolbar or pressing control+m. If you have errors, please refer
-   to those errors and the [setup guide](https://github.com/diablodale/dp.kinect2/wiki#setup-guide).
-4. Like many objects in Max, dp.kinect2 requires you to `bang` it to receive data from it.
-   If you are not familiar with this, please visit the Max jitter tutorials
-   [online](https://docs.cycling74.com/max8/tutorials/jitindex) or included with Max itself.
-5. Create a toggle object.
-6. Create a qmetro object with the argument `33`. This instructs the qmetro to output a bang
+   to those errors and the [setup guide](../dp.kinect2.md#setup) for your plugin.
+4. Like many objects in Max, dp.kinect2 requires you to [`bang`](../methods/bang.md) the first
+   inlet to output data from it. If you are not familiar with this, please visit the
+   [Max jitter tutorials online](https://docs.cycling74.com/max7/tutorials/jitindex) or within Max.
+5. Create a [toggle](https://docs.cycling74.com/max7/refpages/toggle) object.
+6. Create a [qmetro](https://docs.cycling74.com/max7/refpages/qmetro) object with the argument `33`.
+   This instructs the qmetro to output a bang
    every 33 milliseconds (1/30th of a second). Why this interval? Because, the native framerate
    of most sensors is 1/30th of a second.
 7. Connect the outlet of the toggle to the inlet of the qmetro.
 8. Connect the output of the qmetro to the inlet of the dp.kinect2 object.
-9. Create a message object and make its message `open`.
+9. Create a [message](https://docs.cycling74.com/max7/refpages/message) object and make its message `open`.
 10. Connect the output of the message object to the inlet of the dp.kinect2 object.
     The open message is needed to start/open a connection to your sensor.
-11. Create a route object with the argument `skel`. dp.kinect2 can output many messages
+11. Create a [route](https://docs.cycling74.com/max7/refpages/route) object with the argument `skel`.
+    dp.kinect2 can output many messages
     to provide you with the data you request. The messages with joint locations start with `skel`.
 12. Connect the fifth outlet of dp.kinect2 to the first inlet of route.
-13. Create a zl object with the arguments `slice 1`. The zl object has many features; see the
-    Max documentation to learn about it. We will use it to slice off and ignore the numeric playerId
+13. Create a [zl](https://docs.cycling74.com/max7/refpages/zl) object with the arguments `slice 1`.
+    The zl object has many features. We will use it to slice off and ignore the numeric playerId
     associated with all the data for a person. We do not need the playerId for this tutorial.
 14. Connect the first outlet of route to the first inlet of zl.
 15. Create another route object with the argument `l_hand`. This route object will be used
@@ -78,9 +82,9 @@ luminance of a panel using only your hand.
 4. Connect the first outlet of route to the first inlet of this zl object. This will slice
    the x, y, z, confidence message so that we only have the x and y values.
 5. Create a message object with the arguments `hsl $1 1. $2`.
-6. Create a swatch object.
-7. Create a prepend object with the argument `bgcolor`.
-8. Create a panel object.
+6. Create a [swatch](https://docs.cycling74.com/max7/refpages/swatch) object.
+7. Create a [prepend](https://docs.cycling74.com/max7/refpages/prepend) object with the argument `bgcolor`.
+8. Create a [panel](https://docs.cycling74.com/max7/refpages/panel) object.
 9. Connect zl -> message -> swatch -> prepend -> panel.
 10. Your patch should look similar to this picture  
     ![Max patch with color panel]({{- site.baseurl -}}/assets/max/tutorials/skeleton_joints_3.png)
@@ -97,5 +101,5 @@ first outlet. We then prepend `bgcolor` to that message which can then be unders
 by the panel object.
 
 When you want to learn more, please see the help file included with the plugin download.
-Each section tab of the help file includes comments at key locations of the patch.
-Naturally, the reference documentation is good for technical details.
+Each tab in the help file includes comments at key locations of the patch.
+Naturally, this documentation website is good for technical details.
