@@ -42,7 +42,7 @@ confidence
 : normalized float `[0.0..1.0]` for the confidence of that property.
   `1.0` indicates the highest confidence
 
-### Examples
+## Examples
 
 ```python
 # face on skeleton 2 expresses happiness and sensor is very confident

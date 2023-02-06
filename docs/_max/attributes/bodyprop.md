@@ -56,7 +56,7 @@ confidence
 : normalized float `[0.0..1.0]` for the confidence of that property.
   `1.0` indicates the highest confidence
 
-### Examples
+## Examples
 
 ```python
 # all examples: @bodyprop 1 @skeletonformat 1

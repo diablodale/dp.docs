@@ -24,7 +24,7 @@ PORT
 STATUS
 : sensor-specific status of port
 
-### Examples
+## Examples
 
 ```python
 # send to first inlet of plugin for ports on default sensor

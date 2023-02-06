@@ -43,7 +43,7 @@ su1 su2...
 au1 au2...
 : floats for AUs described below
 
-### dp.kinect
+## dp.kinect
 
 [`dp.kinect`](../dp.kinect.md) with Microsoft's
 [Kinect v1](../../_hardware/sensors/kinect-v1.md) SDK deforms the face
@@ -59,7 +59,7 @@ model using shape units (SU) and animation units (AU) roughly based on the
 Details of Kinect v1 SDK SUs and AUs are in
 [Microsoft documentation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj130970(v=ieb.10)#face-tracking-outputs).
 
-### dp.kinect2
+## dp.kinect2
 
 Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
 face model is Microsoft-proprietary and has insufficient documentation.

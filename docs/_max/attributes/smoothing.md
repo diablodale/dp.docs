@@ -55,10 +55,10 @@ that a filtered position can deviate from raw data. A filtered value that exceed
 clamped at the maximum radius in the direction of the filtered value. Too high a value can
 snap back to noisy data.
 
-### Parameter suggestions
+## Examples
 
 Microsoft's documentation and [smoothing whitepaper](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj131429(v=ieb.10))
-provide three parameter set suggestions
+provide suggestions for the 5-parameter [Holt](#holt) filter.
 
 * `0.5 0.5 0.5 0.05 0.04` some smoothing with little latency; only filters out small jitters,
   good for gesture recognition (this is the default)

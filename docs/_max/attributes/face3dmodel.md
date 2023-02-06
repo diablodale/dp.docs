@@ -27,7 +27,7 @@ The face 3D model can be scaled, translated, and rotated using [`face pose`](fac
 [`@distmeter`](distmeter.md) does not scale face 3D model triangles.
 [`@flipx`](flipx.md) affects winding of triangle vertices.
 
-### dp.kinect
+## dp.kinect
 
 Microsoft's [Kinect v1](../../_hardware/sensors/kinect-v1.md) SDK
 used by [`dp.kinect`](../dp.kinect.md) has
@@ -36,7 +36,7 @@ for its face 3D model. Microsoft hints it is based on the [Candide-3 model](http
 
 ![dp.kinect faces]({{- site.baseurl -}}/assets/max/attributes/face3dmodel-k1-2faces-h300.jpg)
 
-### dp.kinect2
+## dp.kinect2
 
 Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
 used by [`dp.kinect2`](../dp.kinect2.md) has
@@ -46,7 +46,7 @@ It is not based on the Candide-3 model. It requires a [captured face model](face
 
 ![dp.kinect2 face]({{- site.baseurl -}}/assets/max/attributes/face3dmodel-k2-1face-h300.png)
 
-### Triangles list
+## Triangles list
 
 Output a `triangles` list of counterclockwise triangles. Each triangle has 9 coordinate values
 for the three XYZ vertices. The list is extremely long; 9 times the number of triangles.
@@ -71,7 +71,7 @@ t1_v2_x, t1_v2_y, t1_v2_z
 t1_v3_x, t1_v3_y, t1_v3_z
 : float XYZ coordinates in local face coordinate-space for the *third* vertex of triangle `t1`
 
-### Indices and vertices lists
+## Indices and vertices lists
 
 Output an `indices` list and then a `vertices` list of XYZ coordinates in the indices order.
 Each triangle is described by three index values for the three vertices in counterclockwise order.
@@ -103,7 +103,7 @@ t1_v1_idx, t1_v2_idx, t1_v3_idx
 v1_x, v1_y, v1_z
 : float XYZ coordinates for a point in local face coordinate-space
 
-### Triangles matrix
+## Triangles matrix
 
 Output a 3-plane float32 matrix of counterclockwise triangles.
 Sequential groups of three matrix cells (each cell having three planes for XYZ) define
@@ -124,7 +124,7 @@ playerId
 uTriangleName
 : unique name for 3-plane float32 matrix containing triangles
 
-### Indices and vertices matrices
+## Indices and vertices matrices
 
 Output two 3-plane matrices. The `indices` integer matrix is a lookup to find the index'th vertex
 of the `vertices` matrix to create triangles. Each cell of the `vertices` float32 matrix contains

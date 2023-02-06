@@ -35,7 +35,7 @@ u1 v1 u2 v2 u3 v3...
 : `uv` coordinates of face key points 1, 2, 3...
   in `points2d` color-space or `points2ddepth` depth-space
 
-### dp.kinect detailed points (1)
+## dp.kinect detailed points (1)
 
 [`dp.kinect`](../dp.kinect.md) with `@face2dpoints 1` enables output of 100 2D-points in color-space
 that describe the face. The first 87 points are correctly shown in
@@ -51,7 +51,7 @@ However, Microsoft is wrong about the last 13 points. The correct key points are
 `points2d` will have 200 integers since there are 100 key points.  
 `points2ddepth` depth-space coordinates are not supported.
 
-### dp.kinect2 basic points (2)
+## dp.kinect2 basic points (2)
 
 [`dp.kinect2`](../dp.kinect2.md) with `@face2dpoints 2` enables output of 5 basic 2D-points that describe the face.
 Since there are 5 key points, the `points2d` and `points2ddepth` messages will both have 10 integers.
@@ -64,7 +64,7 @@ left mouth corner
 right mouth corner
 ```
 
-### dp.kinect2 detailed points (3)
+## dp.kinect2 detailed points (3)
 
 [`dp.kinect2`](../dp.kinect2.md) with `@face2dpoints 3` enables output of 35 detailed 2D-points that describe the face.
 These detailed points require a [face model](faces.md#face-model).

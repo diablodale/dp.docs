@@ -28,7 +28,7 @@ skelcolor playerId jointname column row confidence
 * `playerId`, `jointname`, and `confidence` are the same as [@skeleton](skeleton.md) output
 * `column, row` are integers that represent the column and row in the colormap image
 
-### Examples
+## Examples
 
 ```python
 # @skeletonformat 0

@@ -12,31 +12,18 @@ usage:
 ---
 
 Floor plane as x, y, z coordinates for a point on the plane
-and i, j, k of a vector normal to the plane. Read only. The floor plane
-identification occurs when [`@skeleton`](skeleton.md) is enabled and
-the values stabilize.
+and i, j, k of a vector normal to the plane. Read only.
 
-Floor values are affected by [`@flipx`](flipx.md) and [`@distmeter`](distmeter.md).
+Floor plane identification occurs when [`@skeleton`](skeleton.md) is enabled and
+values stabilize. Floor values are affected by [`@flipx`](flipx.md)
+and [`@distmeter`](distmeter.md). Enable [`@flooronbang`](flooronbang.md)
+to output `floor` messages on every bang.
 
-### Floor message
-
-Output `floor` messages on every bang by enabling [`@flooronbang`](flooronbang.md).
-When values is not needed often, they are also available directly
-from the `@floor` attribute. It can be queried using the standard Max mechanism
+The `@floor` attribute can be queried using the standard Max mechanism
 of prepending "get" to the attribute name, `getfloor`, and sending that message
-to the plugin's 1st inlet. The `@floor` values will be output on the dumpout outlet.
+to the plugin's 1st inlet. `@floor` values will be output from the dumpout outlet.
 
-```python
-# Max native:   @skeleton 1 @skeletonformat 1
-floor x y z i j k
-floor 0.0 -925.7 0.0 0.12 0.97 0.047
-
-# OSC protocol: @skeleton 1
-/floor x y z i j k
-/floor 0.0 -925.7 0.0 0.12 0.97 0.047
-```
-
-### Example
+## Example
 
 Render an OpenGL plane that visually matches the physical floor identified.
 
@@ -48,10 +35,12 @@ Render an OpenGL plane that visually matches the physical floor identified.
 3. Set the `@position` of the node to be the `floor` x, y, z values.
 4. Set the `@direction` of the node to be the `floor` i, j, k values.
 
-### dp.kinect, dp.kinect2 floor equation
+## Kinect v1 and v2 SDK floor equation
 
 [`dp.kinect`](../dp.kinect.md) and [`dp.kinect2`](../dp.kinect2.md) use
-Microsoft Kinect SDKs that describe their floor clipping plane as an equation.
+Microsoft Kinect SDKs that internally describe their floor clipping plane
+as an equation. When you need that SDK equation, use the `@floor` values
+to populate their coefficients.
 
 ```
 Ax + By + Cz + D = 0

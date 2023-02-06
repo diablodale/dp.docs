@@ -25,7 +25,7 @@ Format of pointcloud output as three or four floating point values.
   pointcloud with matrix math or OpenGL shaders.
 
 > :warning: Pointcloud output requires the optional fifth outlet enabled
-> with the plugin argument [`gldepth`](#outlet-5).
+> with the plugin argument [`gldepth`](#pointcloud-outlet).
 
 The matrix output on this fifth outlet is a jitter matrix having
 three or four planes, same dimensions as the depthmap, and
@@ -40,7 +40,7 @@ Use [`@align`](align.md) to align color/depth/ir/playermap data with
 the pointcloud xyz values. This enables scenarios like overlaying the
 colormap pixels on to the pointcloud points.
 
-### Outlet 5 for Pointclouds {#outlet-5}
+## Optional Pointcloud Outlet {#pointcloud-outlet}
 
 Plugins only have four matrix outlets by default. Enable the
 optional fifth outlet for pointclouds by typing the argument

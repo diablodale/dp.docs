@@ -29,7 +29,7 @@ skeldepth playerId jointname column row depth confidence
 * `column, row` are integers that represent the column and row in the depthmap image
 * `depth` is z-depth at that pixel in units chosen by [`@distmeter`](distmeter.md)
 
-### Examples
+## Examples
 
 ```python
 # @skeletonformat 0 @distmeter 0
