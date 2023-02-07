@@ -102,7 +102,11 @@ q
 ## Skeleton Joints
 
 Skeleton joint data is output when `@skeleton`, [`@skeldepth`](skeldepth.md), or [`@skelcolor`](skelcolor.md) are enabled.
-This data is affected by the other attributes [`@distmeter`](distmeter.md), [`@flipx`](flipx.md), [`@align`](align.md),
+A sensor may be able to [locate](#user-location) more users than it can track joints of those users. For example,
+the [Kinect v1](../../_hardware/sensors/kinect-v1.md) sensor can locate up to six users yet can only track
+the skeleton joints for two of them.
+
+Joint data is affected by the other attributes [`@distmeter`](distmeter.md), [`@flipx`](flipx.md), [`@align`](align.md),
 [`@position`](position.md), [`@quat`](quat.md), [`@rotate`](rotate.md), [`@rotatexyz`](rotatexyz.md), and [`@scale`](scale.md).
 
 ### Joint names, diagrams, output order {#joint-names}
