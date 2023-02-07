@@ -31,3 +31,6 @@ Newer sensors and plugins usually have more flexible ranges.
 Its default is automatic white balance. To set a specific white temperature,
 disable automatic and then set the temperature,
 e.g. `@autowhitebalance 0 @whitebalance 4000`.
+
+[`@hue`](hue.md) and [`@whitebalance`](whitebalance.md) are sometimes
+used together to correct for shifts in color.

@@ -37,10 +37,9 @@ The new documentation is almost complete 🙂
 
 * ~~Tutorials are complete~~
 * ~~Sensor hardware references are complete~~
-* ~~[dp.kinect3](/_max/dp.kinect3.md) and [dp.oak](/_max/dp.oak.md) setup, attributes, and methods are complete~~
-* Most [dp.kinect](/_max/dp.kinect.md) and [dp.kinect2](/_max/dp.kinect2.md) attributes and methods are
-  complete. Their setup instructions need migration. Fill gaps with the previous documentation until we
-  finish.
+* ~~[dp.kinect](/_max/dp.kinect.md), [dp.kinect2](/_max/dp.kinect2.md), [dp.kinect3](/_max/dp.kinect3.md), and [dp.oak](/_max/dp.oak.md) attributes and methods are complete~~
+* ~~[dp.kinect2](/_max/dp.kinect2.md), [dp.kinect3](/_max/dp.kinect3.md), and [dp.oak](/_max/dp.oak.md) setup guides are complete~~
+* [dp.kinect](/_max/dp.kinect.md) setup guide needs migration.
 
 </div>
 
