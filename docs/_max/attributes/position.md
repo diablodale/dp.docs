@@ -17,3 +17,9 @@ translate sensor data by this XYZ vector.
 
 This `@position` is compatible with Max
 [jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node).
+
+## dp.kinect
+
+[dp.kinect](../dp.kinect.md) uses the old deprecated attribute name `@translate`.
+It offsets the origin the same.
+It does *not* support [jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node).

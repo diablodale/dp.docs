@@ -1,4 +1,5 @@
 ---
+redirect_to: /max/attributes/position#dpkinect
 products:
   - dp.kinect
 tags:
@@ -10,8 +11,4 @@ usage:
     - "@translate 1.3 -4.0 23.5"
 ---
 
-Offset the origin of sensor data to this XYZ value. That is,
-translate sensor data by this XYZ vector.
-
-> :memo: `@translate` is replaced by [`@position`](position.md)
-> in other plugins
+Offset the origin of sensor data to this XYZ value. Deprecated.

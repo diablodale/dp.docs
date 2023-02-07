@@ -5,7 +5,7 @@ products:
 tags:
   - visual
 usage:
-  signature: "[U_NUMBER V_NUMBER Z_NUMBER [U_NUMBER V_NUMBER Z_NUMBER...]]"
+  signature: "DEPTH_U DEPTH_V DEPTH_Z [DEPTH_U DEPTH_V DEPTH_Z...]"
   values: pixeltoskel X Y Z
   examples:
     - "pixeltoskel -0.42012 0.294084 2.4"
