@@ -17,3 +17,5 @@ products:
 [Coordinate spaces](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh973078(v=ieb.10)) and [orientation](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh973073(v=ieb.10))
 
 [Speech recognition language packs](http://go.microsoft.com/fwlink/?LinkID=248679)
+
+[Kinect for XBox 360 has less features than Kinect v1 for Windows](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh855358(v=ieb.10))
