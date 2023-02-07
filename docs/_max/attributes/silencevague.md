@@ -5,7 +5,7 @@ products:
 tags:
   - audio
 usage:
-  signature: "MILLISECONDS"
+  signature: "[0..10000]"
   values: "OS specific"
   examples:
     - "@silencevague 1000"
