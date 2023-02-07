@@ -12,7 +12,7 @@ compatible_hardware:
 * [Cycling74 Max requirements](https://cycling74.com/products/max)
 * [Microsoft Kinect v2 requirements](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782036(v=ieb.10)#recommended-hardware-configuration) can be verified with their
   [configuration verifier](https://learn.microsoft.com/en-us/windows/apps/design/devices/kinect-for-windows#kinect-configuration-verifier)
-* Windows 8.1 or newer (64-bit)
+* Windows 8.1 or newer (64-bit). Windows 10 is highly recommended.
 
 ### Setup
 
@@ -83,7 +83,7 @@ dp.kinect2 is very compatible with [dp.kinect](dp.kinect.md). There are some kno
 * The dumpout messages `newkinect` and `lostkinect` are not implemented. Microsoft's API and drivers are not reliable
   for detecting plugged/unplugged sensors.
 
-### Known Issues
+### Known issues
 
 * Microsoft has isolated a performance problem that might occur with the Kinect v2 on Intel CPUs. Microsoft believes
   it is isolated to Kinect software that uses eventing to get Kinect data. dp.kinect2 ***does not*** use eventing
@@ -123,6 +123,6 @@ the optional files needed for face tracking can not be directly included within 
 I have created a workaround in the plugin codebase. It requires you copy the `Kinect20.Face.xxx.dll`
 and the `NuiDatabase` folder into the same folder as the collective.
 
-Please remember that your license for dp.kinect2 is only for one computer. You or your customers need
+Please remember that your license for {{ page.title }} is only for one computer. You or your customers need
 <a href="https://hidale.com/shop/{{- page.title | slugify -}}/">additional licenses</a> for each computer
 on which your standalone or collective runs.
