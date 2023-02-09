@@ -30,9 +30,7 @@ compatible_hardware:
    controller because this Kinect model requires all the bandwidth of a USB controller.
 7. [Register](#register) {{ page.title }}
 
-### Optional setup
-
-These optional features need additional setup.
+#### Optional setup
 
 * Face tracking: Download [face tracking data](http://hidale.com/shop/dp-kinect/#download)
   and decompress all the files in this download into the same install folder
@@ -77,7 +75,20 @@ outlets of all dp.kinect instances in Max.
   a Kinect was unplugged from a computer:  
   `lostkinect USB\VID_0409&PID_005A\5&332C30EE&0&2`
 
-### Compatibility with jit.openni
+### Collective/app  {#collective}
+
+You can create standalone applications and collectives with dp.kinect.
+In the Build Collective/Application dialog, click "Include file..." and choose the
+`dp.kinectsupport_xx.dll` for your 32 or 64-bit application. When using face features,
+you will need to additionally include the matching `FaceTrackData.dll`.
+When you create a standalone application, it may be possible to copy these two files
+into the support subfolder instead of including them with the Build dialog box.
+
+Please remember that your license for {{ page.title }} is only for one computer. You or your customers need
+<a href="https://hidale.com/shop/{{- page.title | slugify -}}/">additional licenses</a> for each computer
+on which your standalone or collective runs.
+
+### Compatibility
 
 dp.kinect output is almost compatible with jit.openni yet faster, more stable, and more accurate.
 
@@ -96,16 +107,3 @@ dp.kinect output is almost compatible with jit.openni yet faster, more stable, a
   "Missing the Microsoft Visual C++ 2012 Runtime", then download and install
   [Microsoft Visual C++ Redistributable for VS 2012](https://www.microsoft.com/download/details.aspx?id=30679)
   for 64-bit and/or 32-bit architecture to match your installed Cycling'74 Max architecture(s).
-
-### Standalone applications and collectives {#standalone}
-
-You can create standalone applications and collectives with dp.kinect.
-In the Build Collective/Application dialog, click "Include file..." and choose the
-`dp.kinectsupport_xx.dll` for your 32 or 64-bit application. When using face features,
-you will need to additionally include the matching `FaceTrackData.dll`.
-When you create a standalone application, it may be possible to copy these two files
-into the support subfolder instead of including them with the Build dialog box.
-
-Please remember that your license for {{ page.title }} is only for one computer. You or your customers need
-<a href="https://hidale.com/shop/{{- page.title | slugify -}}/">additional licenses</a> for each computer
-on which your standalone or collective runs.

@@ -32,9 +32,7 @@ compatible_hardware:
    controller because this Kinect model requires all the bandwidth of a USB 3.0 controller.
 7. [Register](#register) {{ page.title }}
 
-### Optional setup
-
-These optional features need additional setup.
+#### Optional setup
 
 * Face tracking: Download the [face tracking model](http://hidale.com/shop/dp-kinect2/#download)
   and follow the instructions found in your folder `Packages\{{ page.title }}\support`.
@@ -43,7 +41,22 @@ These optional features need additional setup.
 
 {% include plugin-setup-register.md %}
 
-### Compatibility with dp.kinect
+### Collective/app  {#collective}
+
+Standalone applications can be created with dp.kinect2. All standard features of dp.kinect2 will work.
+If you use the optional face features, you will need to copy the `Kinect20.Face.xxx.dll` and the `NuiDatabase`
+folder into the support subfolder of your application.
+
+Collectives can also be created and all standard features will work. Max 6 and Max 7 have a limitation;
+the optional files needed for face tracking can not be directly included within the collective file.
+I have created a workaround in the plugin codebase. It requires you copy the `Kinect20.Face.xxx.dll`
+and the `NuiDatabase` folder into the same folder as the collective.
+
+Please remember that your license for {{ page.title }} is only for one computer. You or your customers need
+<a href="https://hidale.com/shop/{{- page.title | slugify -}}/">additional licenses</a> for each computer
+on which your standalone or collective runs.
+
+### Compatibility
 
 dp.kinect2 is very compatible with [dp.kinect](dp.kinect.md). There are some known differences.
 
@@ -111,18 +124,3 @@ dp.kinect2 is very compatible with [dp.kinect](dp.kinect.md). There are some kno
   Kinect even though there is one plugged in. The result is sometimes the "open" will fail. Or you will get a
   successful open yet get repeatedly the last known data (which could be zeros). Set [`@unique 1`](attributes/unique.md)
   to prevent this errant data.
-
-### Standalone Applications and Collectives {#standalone}
-
-Standalone applications can be created with dp.kinect2. All standard features of dp.kinect2 will work.
-If you use the optional face features, you will need to copy the `Kinect20.Face.xxx.dll` and the `NuiDatabase`
-folder into the support subfolder of your application.
-
-Collectives can also be created and all standard features will work. Max 6 and Max 7 have a limitation;
-the optional files needed for face tracking can not be directly included within the collective file.
-I have created a workaround in the plugin codebase. It requires you copy the `Kinect20.Face.xxx.dll`
-and the `NuiDatabase` folder into the same folder as the collective.
-
-Please remember that your license for {{ page.title }} is only for one computer. You or your customers need
-<a href="https://hidale.com/shop/{{- page.title | slugify -}}/">additional licenses</a> for each computer
-on which your standalone or collective runs.

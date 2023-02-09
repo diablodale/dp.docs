@@ -33,12 +33,10 @@ permalink: /
 <div class="mr-5 flex-auto">
 <h2 id="updates" class="ul-90">:dart: Updates</h2>
 
-Documentation was successfully migrated to this website. 🙂
-
-* ~~Tutorials are complete~~
-* ~~Sensor hardware references are complete~~
-* ~~[dp.kinect](/_max/dp.kinect.md), [dp.kinect2](/_max/dp.kinect2.md), [dp.kinect3](/_max/dp.kinect3.md), and [dp.oak](/_max/dp.oak.md) attributes and methods are complete~~
-* ~~[dp.kinect](/_max/dp.kinect.md), [dp.kinect2](/_max/dp.kinect2.md), [dp.kinect3](/_max/dp.kinect3.md), and [dp.oak](/_max/dp.oak.md) setup guides are complete~~
+* Successful migration for all our docs. 🎉
+* Soon we will adjust navigation as we better understand how people use these docs.
+* Your contributions are welcome. 🙂 Thank you. Click the `Edit this page` link
+  at the bottom of any page.
 
 </div>
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: insert-toc
 ---
 <header>
   <h1>{{- page.title | escape -}}</h1>
@@ -17,11 +17,15 @@ development environment to use the
 with a Windows computer.
 </p>
 
-<h2 id="get-started" class="ul-90">:running_woman: Get started</h2>
-<h3 id="download">Downloads, trials, licenses</h3>
+<div class="toc">
+__INSERT_TOC__
+</div>
 
-Get <a href="https://hidale.com/shop/{{- page.title | slugify -}}/">downloads,
-trials, and licenses</a> from the store.
+<div style="overflow:auto;"><h2 id="get-started" class="ul-90 mt-0">:running_woman: Get started</h2></div>
+<h3 id="download">Download, trial, license</h3>
+
+Get a <a href="https://hidale.com/shop/{{- page.title | slugify -}}/">download,
+trial, or license</a> from the store.
 
 {{- content -}}
 
@@ -29,7 +33,7 @@ trials, and licenses</a> from the store.
 Use search <a href="#search-input">:mag:</a> at the top or all below to find
 tutorials, features, attributes, methods, and more.
 
-<h3>Tutorials</h3>
+<h3 id="tutorials">Tutorials</h3>
 <dl>
 {%- for item in site.max -%}
   {%- if item.categories contains "tutorials" and item.products contains page.title -%}
@@ -39,7 +43,7 @@ tutorials, features, attributes, methods, and more.
 {%- endfor -%}
 </dl>
 
-<h3>Attributes</h3>
+<h3 id="attributes">Attributes</h3>
 <dl>
 {%- for item in site.max -%}
   {%- if item.categories contains "attributes" and item.products contains page.title -%}
@@ -49,7 +53,7 @@ tutorials, features, attributes, methods, and more.
 {%- endfor -%}
 </dl>
 
-<h3>Methods</h3>
+<h3 id="methods">Methods</h3>
 <dl>
 {%- for item in site.max -%}
   {%- if item.categories contains "methods" and item.products contains page.title -%}

@@ -1,0 +1,7 @@
+---
+layout: page
+---
+{%- capture content_toc -%}<details open><summary class="text-delta">Quick jump</summary>
+{%- include allejo-jekyll-toc.html html=content sanitize=true class="toc-list" id="toc" h_min=2 h_max=3 -%}
+</details>{%- endcapture -%}
+{{- content | replace_first: "__INSERT_TOC__", content_toc -}}
