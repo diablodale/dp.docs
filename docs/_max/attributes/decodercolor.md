@@ -18,7 +18,7 @@ usage:
 
 Select the color decoder used primarily for decoding MJPEG sensor data.
 This attribute is enabled for sensors with design limitations like
-[Azure Kinect](#azure-kinect). Test and experiment to discover which method of
+[Kinect v3](#kinect-v3). Test and experiment to discover which method of
 color decoding works best with your specific computing hardware.
 
 * `intelmedia` is the Intel decompressor that uses Intel GPU Quick Sync
@@ -37,41 +37,35 @@ For example...
 
   * Decode color frames on the Intel CPU harware decoder `@decodercolor intelmedia`
   * Flip and undistort frames on integrated Intel GPU `@opencl intel`
-  * Track skeleton joints on the discrete NVIDIA GPU `@skelcompute nvidia`
+  * Track skeleton joints on the discrete Nvidia GPU `@skelcompute nvidia`
   * and the remaining features run on your CPU
 
 I recommend testing to discover which settings meet your needs for hardware,
 latency, and throughput. You can have significant performance improvements! :smile:
 
-## Azure Kinect
+## Kinect v3 (Azure) {#kinect-v3}
 
-The [@decodercolor](decodercolor.md) attribute is a result of Microsoft's
-Azure Kinect design. Microsoft does not provide low-latency
-full HD (1920x1080) color output on the Azure Kinect. Instead, they only
-provide one low-latency color output at basic HD (1280x720) resolution.
-When low-latency color output is needed on the Azure Kinect,
-I recommend 1280x720 resolution.
+[Kinect v3](../../_hardware/sensors/kinect-v3.md) has many color resolutions.
+Unfortunately, only one resolution is low-latency. The single low-latency Kinect v3
+resolution is basic HD (1280x720). Use [`@colormapres 1280x720`](colormapres.md)
+when the lowest color latency is needed.
 
-Higher resolutions of color are available (e.g. 4K) with Azure Kinect. However,
-these resolutions are only available from the sensor in MJPEG format. MJPEG is
-an outdated compression format; an unfortunate Microsoft choice. Due to the
-mathematics of MJPEG, the decompression can not be low-latency or multithreaded
-on the CPU or GPU. This means -- on modern CPUs with multiple "cores",
-only one core will be used to decompress this MJPEG data. When that one core
-is running as fast as possible, then color frames can not be processed any faster.
-You may see this in Windows 10 Task Manager; one core may be at 100% while other
-cores are not busy.
+[@decodercolor](decodercolor.md) is a result of Microsoft's design choice.
+These alternate resolutions arrive from the sensor in MJPEG format. MJPEG is
+an outdated compression format. Due to the algorithm of MJPEG, the decompression
+can not be multithreaded on the CPU or GPU. Modern CPUs with multiple "cores"
+and powerful GPUs can not be used. Only one CPU core will be used to decompress
+a MJPEG color frame. This usually leads to slightly higher latency.
 
-### NVIDIA decoder (removed) {#nvidia}
+### Nvidia nvJPEG decoder (removed) {#nvidia}
 
-> :warning: The NVIDIA nvJPEG decoder described below has been removed from
-> plugins v1.3.2023 and higher. Other color decoders perform better.
+> :warning: This Nvidia nvJPEG decoder is deprecated and was removed in plugin v1.3.2023.
+> It did not show significant benefits during testing when compared to other decoders.
 
-An optional color decoder can be enabled when an Azure Kinect sensor is used with
-an NVIDIA GPU. Please note: this decoder **did not** demonstrate significant benefits
-during testing.
+An optional color decoder could be enabled when an Azure Kinect sensor
+and [`dp.kinect3`](../dp.kinect3.md) were used with an Nvidia GPU.
 
-1. Download the optional-nvidia-addons.zip from <https://hidale.com/shop/dp-kinect3/#download>
+1. Download the optional-nvidia-addons.zip from <https://hidale.com/shop/dp-kinect3/#download>.
 2. The ZIP download contains four files for this decoder. Copy them to your dp.kinect3 folder.  
    ```
    nppc64_11.dll
@@ -79,4 +73,4 @@ during testing.
    nppidei64_11.dll
    nvjpeg64_11.dll
    ```
-3. Enable the decoder with the attribute `@decodercolor nvjpeg`
+3. Enable the decoder with `@decodercolor nvjpeg`.

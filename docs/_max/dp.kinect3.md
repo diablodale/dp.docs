@@ -7,7 +7,7 @@ compatible_hardware:
     slug: sensors/kinect-v3
 ---
 
-### System Requirements
+### System requirements
 
 * [Cycling74 Max requirements](https://cycling74.com/products/max)
 * [Microsoft Azure Kinect requirements](https://docs.microsoft.com/en-us/azure/kinect-dk/system-requirements)
@@ -19,13 +19,11 @@ copies of Kinect drivers and files. There are three main groups:
 
 * {{ page.title }} plugin download with all features _except body tracking_. ~19 MB download
 * Microsoft body tracking files that Microsoft creates and tests. ~430 MB download
-* Optional NVIDIA files to run body tracking with CUDA and cnDNN apis. ~4 GB download
+* Optional Nvidia files to run body tracking with CUDA and cnDNN apis. ~4 GB download
 
 {% include plugin-setup-basic.md %}
 
-{% include plugin-setup-register.md %}
-
-### Body Tracking Setup
+#### Optional body tracking  {#body-tracking}
 
 1. Download and install Microsoft's
    [Body Tracking SDK 1.1.2](https://docs.microsoft.com/en-us/azure/kinect-dk/body-sdk-download).
@@ -41,4 +39,4 @@ copies of Kinect drivers and files. There are three main groups:
 
 {% include plugin-setup-onnx-cuda.md %}
 
-{% include plugin-setup-nvjpeg.md %}
+{% include plugin-setup-register.md %}

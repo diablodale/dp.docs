@@ -5,15 +5,17 @@ products:
 tags:
   - physical
 usage:
-  signature: "ENGINE_STRING [ DEVICE_SUBSTRING | INDEX_INT ]"
+  signature: "ENGINE_STRING [ DEVICE_SUBSTRING | DEVICE_INDEX ]"
   values: "directml 0 (default)"
   examples:
-    - "@skelcompute directml        <- DirectML, first gpu"
-    - "@skelcompute directml 1      <- DirectML, second gpu"
-    - "@skelcompute directml intel  <- DirectML, \"intel\" gpu"
-    - "@skelcompute cuda            <- CUDA, first NVIDIA gpu"
-    - "@skelcompute tensor          <- TensorRT, first NVIDIA gpu"
-    - "@skelcompute tensor_fp16     <- TensorRT, NVIDIA gpu, float16"
+    - "@skelcompute directml        <- DirectML, first GPU"
+    - "@skelcompute directml 1      <- DirectML, second GPU"
+    - "@skelcompute directml \"2070\" <- DirectML, \"2070\" GPU"
+    - "@skelcompute directml intel  <- DirectML, \"intel\" GPU"
+    - "@skelcompute directml rtx    <- DirectML, \"rtx\" GPU"
+    - "@skelcompute cuda            <- CUDA, first Nvidia GPU"
+    - "@skelcompute tensor          <- TensorRT, first Nvidia GPU"
+    - "@skelcompute tensor_fp16     <- TensorRT, Nvidia GPU, float16"
 ---
 
 Skeleton tracking compute engine and device.
@@ -21,7 +23,7 @@ Enable multiple compute devices for different tasks using attributes like
 [@skelcompute](skelcompute.md), [@decodercolor](decodercolor.md), and [@opencl](opencl.md).
 For example...
 
-* Track skeleton joints on the discrete NVIDIA GPU `@skelcompute nvidia`
+* Track skeleton joints on the discrete Nvidia GPU `@skelcompute nvidia`
 * Decode color frames on the Intel CPU harware decoder `@decodercolor intelmedia`
 * Flip and undistort frames on integrated Intel GPU `@opencl intel`
 * and the remaining features run on your CPU
@@ -42,13 +44,15 @@ documentation for details.
 
 ## Performance
 
-* DirectML works very well across many GPUs. It is the recommended choice.
-* NVIDIA gpus often perform great with DirectML. An alternate is TensorRT which
-  usually performs better than CUDA.
+* DirectML works very well across most GPUs. It is the recommended choice.
+* CUDA and TensorRT are optional providers for body tracking. They require
+  [additional setup](../dp.kinect3.md#cuda), are for unusual situations,
+  and performed no better than DirectML during testing.
+* TensorRT usually performs better than CUDA.
 * `@skelcompute tensor_fp16` will use the Tensor Runtime and optimize the chosen body tracking model
   with 16-bit floating point calculations. It is slightly less accurate and uses less resources.
 * TensorRT choices will have a **very long** first-time startup. For example, it is almost 5 minutes on
-  a laptop with a RTX2070-Super gpu and choosing `tensor_fp16`. Later startups are only a few seconds
+  a laptop with a RTX2070-Super GPU and choosing `tensor_fp16`. Later startups are only a few seconds
   due to caching.
 * TensorRT caches the first-time startup optimizations at `%TEMP%\PLUGIN_NAME\tensor.cache`.
   You or Windows can delete these cache folders. TensorRT will re-create a cache

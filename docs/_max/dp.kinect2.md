@@ -7,7 +7,7 @@ compatible_hardware:
     slug: sensors/kinect-v2
 ---
 
-### System Requirements
+### System requirements
 
 * [Cycling74 Max requirements](https://cycling74.com/products/max)
 * [Microsoft Kinect v2 requirements](https://learn.microsoft.com/en-us/previous-versions/windows/kinect/dn782036(v=ieb.10)#recommended-hardware-configuration) can be verified with their
@@ -32,7 +32,7 @@ compatible_hardware:
    controller because this Kinect model requires all the bandwidth of a USB 3.0 controller.
 7. [Register](#register) {{ page.title }}
 
-#### Optional setup
+#### Optional features
 
 * Face tracking: Download the [face tracking model](http://hidale.com/shop/dp-kinect2/#download)
   and follow the instructions found in your folder `Packages\{{ page.title }}\support`.

@@ -13,7 +13,7 @@ usage:
     - "@opencl nvidia"
     - "@opencl default"
     - "@opencl 1"
-    - '@opencl "2070"  <--  number quoted otherwise is gpu index 2070'
+    - '@opencl "2070"  <--  number quoted otherwise is GPU index 2070'
     - "@opencl 0"
     - "@opencl off"
 ---
