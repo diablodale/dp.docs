@@ -1,8 +1,7 @@
 # Hidale Documentation
 
-This repository contains documentation, markdown, html, code, etc. for
-Hidale software and services. This is typically rendered and available
-at <https://docs.hidale.com>.
+This repository contains source content, markdown, html, code, etc. for
+<https://docs.hidale.com>.
 
 ## Contributing
 

@@ -34,7 +34,7 @@ permalink: /
 <h2 id="updates" class="ul-90">:dart: Updates</h2>
 
 * Successful migration for all our docs. 🎉
-* Soon we will adjust navigation as we better understand how people use these docs.
+* Ongoing navigation updates as we understand usage.
 * Your contributions are welcome. 🙂 Thank you. Click the `Edit this page` link
   at the bottom of any page.
 
