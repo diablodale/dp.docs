@@ -16,11 +16,19 @@ usage:
 Acceleration XYZ vector usually pointing towards gravity
 (where 1 unit = 9.81m/s^2). Read-only.
 
-The coordinate system is centered on the sensor, and is a right-handed coordinate
-system with positive Z in the direction the sensor lens is pointing. When a sensor
-is perfectly still and perfectly level, this returns the vector `0. -1. 0.`.
+Acceleration calculation requires the following
+
+* Sensor contains an [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit)
+* Any of the following are enabled: [`@skeleton`](skeleton.md),
+  [`@skelcolor`](skelcolor.md), [`@skeldepth`](skeldepth.md),
+  [`@rotatemethod gravity`](rotatemethod.md), [`@flooronbang`](flooronbang.md),
+  or [`@floorout`](floorout.md)
+
+The acceleration coordinate system is the same as most depth coordinate systems.
+It is centered on the sensor, and is a right-handed coordinate system
+with positive Z in the direction the sensor lens is pointing. When a sensor
+is perfectly still and perfectly level, the acceleration values are `0. -1. 0.`.
+
+Acceleration values are not affected by flip or rotation attributes.
 
 > :memo: Plugins older than v1.3 return a four-value vector `x y z 0`.
-
-> :memo: This feature is only supported on sensors with an
-> [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit).

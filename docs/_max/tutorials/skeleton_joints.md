@@ -70,8 +70,8 @@ it is `1.`. This last number represents the confidence in the x, y, z values. Th
 can range from 0.0 to 1.0. A value of 1.0 is a very high confidence in the position values.
 A confidence of 0.5 is a good guess at the position values. By default, you are provided
 all data with a confidence of 0.5 or higher. You can change this with the
-`@posconfidence` attribute. If you change it to 1.0, then dp.kinect2 would only send you
-the very high confidence data and filter out the rest.
+[`@posconfidence`](../attributes/posconfidence.md) attribute. If you change it to 1.0,
+then dp.kinect2 would only send you the very high confidence data and filter out the rest.
 
 Let's have some fun with :art: color. We will update this patch to control the hue and
 luminance of a panel using only your hand.
