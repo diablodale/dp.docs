@@ -19,7 +19,7 @@ Acceleration XYZ vector usually pointing towards gravity
 Acceleration calculation requires the following
 
 * Sensor contains an [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit)
-* Any of the following are enabled: [`@skeleton`](skeleton.md),
+* Enable [`@skeleton`](skeleton.md),
   [`@skelcolor`](skelcolor.md), [`@skeldepth`](skeldepth.md),
   [`@rotatemethod gravity`](rotatemethod.md), [`@flooronbang`](flooronbang.md),
   or [`@floorout`](floorout.md)
@@ -32,3 +32,10 @@ is perfectly still and perfectly level, the acceleration values are `0. -1. 0.`.
 Acceleration values are not affected by flip or rotation attributes.
 
 > :memo: Plugins older than v1.3 return a four-value vector `x y z 0`.
+
+## dp.oak
+
+Luxonis OAK sensors are available with IMUs. Some of those IMUs are
+[not factory calibrated](https://github.com/luxonis/depthai-core/issues/319).
+These uncalibrated IMUs report errant acceleration.
+[`dp.oak`](../dp.oak.md) v1.3.20230301+ includes a workaround for most use cases.

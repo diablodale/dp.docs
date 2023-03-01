@@ -17,7 +17,7 @@ and i, j, k of a vector normal to the plane. Read only.
 Floor plane identification occurs when [`@skeleton`](skeleton.md) is enabled and
 values stabilize. Floor values are affected by [`@flipx`](flipx.md)
 and [`@distmeter`](distmeter.md). Enable [`@flooronbang`](flooronbang.md)
-to output `floor` messages on every bang.
+or [`@floorout`](floorout.md) to output `floor` messages on every bang.
 
 The `@floor` attribute can be queried using the standard Max mechanism
 of prepending "get" to the attribute name, `getfloor`, and sending that message
