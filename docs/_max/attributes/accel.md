@@ -35,7 +35,6 @@ Acceleration values are not affected by flip or rotation attributes.
 
 ## dp.oak
 
-Luxonis OAK sensors are available with IMUs. Some of those IMUs are
-[not factory calibrated](https://github.com/luxonis/depthai-core/issues/319).
-These uncalibrated IMUs report errant acceleration.
-[`dp.oak`](../dp.oak.md) v1.3.20230301+ includes a workaround for most use cases.
+[`dp.oak`](../dp.oak.md) v1.3.20230301+ includes a workaround for
+Luxonis OAK sensors with [uncalibrated IMUs](https://github.com/luxonis/depthai-core/issues/319).
+These uncalibrated IMUs report errant acceleration without this workaround.

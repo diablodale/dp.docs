@@ -48,4 +48,5 @@ For TensorRT, follow these additional steps
    nvinfer.dll
    nvinfer_plugin.dll
    nvinfer_builder_resource.dll
+   nvonnxparser.dll
    ```
