@@ -33,8 +33,6 @@ permalink: /
 <div class="mr-5 flex-auto">
 <h2 id="updates" class="ul-90">:dart: Updates</h2>
 
-* Successful migration for all our docs. 🎉
-* Ongoing navigation updates as we understand usage.
 * Your contributions are welcome. 🙂 Thank you. Click the `Edit this page` link
   at the bottom of any page.
 

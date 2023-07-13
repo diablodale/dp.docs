@@ -21,13 +21,10 @@ This attribute is enabled for sensors with design limitations like
 [Kinect v3](#kinect-v3). Test and experiment to discover which method of
 color decoding works best with your specific computing hardware.
 
-* `intelmedia` is the Intel decompressor that uses Intel GPU Quick Sync
-  hardware acceleration
-* `libyuv` is the libyuv decompression library and runs on the CPU
-* `nv12` is a hybrid decompressor using OpenCV and IPP and may
-  use both your CPU and GPU
-* `winmf` is the Windows Media Foundation decoder in Windows and
-  may be hardware accelerated
+* `intelmedia` uses Intel GPU hardware acceleration
+* `libyuv` uses the libyuv library; runs on the CPU
+* `nv12` uses OpenCV and IPP; runs on the CPU and/or GPU
+* `winmf` uses Windows Media Foundation; may be hardware accelerated
 
 ## Performance
 
@@ -35,10 +32,10 @@ Enable multiple compute devices for different tasks using the
 attributes [@decodercolor](decodercolor.md), [@opencl](opencl.md), and [@skelcompute](skelcompute.md).
 For example...
 
-  * Decode color frames on the Intel CPU harware decoder `@decodercolor intelmedia`
-  * Flip and undistort frames on integrated Intel GPU `@opencl intel`
-  * Track skeleton joints on the discrete Nvidia GPU `@skelcompute nvidia`
-  * and the remaining features run on your CPU
+* Decode color frames on integrated Intel GPU `@decodercolor intelmedia`
+* Flip and undistort frames on integrated Intel GPU `@opencl intel`
+* Track skeleton joints on the discrete Nvidia GPU `@skelcompute nvidia`
+* ...and the remaining features run on your CPU
 
 I recommend testing to discover which settings meet your needs for hardware,
 latency, and throughput. You can have significant performance improvements! :smile:
