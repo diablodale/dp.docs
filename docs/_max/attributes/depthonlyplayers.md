@@ -3,7 +3,6 @@ products:
   - dp.kinect
   - dp.kinect2
   - dp.kinect3
-  - dp.oak
 tags:
   - visual adjustment
 usage:
