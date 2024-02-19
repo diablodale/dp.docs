@@ -20,11 +20,11 @@ usage:
 
 Skeleton tracking compute engine and device.
 Enable multiple compute devices for different tasks using attributes like
-[@skelcompute](skelcompute.md), [@decodercolor](decodercolor.md), and [@opencl](opencl.md).
+[@skelcompute](skelcompute.md), [@transcoder](transcoder.md), and [@opencl](opencl.md).
 For example...
 
 * Track skeleton joints on the discrete Nvidia GPU `@skelcompute nvidia`
-* Decode color frames on the Intel CPU harware decoder `@decodercolor intelmedia`
+* Decode color frames on the Intel CPU harware decoder `@transcoder intelmedia`
 * Flip and undistort frames on integrated Intel GPU `@opencl intel`
 * and the remaining features run on your CPU
 
