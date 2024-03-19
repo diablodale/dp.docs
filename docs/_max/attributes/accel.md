@@ -33,8 +33,14 @@ Acceleration values are not affected by flip or rotation attributes.
 
 > :memo: Plugins older than v1.3 return a four-value vector `x y z 0`.
 
-## dp.oak
+## OAK sensors
 
+Some OAK sensor IMUs incorrectly rotate accelerometer data due to a
+[Luxonis bug](https://github.com/luxonis/depthai-core/issues/319#issuecomment-2007761449).
+Upgrading your IMU [firmware](../methods/firmware.md) may resolve this on some
+(but not all) OAK sensors.
+
+Many Luxonis OAK sensors have [uncalibrated IMUs](https://github.com/luxonis/depthai-core/issues/319).
+Their accelerometer reports errant acceleration.
 [`dp.oak`](../dp.oak.md) v1.3.20230301+ includes a workaround for
-Luxonis OAK sensors with [uncalibrated IMUs](https://github.com/luxonis/depthai-core/issues/319).
-These uncalibrated IMUs report errant acceleration without this workaround.
+Luxonis OAK sensors with these uncalibrated IMUs.
