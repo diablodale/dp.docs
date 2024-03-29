@@ -17,6 +17,8 @@ usage:
 
 Firmware version query and update for supported sensor devices.
 
+:memo: Network devices may be very slow for all `firmware` actions.
+
 ## Version
 
 Versions of firmware on sensors often has user-friendly versions. The format of versions
