@@ -1,5 +1,5 @@
 # from https://hub.docker.com/_/ruby
-FROM ruby:3.1.3
+FROM ruby:3.1.4
 
 RUN apt update && \
     apt install build-essential && \

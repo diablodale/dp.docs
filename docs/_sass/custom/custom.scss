@@ -13,6 +13,12 @@
     padding-top: 0;
 }
 
+// remove top margin jekyll+JTD inserts with mermaid
+// uses: <pre><code class="language-mermaid">...</code></pre>
+.main-content pre:has(> code.language-mermaid) {
+    margin-top: 0;
+}
+
 // floating div around toc
 div.toc {
     width: 35%;
