@@ -63,7 +63,7 @@ UPDATE_VERSION
 
 > :warning: You may damage or brick your sensor device! :warning:
 
-Some sensors have firmware that can be updated with dp plugins.
+Some sensors have firmware that can be updated.
 Start updates for individual components with `firmware update IDSENSOR COMPONENT`
 
 IDSENSOR
@@ -71,6 +71,8 @@ IDSENSOR
 
 COMPONENT
 : sensor component to update, e.g. `bootloader` or `imu`
+
+### Update process
 
 1. Get the list of supported sensors with [`getusbidlist`](../methods/getusbidlist.md)
    or the id from [`@idsensor`](../attributes/idsensor.md).

@@ -32,7 +32,7 @@ When banding or flickering is seen, try the [`@powerfreq`](powerfreq.md) filter.
 > :memo: [Kinect v1](../../_hardware/sensors/kinect-v1.md) hardware
 > does not have enough USB bandwidth to output color and infrared data at the same time.
 
-> :warning: All known versions of Max incorrectly process and display
+> :warning: All known versions of Max 5, 6, 7, and 8 incorrectly process and display
 >  ***all*** image data. Max will slightly shift tint, color,
 > saturation, and brightness. The shifts accumulate. These shifts may
 > not be important or visible depending on your specific use.
