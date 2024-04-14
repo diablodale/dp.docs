@@ -22,7 +22,7 @@ the plugin data to uniquely identify skeletons seen by the sensor.
 
 This playermap can be used to mask and filter matrix data.
 A common use is to mask the depthmap, colormap, or pointcloud based on skeletons
-detected. This can be done automatically using [`@depthonlyplayers`](depthonlyplayers.md).
+detected. This can be done automatically using [`@onlyplayers`](onlyplayers.md).
 
 The depthmap, IR, playermap, and pointcloud matrices align with each
 other by default. Use [`@align`](align.md) to also align and match the color data.

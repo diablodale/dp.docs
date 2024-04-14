@@ -35,7 +35,7 @@ This affects all data: depthmap, colormap, ir, playermap, pointcloud, etc.
 > camera can not see those same pixels.
 
 Newer plugins have less artifacts with [`@depthvis`](depthvis.md)
-and [`@depthonlyplayers`](depthonlyplayers.md) filtering, and improvements
+and [`@onlyplayers`](onlyplayers.md) filtering, and improvements
 in sensor manufacturing.
 
 Below are examples of possible artifacts without filtering.

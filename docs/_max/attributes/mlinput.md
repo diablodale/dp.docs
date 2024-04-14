@@ -7,7 +7,7 @@ tags:
   - machine learning
 usage:
   signature: "[FourCC [Width Height]]..."
-  values: "mlinput rgb (default)"
+  values: "@mlinput rgb (default)"
   examples:
     - "@mlinput bgr"
     - "@mlinput rgb z16"
