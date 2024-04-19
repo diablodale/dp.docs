@@ -6,7 +6,7 @@ gem "jekyll", "~> 4.3" # installed by `gem jekyll`
 # gem "just-the-docs", "0.4.0.rc3" # currently the latest pre-release
 # BUGBUG below is fix for dup external links https://github.com/just-the-docs/just-the-docs/issues/1062
 #gem "just-the-docs", path: "/jtd"
-gem "just-the-docs", github: "diablodale/just-the-docs", branch: "dp-release"
+gem "just-the-docs", :git => "https://github.com/diablodale/just-the-docs", :branch => "dp-release"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
