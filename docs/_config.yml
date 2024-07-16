@@ -54,7 +54,7 @@ plugins:
   - jekyll-link-attributes
   - jekyll-redirect-from
 mermaid:
-  version: "10.9" # pick from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "10.9.1" # pick from https://cdn.jsdelivr.net/npm/mermaid/
   config: # mermaid.initialize(config)
     startOnLoad: false # required otherwise mermaid run() runs twice
     theme: dark
