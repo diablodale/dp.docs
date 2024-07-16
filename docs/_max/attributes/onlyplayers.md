@@ -30,23 +30,23 @@ all combinations of the four matrix outputs to be filtered.
 
 ## Filter bitfield values {#bitfield}
 
-:heavy_check_mark: below means the data of that column is filtered
+✔️ below means the data of that column is filtered
 
 |    | depth | color | infrared | pointcloud |
 | -: | :---: | :---: | :------: | :--------: |
 |  **0** |   |   |   |   |
-|  **1** | :heavy_check_mark: |   |   |   |
-|  **2** |   | :heavy_check_mark: |   |   |
-|  **3** | :heavy_check_mark: | :heavy_check_mark: |   |   |
-|  **4** |   |   | :heavy_check_mark: |   |
-|  **5** | :heavy_check_mark: |   | :heavy_check_mark: |   |
-|  **6** |   | :heavy_check_mark: | :heavy_check_mark: |   |
-|  **7** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |   |
-|  **8** |   |   |   | :heavy_check_mark: |
-|  **9** | :heavy_check_mark: |   |   | :heavy_check_mark: |
-| **10** |   | :heavy_check_mark: |   | :heavy_check_mark: |
-| **11** | :heavy_check_mark: | :heavy_check_mark: |   | :heavy_check_mark: |
-| **12** |   |   | :heavy_check_mark: | :heavy_check_mark: |
-| **13** | :heavy_check_mark: |   | :heavy_check_mark: | :heavy_check_mark: |
-| **14** |   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| **15** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+|  **1** | ✔️ |   |   |   |
+|  **2** |   | ✔️ |   |   |
+|  **3** | ✔️ | ✔️ |   |   |
+|  **4** |   |   | ✔️ |   |
+|  **5** | ✔️ |   | ✔️ |   |
+|  **6** |   | ✔️ | ✔️ |   |
+|  **7** | ✔️ | ✔️ | ✔️ |   |
+|  **8** |   |   |   | ✔️ |
+|  **9** | ✔️ |   |   | ✔️ |
+| **10** |   | ✔️ |   | ✔️ |
+| **11** | ✔️ | ✔️ |   | ✔️ |
+| **12** |   |   | ✔️ | ✔️ |
+| **13** | ✔️ |   | ✔️ | ✔️ |
+| **14** |   | ✔️ | ✔️ | ✔️ |
+| **15** | ✔️ | ✔️ | ✔️ | ✔️ |

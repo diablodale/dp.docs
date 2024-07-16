@@ -117,25 +117,25 @@ joints. Some of those additional joints are output by those specific plugins.
 Joints have consistent names with all plugins. `l_` means left. `r_` means right.
 
 |                        | dp.kinect<br/>[diagram](https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/jj131025(v=ieb.10)#skeleton-position-and-tracking-state)      | dp.kinect2<br/>[diagram](https://docs.microsoft.com/en-us/previous-versions/windows/kinect/dn799273(v=ieb.10))     | dp.kinect3<br/>[diagram](https://learn.microsoft.com/en-us/azure/kinect-dk/body-joints#joint-hierarchy)     | dp.oak (MoveNet)<br/>[diagram](https://www.google.com/images?q=COCO+standard+17+body+keypoints) |
-| ---------------------: | ------------------ | ------------------ | ------------------ | ------------------ |
-| l_thumb, r_thumb       |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
-| l_hand_tip, r_hand_tip |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
-| l_hand, r_hand         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
-| l_wrist, r_wrist       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| l_elbow, r_elbow       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| l_shoulder, r_shoulder | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| l_foot, r_foot         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |
-| l_ankle, r_ankle       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| l_knee, r_knee         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| l_hip, r_hip           | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| l_ear, r_ear           |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| l_eye, r_eye           |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| nose                   |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| head                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| neck                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| c_shoulder             |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| torso                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| waist                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| ---------------------: | :--: | :--: | :--: | :--: |
+| l_thumb, r_thumb       |   | ✔️ | ✔️ |   |
+| l_hand_tip, r_hand_tip |   | ✔️ | ✔️ |   |
+| l_hand, r_hand         | ✔️ | ✔️ | ✔️ |   |
+| l_wrist, r_wrist       | ✔️ | ✔️ | ✔️ | ✔️ |
+| l_elbow, r_elbow       | ✔️ | ✔️ | ✔️ | ✔️ |
+| l_shoulder, r_shoulder | ✔️ | ✔️ | ✔️ | ✔️ |
+| l_foot, r_foot         | ✔️ | ✔️ | ✔️ |   |
+| l_ankle, r_ankle       | ✔️ | ✔️ | ✔️ | ✔️ |
+| l_knee, r_knee         | ✔️ | ✔️ | ✔️ | ✔️ |
+| l_hip, r_hip           | ✔️ | ✔️ | ✔️ | ✔️ |
+| l_ear, r_ear           |   |   | ✔️ | ✔️ |
+| l_eye, r_eye           |   |   | ✔️ | ✔️ |
+| nose                   |   |   | ✔️ | ✔️ |
+| head                   | ✔️ | ✔️ | ✔️ | ✔️ |
+| neck                   | ✔️ | ✔️ | ✔️ | ✔️ |
+| c_shoulder             |   | ✔️ | ✔️ | ✔️ |
+| torso                  | ✔️ | ✔️ | ✔️ | ✔️ |
+| waist                  | ✔️ | ✔️ | ✔️ | ✔️ |
 
 #### Joint output order
 
