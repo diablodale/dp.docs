@@ -17,6 +17,9 @@ usage:
 
 Firmware version query and update for supported sensor devices.
 
+Some sensors may spontaneously report bootloader version warnings.
+The manufacturer is responsible for their warnings and recommendations.
+
 :memo: Network devices may be very slow for all `firmware` actions.
 
 ## Version

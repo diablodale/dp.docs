@@ -5,14 +5,14 @@
 {%- if include.usage -%}
     <dl style="display:inline-grid;grid-template:none;margin-block-end:0em;">
     {%- if include.usage.signature -%}
-        <dt>:information_source: signature</dt>
+        <dt>signature</dt>
         <dd><code>{%- if layout == "attribute" -%}@{%- endif -%}
             {{- page.slug | escape }} {{ include.usage.signature -}}
         </code></dd>
     {%- endif -%}
 
     {%- if include.usage.values -%}
-        <dt>:house: values</dt>
+        <dt>values</dt>
         <dd>
         {%- if include.usage.values.first -%}
             <dl style="display:inline-grid;grid-template:none;margin-block-end:0em;">
@@ -28,7 +28,7 @@
     {%- endif -%}
 
     {%- if include.usage.examples[0] -%}
-        <dt>:bulb: examples</dt>
+        <dt>examples</dt>
         <dd><pre>{%- for example in include.usage.examples -%}
             {{- example -}}
             {%- unless forloop.last -%}<br/>{%- endunless -%}

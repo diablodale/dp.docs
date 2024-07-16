@@ -12,7 +12,7 @@ permalink: /
 <div class="d-flex" style="flex-wrap: wrap;">
 
 <div class="mr-5 flex-auto">
-<h2 id="get-started" class="ul-90 mt-0"><span>:running_woman: Get&nbsp;started</span></h2>
+<h2 id="get-started" class="bb-90 mt-0"><span>🏃&nbsp;Get&nbsp;started</span></h2>
 <ul>
 {%- include build-collection-products.html -%}
 {%- for product in products -%}
@@ -22,7 +22,7 @@ permalink: /
 </div>
 
 <div class="mr-5 flex-auto">
-<h2 id="learn" class="ul-90 mt-0">:open_book:&nbsp;Learn</h2>
+<h2 id="learn" class="bb-90 mt-0">📖&nbsp;Learn</h2>
 
 * [Tutorials](/_max/tutorials.md)
 * [Attribute](/_max/attributes.md) reference
@@ -31,7 +31,7 @@ permalink: /
 </div>
 
 <div class="mr-5 flex-auto">
-<h2 id="updates" class="ul-90">:dart: Updates</h2>
+<h2 id="updates" class="bb-90 mt-0">🎯&nbsp;Updates</h2>
 
 * New machine learning features -- start with [@mlmodel](/_max/attributes/mlmodel.md)
 * Your contributions are welcome. 🙂 Thank you. Click the `Edit this page` link

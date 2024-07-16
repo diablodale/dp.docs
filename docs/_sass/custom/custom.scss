@@ -1,7 +1,7 @@
-// hr with underline
-.ul-90 {
+// 90% bottom border
+.bb-90 {
     width: 90%;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid;
 }
 
 .flex-auto {
@@ -55,3 +55,8 @@ div.toc {
     }
 }
 
+header > dl {
+    border-left: 1px solid #44434d;
+    border-bottom: 1px solid #44434d;
+    padding-left: 0.5em;
+}
