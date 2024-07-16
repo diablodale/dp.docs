@@ -1,6 +1,6 @@
 #### Optional Nvidia-only color decoder
 
-> :warning: This Nvidia nvJPEG decoder is deprecated and was removed in plugin v1.3.2023.
+> ⚠️ This Nvidia nvJPEG decoder is deprecated and was removed in plugin v1.3.2023.
 > It did not show significant benefits during testing when compared to other decoders.
 
 Optionally enable an additional color decoder for your Nvidia GPU with these steps.

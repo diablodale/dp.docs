@@ -57,7 +57,7 @@ It is not unusual to need 20 seconds after stopping a PoE sensor for that same P
 
 ### Known issues
 
-* :warning: Luxonis [PoE](#poe) sensors may not meet some quality requirements  
+* ⚠️ Luxonis [PoE](#poe) sensors may not meet some quality requirements  
   [PoE can't read data](https://github.com/luxonis/depthai-core/issues/406)  
   [PoE fails after 6 connections](https://github.com/luxonis/depthai-core/issues/415)  
   [PoE overloaded on CSS vpu](https://github.com/luxonis/depthai-core/issues/423)

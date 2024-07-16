@@ -13,7 +13,7 @@ compatible_hardware:
 * [Microsoft Kinect v1 requirements](https://learn.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh855359(v=ieb.10))
 * Windows 8.1 or newer. Windows 7 is unsupported yet may work.
 
-> :warning: Kinect v1 for Windows drivers are incompatible with Windows 10
+> ⚠️ Kinect v1 for Windows drivers are incompatible with Windows 10
 > Memory Integrity. Workaround solution at <https://github.com/diablodale/dp.kinect/issues/54>.
 
 ### Setup
@@ -95,7 +95,7 @@ dp.kinect output is almost compatible with jit.openni yet faster, more stable, a
 * Joint orientation data is different than jit.openni
 * jit.openni attributes often have new dp.kinect attribute names
 
-> :warning: Installing both the official Microsoft Kinect v1 Runtime/SDK and the SensorKinect driver
+> ⚠️ Installing both the official Microsoft Kinect v1 Runtime/SDK and the SensorKinect driver
 > for OpenNI v1.x is not supported at the same time.
 
 ### Known issues

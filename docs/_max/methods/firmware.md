@@ -60,11 +60,11 @@ UPDATE_VERSION
 
 ## Update
 
-> :warning: Firmware updates are at your own risk! :warning:
+> ⚠️ Firmware updates are at your own risk! ⚠️
 
-> :warning: You accept all consequences and waive all claims! :warning:
+> ⚠️ You accept all consequences and waive all claims! ⚠️
 
-> :warning: You may damage or brick your sensor device! :warning:
+> ⚠️ You may damage or brick your sensor device! ⚠️
 
 Some sensors have firmware that can be updated.
 Start updates for individual components with `firmware update IDSENSOR COMPONENT`

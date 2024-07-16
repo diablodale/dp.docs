@@ -29,7 +29,7 @@ This affects all data: depthmap, colormap, ir, playermap, pointcloud, etc.
 
 ## Artifacts
 
-> :warning: There can be slight artifacts around edges of objects because the two
+> ⚠️ There can be slight artifacts around edges of objects because the two
 > cameras (depth, color) on the sensor can not occupy the same physical place.
 > They have slightly different views causing one camera to see pixels while the other
 > camera can not see those same pixels.

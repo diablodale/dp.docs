@@ -24,7 +24,7 @@ control of their laser. `@irdot` is ignored on all such sensors.
 We recommend to only use the brightness (power) needed. Higher
 brightness *does not* imply better results.
 
-> :warning: IR laser dot projectors can overheat and are
+> ⚠️ IR laser dot projectors can overheat and are
 > a consumable component. Consult the manufacturer's documentation
 > to learn responsible and reliable usage of the IR laser dot
 > projector. We are *not responsible* for misuse or its consumption.

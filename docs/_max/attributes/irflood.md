@@ -24,7 +24,7 @@ control of their flood. `@irflood` is ignored on all such sensors.
 We recommend to only use the brightness (power) needed. Higher
 brightness *does not* imply better results.
 
-> :warning: IR flood lights can overheat and are
+> ⚠️ IR flood lights can overheat and are
 > a consumable component. Consult the manufacturer's documentation
 > to learn responsible and reliable usage of the IR flood light.
 > We are *not responsible* for misuse or its consumption.

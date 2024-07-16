@@ -55,7 +55,7 @@ Examples:   Intel:GPU:
 
 ## Known Issues
 
-> :warning:
+> ⚠️
 > Enabling `@opencl` on an Intel GPU may crash Max when you first start your sensor. This
 > is a known bug with Intel GPU drivers and LLVM (the compiler Intel uses for OpenCL).
 > The only workaround is to try again. After clang successfully compiles the OpenCL kernels,

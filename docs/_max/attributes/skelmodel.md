@@ -21,7 +21,7 @@ Microsoft provides two models for Azure Kinect
 * `dnn_model_2_0_lite_op11.onnx`: default, less accurate, less compute burden
 * `dnn_model_2_0_op11.onnx`: more accurate, more compute burden
 
-> :warning: Microsoft will not fix their bug
+> ⚠️ Microsoft will not fix their bug
 > <https://github.com/microsoft/Azure-Kinect-Sensor-SDK/issues/1540>.
 > The Azure Kinect model file must be on an ASCII path.
 

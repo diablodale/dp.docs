@@ -24,7 +24,7 @@ Format of pointcloud output as three or four floating point values.
   W is always 1.0. This format is often useful when transforming the
   pointcloud with matrix math or OpenGL shaders.
 
-> :warning: Pointcloud output requires the optional fifth outlet enabled
+> ⚠️ Pointcloud output requires the optional fifth outlet enabled
 > with the plugin argument [`gldepth`](#pointcloud-outlet).
 
 The matrix output on this fifth outlet is a jitter matrix having

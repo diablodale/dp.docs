@@ -51,7 +51,7 @@ special-purpose MJPEG engine.
 
 ### Nvidia nvJPEG decoder (removed) {#nvidia}
 
-> :warning: This Nvidia nvJPEG decoder is deprecated and was removed in plugin v1.3.2023.
+> ⚠️ The Nvidia nvJPEG decoder is deprecated and was removed in plugin v1.3.2023.
 > It did not show significant benefits during testing when compared to other decoders.
 
 An optional color decoder could be enabled when an Azure Kinect sensor

@@ -31,7 +31,7 @@ Use `@faces 2` to track the maximum two.
 [`dp.kinect2`](../dp.kinect2.md) with Microsoft's [Kinect v2](../../_hardware/sensors/kinect-v2.md) SDK
 can track faces on all tracked skeletons. Use `@faces 1` to track all faces.
 
-> :warning: Kinect v2 face [2D keypoints](face2dpoints.md), 3D model,
+> ⚠️ Kinect v2 face [2D keypoints](face2dpoints.md), 3D model,
 > shape units, and face color output requires a [face model](#face-model).
 
 ```python
