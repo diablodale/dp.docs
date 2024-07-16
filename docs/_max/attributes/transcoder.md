@@ -33,7 +33,7 @@ For example...
 * ...and the remaining features run on your CPU
 
 I recommend testing to discover which settings meet your needs for hardware,
-latency, and throughput. You can have significant performance improvements! :smile:
+latency, and throughput. You can have significant performance improvements! 🙂
 
 ## Kinect v3 (Azure) {#kinect-v3}
 

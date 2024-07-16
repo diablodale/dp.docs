@@ -13,7 +13,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   #gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-sitemap", "~> 1.4"
-  gem "jemoji", "~> 0.12.0"
   gem "jekyll-relative-links", "~> 0.6.1"
   gem "jekyll-link-attributes", github: "twinsunllc/jekyll-link-attributes", ref: "6669401e43f8f5b5ebf5b1660613f216ebf118a0"
   gem "jekyll-redirect-from", "~> 0.16.0"

@@ -60,7 +60,7 @@ to change the color of a panel.
 
 Stand in front of the sensor and move your hand.
 
-Congratulations! :tada: You should now see the real-world x, y, z position of your hand in meters
+Congratulations! 🎉 You should now see the real-world x, y, z position of your hand in meters
 relative to the sensor. In the below picture, the hand is 0.26 meters to the left of the
 sensor, 0.37 meters above the sensor, and 1.15 meters in front of the sensor.  
 ![Max patch with hand position]({{- site.baseurl -}}/assets/max/tutorials/skeleton_joints_2.png)
@@ -73,7 +73,7 @@ all data with a confidence of 0.5 or higher. You can change this with the
 [`@posconfidence`](../attributes/posconfidence.md) attribute. If you change it to 1.0,
 then dp.kinect2 would only send you the very high confidence data and filter out the rest.
 
-Let's have some fun with :art: color. We will update this patch to control the hue and
+Let's have some fun with 🎨 color. We will update this patch to control the hue and
 luminance of a panel using only your hand.
 
 1. Unlock your patch.

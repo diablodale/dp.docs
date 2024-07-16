@@ -29,7 +29,7 @@ For example...
 * and the remaining features run on your CPU
 
 Test to discover which settings meet your needs for hardware, latency, and throughput.
-You can have significant performance improvements! :smile:
+You can have significant performance improvements! 🙂
 
 DirectML is built into Windows and requires no downloads. Other compute engines like
 CUDA and TensorRT have additional download requirements. Consult your plugin setup

@@ -41,9 +41,9 @@ All of these factors result in data loss or old data.
 3. Host computer waits 33ms (poor estimate of 30 Hz frame rate)
 4. 1 picosecond before 33ms, the sensor has new data "beta"
 5. Host computer samples the sensor and gets new data "beta"
-6. What happens to 33ms old data "alpha"? :thinking:
+6. What happens to 33ms old data "alpha"? 🤔
 7. Host computer waits 33ms
-8. Host computer samples the sensor and finds no new data :no_entry_sign:
+8. Host computer samples the sensor and finds no new data 🚫
 9. 1 picosecond later, the sensor has new data "zeta"
 
 ## async
@@ -53,7 +53,7 @@ Output is the most current data with synchronized incrementing timestamps.
 
 1. `bang` is the trigger
 2. Get raw data from the sensor and queue it for post-process transforms
-  * :twisted_rightwards_arrows: Multiple threads in parallel transform raw
+  * Multiple threads in parallel 🔀 transform raw
     data into visual frames, skeleton tracking, etc. and queue their results
 3. Output the most current data from the queue to Max on each outlet
 

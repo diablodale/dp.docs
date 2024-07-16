@@ -45,7 +45,7 @@ A depthmap represents the distance to surfaces at every pixel from your sensor.
 15. Click the open message. Click the toggle to turn it on. You should not have any red
     errors in your Max console window.
 
-Congratulations! :tada: You should now see a depthmap in the jit.pwindow.  
+Congratulations! 🎉 You should now see a depthmap in the jit.pwindow.  
 ![Max patch showing depthmap]({{- site.baseurl -}}/assets/max/tutorials/view_depthmap_2.png)
 
 The jit.pwindow expects to receive a grey scale image matrix with values ranging
@@ -71,7 +71,7 @@ We want it to multiply by 0.125. This is because 1.0/8.0 = 0.125.
 4. Connect the first outlet of dp.kinect2 to the inlet of jit.op.
 5. Connect the outlet of jit.op to the inlet of jit.pwindow.
 
-Well done! :smile: You should now see a new depthmap with a wider range of grey for the distance.  
+Well done! 🙂 You should now see a new depthmap with a wider range of grey for the distance.  
 ![Max patch showing wide grey depthmap]({{- site.baseurl -}}/assets/max/tutorials/view_depthmap_3.png)
 
 When you want to learn more, please see the help file included with the plugin download.
