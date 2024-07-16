@@ -26,7 +26,7 @@ chosen. It should be tested.
 
 ## GPU Sequence and Default
 
-> :memo: Plugins v1.3.20221003 and newer support using GPU names,
+> 📝 Plugins v1.3.20221003 and newer support using GPU names,
 > e.g. `@opencl nvidia`. Use specific names to avoid the sequence
 > concerns below.
 

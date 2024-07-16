@@ -35,7 +35,7 @@ DirectML is built into Windows and requires no downloads. Other compute engines 
 CUDA and TensorRT have additional download requirements. Consult your plugin setup
 documentation for details.
 
-> :memo: The second parameter of `@skelcompute` is the name of the device or
+> 📝 The second parameter of `@skelcompute` is the name of the device or
 > the numeric index (starting with 0) of the device. *Name* of the device is recommended.
 > The index may change because the Windows Graphics Performance Preference default
 > is "Let Windows decide". Windows may decide to change the order of GPUs and therefore

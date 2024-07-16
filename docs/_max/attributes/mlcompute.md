@@ -31,7 +31,7 @@ You can have significant performance improvements! :smile:
 DirectML is built into Windows and requires no downloads. Other compute engines like
 CUDA and TensorRT are not tested or supported -- use at your own risk.
 
-> :memo: The second parameter of `@mlcompute` is the name of the device or
+> 📝 The second parameter of `@mlcompute` is the name of the device or
 > the numeric index (starting with 0) of the device. *Name* of the device is recommended.
 > The index may change because the Windows Graphics Performance Preference default
 > is "Let Windows decide". Windows may decide to change the order of GPUs and therefore

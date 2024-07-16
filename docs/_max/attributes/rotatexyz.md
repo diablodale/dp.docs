@@ -20,5 +20,5 @@ and [`@rotate`](rotate.md).
 This `@rotatexyz` is compatible with Max
 [jit.anim.node](https://docs.cycling74.com/max7/refpages/jit.anim.node).
 
-> :memo: Some combinations of Euler angles will result in unworkable
+> 📝 Some combinations of Euler angles will result in unworkable
 > rotations known as [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).

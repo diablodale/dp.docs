@@ -27,5 +27,5 @@ detected. This can be done automatically using [`@onlyplayers`](onlyplayers.md).
 The depthmap, IR, playermap, and pointcloud matrices align with each
 other by default. Use [`@align`](align.md) to also align and match the color data.
 
-> :memo: [dp.kinect](../dp.kinect.md) requires [`@depthmap 2`](depthmap.md)
+> 📝 [dp.kinect](../dp.kinect.md) requires [`@depthmap 2`](depthmap.md)
 > to calculate this playermap.

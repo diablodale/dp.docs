@@ -24,7 +24,7 @@ This affects all data: depthmap, colormap, ir, playermap, pointcloud, etc.
 * depth: align all data and resolutions to be the same resolution as the depthmap
 * color: align all data and resolutions to be the same resolution as the colormap
 
-> :memo: Plugin versions v1.3.20210721 and newer support using string value names
+> 📝 Plugin versions v1.3.20210721 and newer support using string value names
 > like `color` and `off`.
 
 ## Artifacts

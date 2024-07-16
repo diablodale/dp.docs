@@ -11,7 +11,7 @@ Learn how to get the real-world XYZ position
 of your left hand relative to your sensor. Then, use that hand position
 to change the color of a panel.
 
-> :memo: This tutorial uses the [`dp.kinect2`](../dp.kinect2.md) plugin. Substitute the
+> 📝 This tutorial uses the [`dp.kinect2`](../dp.kinect2.md) plugin. Substitute the
 > name of your own sensor plugin. For example, if you have an OAK sensor,
 > type [`dp.oak`](../dp.oak.md) instead.
 

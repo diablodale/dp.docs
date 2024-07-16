@@ -20,5 +20,5 @@ Depth output on the first outlet. This combined with resolution
 [`@depthmapres`](depthmapres.md) and depth value type [`@type`](type.md) define
 the memory layout of depth data.
 
-> :memo: [dp.kinect](../dp.kinect.md) requires `@depthmap 2` to calculate the
+> 📝 [dp.kinect](../dp.kinect.md) requires `@depthmap 2` to calculate the
 > [`@playermap`](playermap.md).

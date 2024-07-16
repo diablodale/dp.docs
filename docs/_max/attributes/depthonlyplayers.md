@@ -20,5 +20,5 @@ usage:
 
 Filter source by tracked players. Deprecated. Use [`@onlyplayers`](onlyplayers.md).
 
-> :memo: Plugin v1.3.20240315 and older use this deprecated attribute.
+> 📝 Plugin v1.3.20240315 and older use this deprecated attribute.
 > Use [`@onlyplayers`](onlyplayers.md) with newer plugins.

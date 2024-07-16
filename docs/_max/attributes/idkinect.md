@@ -14,5 +14,5 @@ usage:
 
 Bind specific sensor to the plugin. Deprecated. Use [`@idsensor`](idsensor.md).
 
-> :memo: Plugins before v1.3.20210818 use this deprecated attribute.
+> 📝 Plugins before v1.3.20210818 use this deprecated attribute.
 > Use [`@idsensor`](idsensor.md) with newer plugins.

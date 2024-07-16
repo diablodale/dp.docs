@@ -29,7 +29,7 @@ IP network identifiers may be prefixed with `ip:` to distinguish them.
 
 Get the list of supported sensors with [`getusbidlist`](../methods/getusbidlist.md).
 
-> :memo: Plugins before v1.3.20210818 use the old name `@idkinect`.
+> 📝 Plugins before v1.3.20210818 use the old name `@idkinect`.
 > It is deprecated.
 
 ## dp.kinect

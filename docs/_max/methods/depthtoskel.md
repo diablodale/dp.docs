@@ -18,7 +18,7 @@ Transform depth pixel UVZ to real-world XYZ coordinates where
 [`@rotate`](../attributes/rotate.md), [`@rotatexyz`](../attributes/rotatexyz.md),
 and [`@scale`](../attributes/scale.md).
 
-> :memo: Older plugins use the old deprecated method name `pixeltoskel`.
+> 📝 Older plugins use the old deprecated method name `pixeltoskel`.
 
 ## Examples
 

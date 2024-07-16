@@ -27,9 +27,9 @@ to OpenGL. This pixel format, resolution [`@colormapres`](colormapres.md), and
 
 When banding or flickering is seen, try the [`@powerfreq`](powerfreq.md) filter.
 
-> :memo: Plugin versions v1.3.20210429 and newer support using value names like `rgb` and `argb`.
+> 📝 Plugin versions v1.3.20210429 and newer support using value names like `rgb` and `argb`.
 
-> :memo: [Kinect v1](../../_hardware/sensors/kinect-v1.md) hardware
+> 📝 [Kinect v1](../../_hardware/sensors/kinect-v1.md) hardware
 > does not have enough USB bandwidth to output color and infrared data at the same time.
 
 > :warning: All known versions of Max 5, 6, 7, and 8 incorrectly process and display

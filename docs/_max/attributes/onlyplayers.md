@@ -24,9 +24,9 @@ Possible values are:
 all combinations of the four matrix outputs to be filtered.
 * any combination of source names combined together
 
-> :memo: [dp.kinect](../dp.kinect.md) plugin only filters depthmap
+> 📝 [dp.kinect](../dp.kinect.md) plugin only filters depthmap
 
-> :memo: Plugins v1.3.20240315 and older used the deprecated `@depthonlyplayers`.
+> 📝 Plugins v1.3.20240315 and older used the deprecated `@depthonlyplayers`.
 
 ## Filter bitfield values {#bitfield}
 

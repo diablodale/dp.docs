@@ -15,7 +15,7 @@ usage:
 
 Swap 3-channel ml input tensor channels 0 and 2 before inference.
 
-> :memo: [`@mlinput`](mlinput.md) may be easier to understand than [`@mlswapch`](mlswapch.md).
+> 📝 [`@mlinput`](mlinput.md) may be easier to understand than [`@mlswapch`](mlswapch.md).
 
 Most models that process color data need their input in a specific channel
 order. `@mlswapch` is one method to change the order of channels. For example,

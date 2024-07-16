@@ -19,4 +19,4 @@ The given `@mlscale` floats are multiplied to each channel in the same order.
 3-channel input with [`@mlswapch`](mlswapch.md) applies `@mlscale` to channels 2,1,0 *and* swaps data
 channels 0 and 2 before sending to the model as input.
 
-> :memo: [`@mlinput`](mlinput.md) may be easier to understand than [`@mlswapch`](mlswapch.md).
+> 📝 [`@mlinput`](mlinput.md) may be easier to understand than [`@mlswapch`](mlswapch.md).

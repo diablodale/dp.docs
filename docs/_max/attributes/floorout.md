@@ -20,7 +20,7 @@ and optionally output a message.
 More efficient than querying the same [`@floor`](floor.md) values
 using `getfloor` on every bang.
 
-> :memo: Plugins before v1.3 use the old attribute `@flooronbang`.
+> 📝 Plugins before v1.3 use the old attribute `@flooronbang`.
 > It is deprecated. Use `@floorout message` with newer plugins.
 
 ## Floor message

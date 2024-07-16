@@ -14,4 +14,4 @@ usage:
 for encoding luminance data in the color image.
 The range is `1.0` to `2.8`.
 
-> :memo: This is distinct from [`@irgamma`](irgamma.md)
+> 📝 This is distinct from [`@irgamma`](irgamma.md)

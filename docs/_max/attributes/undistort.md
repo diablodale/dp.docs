@@ -23,7 +23,7 @@ Usually, the sensor's image can be used with no corrections.
 Some special cases need the image to be undistorted using this
 feature.
 
-> :memo: Plugins always undistort real-world xyz locations of points in
+> 📝 Plugins always undistort real-world xyz locations of points in
 > the pointcloud jit matrix. However, the uv coordinates (i.e. pixel)
 > at which the xyz pointcloud data is stored in memory *are not undistorted*.
 

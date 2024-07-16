@@ -42,11 +42,11 @@ a *hierarchical* rotation coordinate space. Details on the orientation can be fo
 <https://docs.microsoft.com/en-us/previous-versions/windows/kinect-1.8/hh973073(v=ieb.10)>.
 
 
-> :memo: Plugins v1.3.20210818 and newer support format names like `mat` and `quat-abs`.
+> 📝 Plugins v1.3.20210818 and newer support format names like `mat` and `quat-abs`.
 > When `mat` is within the name they output matrix format, otherwise quaternion.
 > When `abs` is within the name they output absolute world rotation, otherwise hierarchical.
 
-> :memo: When migrating from jit.openni, the orientation data has changed. The rotations are *not*
+> 📝 When migrating from jit.openni, the orientation data has changed. The rotations are *not*
 > relative to a T-pose. This change must be managed by your Max patch.
 
 > :warning: [`dp.kinect`](../dp.kinect.md) default orientation format is

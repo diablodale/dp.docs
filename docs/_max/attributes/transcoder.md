@@ -18,7 +18,7 @@ Transcoder for image formats, e.g. transcoding MJPEG sensor data to color RGB.
 * `auto` is the default acceleration with your chosen [@opencl](opencl.md) device and CPU
 * `intelmedia` uses Intel GPU (Quick Sync) hardware when possible, then fallback to `auto`
 
-> :memo: Plugins before v1.3.20231220 use an old deprecated attribute `@decodercolor`.
+> 📝 Plugins before v1.3.20231220 use an old deprecated attribute `@decodercolor`.
 > Use `@transcoder` with newer plugins. `@decodercolor intelmedia` is supported during a transition period.
 
 ## Performance

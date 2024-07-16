@@ -19,7 +19,7 @@ Skeleton, joint, and user tracking output on the fifth outlet.
 Output format (native Max messages, OSC protocol, etc.) is determined by
 [`@skeletonformat`](skeletonformat.md).
 
-> :memo: Some sensors may not support orientation output `@skeleton 2`.
+> 📝 Some sensors may not support orientation output `@skeleton 2`.
 
 ## User Identification
 
@@ -97,7 +97,7 @@ q
   4 = Part of the player's body is out of frame above the camera's field of view.  
   8 = Part of the player's body is out of frame below the camera's field of view.  
   _Example:_ quality = 5 indicates the player's body is out of frame to the camera's right (1) and above (4). 1 + 4 = 5.
-  > :memo: Some sensors may not support user quality output
+  > 📝 Some sensors may not support user quality output
 
 ## Skeleton Joints
 

@@ -30,5 +30,5 @@ imageuntwist 10.2
 /imageuntwist 10.2
 ```
 
-> :memo: This feature is only supported on sensors with an
+> 📝 This feature is only supported on sensors with an
 > [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit).

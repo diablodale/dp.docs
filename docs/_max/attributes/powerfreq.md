@@ -23,7 +23,7 @@ Reduce video banding and flicker related to regional
 * `1` or `50`: apply filter for 50 Hz mains power
 * `2` or `60`: apply filter for 60 Hz mains power
 
-> :memo: Plugin versions v1.3.20210226 and newer support using frequency
+> 📝 Plugin versions v1.3.20210226 and newer support using frequency
 > values `50` and `60`.
 
 ## dp.kinect3

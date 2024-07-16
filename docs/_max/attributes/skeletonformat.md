@@ -18,7 +18,7 @@ usage:
 Message format for skeleton joints, users, faces, etc.
 Native Max messages (usually better) and OSC are the two supported formats.
 
-> :memo: Plugin versions v1.3.20210721 and newer support using the
+> 📝 Plugin versions v1.3.20210721 and newer support using the
 > value names `max` and `osc`.
 
 ## Max messages {#max}

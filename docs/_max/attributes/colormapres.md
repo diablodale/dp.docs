@@ -27,7 +27,7 @@ Resolution of color image that was enabled with [`@colormap`](colormap.md)
 Specify the resolution width and height separated by any character
 except a period `.`
 
-> :memo: Not all sensors support all resolutions. Consult the
+> 📝 Not all sensors support all resolutions. Consult the
 > [hardware documentation](../../_hardware/sensors.md) for your
 > sensor to learn the supported resolution(s). Max objects like
 > jit.matrix can scale or crop plugin output to any resolution.

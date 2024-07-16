@@ -16,7 +16,7 @@ Skeleton body properties output: restricted, handstate, lean, and the
 confidence of those properties. These properties may be noisy and benefit
 from a filter or smoothing.
 
-> :memo: [`@flipx`](flipx.md) does not affect lean values.
+> 📝 [`@flipx`](flipx.md) does not affect lean values.
 
 ```python
 # Max native:   @bodyprop 1 @skeletonformat 1

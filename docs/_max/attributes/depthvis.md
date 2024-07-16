@@ -18,4 +18,4 @@ in common situations.
 
 Set `@depthvis 0` to disable this filter or simulate [dp.kinect](../dp.kinect.md) behavior.
 
-> :memo: Plugin versions v1.2.20200629 and newer support this feature.
+> 📝 Plugin versions v1.2.20200629 and newer support this feature.

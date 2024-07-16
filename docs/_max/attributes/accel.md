@@ -31,7 +31,7 @@ is perfectly still and perfectly level, the acceleration values are `0. -1. 0.`.
 
 Acceleration values are not affected by flip or rotation attributes.
 
-> :memo: Plugins older than v1.3 return a four-value vector `x y z 0`.
+> 📝 Plugins older than v1.3 return a four-value vector `x y z 0`.
 
 ## OAK sensors
 
