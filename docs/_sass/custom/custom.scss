@@ -60,3 +60,14 @@ header > dl {
     border-bottom: 1px solid #44434d;
     padding-left: 0.5em;
 }
+
+table.compact th, table.compact td {
+    padding: 0 !important;
+    min-width: auto;
+    text-align: center;
+    //border-collapse: collapse;
+}
+
+table.compact .table-wrapper {
+    margin: 0;
+}
