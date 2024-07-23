@@ -80,7 +80,7 @@ batch of data input. Two layouts are supported
 `nhwc`
 : number of batch samples, height, width, channels; often with TensorFlow
 
-### Scalar Math
+### Scalar Math {#math}
 
 Scalar math operations can be applied to data values. Any combination of these
 can be used for common operations like substracting the mean, scaling, offset, etc.
@@ -196,3 +196,8 @@ Cropping shapes require a [resize](#resize) dimension, [roi](#roi), or both.
 : crop/remove data outside optional roi, then center crop with dimension's aspect ratio and padding (retains visual content),
   then resize to dimension, preserves visual aspect ratio, also known as "letterboxing" or "pillarboxing";
   e.g. `padcrop resize 256 160` or `padcrop xyxy 200 50 400 150 resize 256 160`
+
+## Archive
+
+Plugin versions before v1.3.20240619 used `@mlcrop`, `@mlmean`, `@mlscale`, and `@mlswapch` to
+pre-process data. Newer plugins do not support these separate attributes. Use [`@mlinput`](mlinput.md) for all pre-processing.

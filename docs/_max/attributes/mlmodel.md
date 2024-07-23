@@ -70,8 +70,3 @@ ONNX data is converted from its native `type` into Max Dictionary compatible typ
 | ONNX_TENSOR_ELEMENT_DATA_TYPE_COMPLEX64  |           |
 | ONNX_TENSOR_ELEMENT_DATA_TYPE_COMPLEX128 |           |
 | ONNX_TENSOR_ELEMENT_DATA_TYPE_BFLOAT16   |           |
-
-## Archive
-
-Old plugin versions used `@mlcrop`, `@mlmean`, and `@mlscale` to pre-process data.
-Current plugins do not support these. Use [`@mlinput`](mlinput.md) for all pre-processing.
