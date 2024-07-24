@@ -10,10 +10,10 @@ usage:
   signature: "{INT | off | argb | uyvy | rgb | rgba}"
   values:
     "0 or off": no color output (default)
-    "1 or argb": color with byte order (alpha red green blue)
-    "3 or uyvy": color with Max uyvy; technically (YCbCr)
-    "4 or rgb": color with byte order (red green blue)
-    "5 or rgba": color with byte order (red green blue alpha)  
+    "1 or argb": color bt.601 ordered (alpha red green blue)
+    "3 or uyvy": color uyvy for Max (technically YCbCr)
+    "4 or rgb": color bt.601 ordered (red green blue)
+    "5 or rgba": color bt.601 ordered (red green blue alpha)  
   examples:
     - "@colormap 1"
     - "@colormap rgb"
@@ -32,14 +32,16 @@ When banding or flickering is seen, try the [`@powerfreq`](powerfreq.md) filter.
 > 📝 [Kinect v1](../../_hardware/sensors/kinect-v1.md) hardware
 > does not have enough USB bandwidth to output color and infrared data at the same time.
 
+## Poor color quality with Cycling74 Max {#color-quality}
+
 > ⚠️ All known versions of Max 5, 6, 7, and 8 incorrectly process and display
 >  ***all*** image data. Max will slightly shift tint, color,
 > saturation, and brightness. The shifts accumulate. These shifts may
 > not be important or visible depending on your specific use.
 > 
 > Details of the problems are within private conversations with Max developers.
-> In general, the problems are due to incorrect and inconsistent formulas in
-> Max's codebase that are used for rgb and uyvy manipulation,
+> The problems are due to incorrect and inconsistent formulas in
+> Max's codebase that are used for both rgb and uyvy manipulation,
 > uyvy to/from rgb conversion, and colorspace transformation. In addition,
 > there is no single shared rgb colorspace for jitter matrices and no
 > metadata that labels jitter matrices with their colorspace. Without this
@@ -48,4 +50,4 @@ When banding or flickering is seen, try the [`@powerfreq`](powerfreq.md) filter.
 > difficult topic area; Cycling74 declines to fix the problems.
 > Workarounds are very difficult and require custom-written Max plugins,
 > shaders, and new visual display components (e.g. jit.window, jit.pwindow).
-><https://cycling74.com/forums/yuv-bugs-fixed-in-max-8-corrupts-tint-color-saturation-and-brightness>
+> <https://cycling74.com/forums/yuv-bugs-fixed-in-max-8-corrupts-tint-color-saturation-and-brightness>

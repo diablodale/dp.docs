@@ -15,8 +15,8 @@ usage:
 
 ---
 
-Machine learning input and data preprocessing steps are applied from left to right.
-For example, color data in RGB format is easy with `@mlinput color rgb`.
+Machine learning input and preprocessing actions.
+For example, color in RGB format is easy with `@mlinput color rgb`.
 
 ## Input sources {#input}
 
@@ -30,38 +30,51 @@ Some actions are chords; meaning that several tokens and values are combined.
 
 Simple example `@mlinput color rgb`
 
-1. get color data from sensor
-2. convert to rgb encoding 
+1. get color input from sensor
+2. convert to rgb encoding
 
 Advanced example `@mlinput color rgb centercrop resize 256 160 int32 nchw`
 
-1. get color data from sensor
+1. get color input from sensor
 2. convert to rgb encoding
 3. center crop to match the resize aspect ratio ↙️
 4. resize the center cropped area to 256x160 pixels (1.6 aspect ratio)
-5. convert each component (of rgb) to a 32-bit signed integer
+5. convert each component (red, green, blue) to a 32-bit signed integer
 6. convert to an NCHW layout tensor
 
-The actions are applied in the order listed. The advanced example order could be changed
+Actions are applied in the order listed. The advanced example order could be changed
 to achieve a similar result with `@mlinput color rgb int32 centercrop resize 256 160 nchw`
 
 ### Transcode
 
-Transcode of data encodings, component type, normalization, and layout are all supported.
+Input encoding, fundamental type, normalization, and layout can all be changed.
 
 #### Encode
 
-`rgb`, `rgba`, `argb`, `bgr`, `bgra`, `grey`, `uyvy`
+Choose the encoding you need. More can be added on request.
 
-#### Component type
+`rgb`, `rgba`, `argb`, `bgr`, `bgra`
+: variations of channel order for BT.601 full range [0..255]
 
-`uint8` or `char`, `float16`, `float32`, `float64` support optional normalization.
+`uyvy`, `ycbcr`
+: interleaved YCbCr; recommend another encoding due to [Max color bugs](colormap.md#color-quality)
 
-`int8`, `int16`, `uint16`, `int32` do not support normalization.
+ `grey`
+: single-channel greyscale using BT.601 primaries
+
+#### Fundamental type {#type}
+
+Fundamental type of input values is changed with the following
+
+Optional [`norm`](#normalize)
+: `uint8` or `char`, `float16`, `float32`, `float64`
+
+No norm
+: `int8`, `int16`, `uint16`, `int32`
 
 #### Normalize
 
-List `norm` after the component type to enable normalization
+List `norm` after the [type](#type) to enable normalization
 
 `uint8 norm`, `char norm`
 : floating-point 0.0-1.0 to 8-bit unsigned integer 0-255 with `(value * 255.0)`
@@ -71,8 +84,8 @@ List `norm` after the component type to enable normalization
 
 #### Layout
 
-Inference models and their underlying engines require specific data layouts for each
-batch of data input. Two layouts are supported
+Inference models and their underlying engines require specific layouts for each
+batch of input. Two layouts are supported
 
 `nchw`
 : number of batch samples, channels, height, width; required for ONNX and often with PyTorch
@@ -82,7 +95,7 @@ batch of data input. Two layouts are supported
 
 ### Scalar Math {#math}
 
-Scalar math operations can be applied to data values. Any combination of these
+Scalar math operations can be applied to values. Any combination of these
 can be used for common operations like substracting the mean, scaling, offset, etc.
 
 `add`
@@ -113,8 +126,9 @@ can be used for common operations like substracting the mean, scaling, offset, e
 
 #### Resize
 
-`resize DIMENSION` will resize data to a given width and height dimension. The
-dimension can be two separate numbers or a resolution string like `256x160`.
+`resize DIMENSION` will resize input to a given width and height dimension.
+It may be faster to resize early so that later actions operate on smaller input.
+The dimension can be two separate numbers or a resolution string like `256x160`.
 All three examples below achieve the same result
 
 * `resize 250 160`
@@ -123,8 +137,8 @@ All three examples below achieve the same result
 
 #### Flip
 
-`flipx` (flip data by columns, rows are same)
-or `flipy` (flip data by rows, columns are same) will flip data across rows or columns.
+`flipx` (flip input by columns, rows are same)
+or `flipy` (flip input by rows, columns are same) will flip input across rows or columns.
 
 <table class="compact"><tr>
 <th>Original</th><th><code>flipx</code></th><th><code>flipy</code></th></tr>
@@ -150,8 +164,8 @@ or `flipy` (flip data by rows, columns are same) will flip data across rows or c
 
 #### Rotate
 
-`rotate NUMBER` will rotate data clockwise in 90 degree-increments, i.e. 0, 90, 180, 270.
-It does not crop or pad data. If your data is 320x240 then `rotate 90` will create data 240x320.
+`rotate NUMBER` will rotate input clockwise in 90 degree-increments, i.e. 0, 90, 180, 270.
+It does not crop or pad input. If your input is 320x240 then `rotate 90` will create input 240x320.
 
 <table class="compact"><tr>
 <th>Original</th><th><code>rotate 90</code></th><th><code>rotate 180</code></th><th><code>rotate 270</code></th></tr>
@@ -185,19 +199,19 @@ Each crop type supports a region of interest (roi) declared using one of these c
 Cropping shapes require a [resize](#resize) dimension, [roi](#roi), or both.
 
 `crop ROI`
-: crop/remove data outside required roi, preserves visual aspect ratio; e.g. `crop xyxy 200 50 400 150`
+: crop/remove input outside required roi, preserves visual aspect ratio; e.g. `crop xyxy 200 50 400 150`
 
 `centercrop [ROI] resize DIMENSION`
-: crop/remove data outside optional roi, then center crop with dimension's aspect ratio and no padding (looses visual content),
+: crop/remove input outside optional roi, then center crop with dimension's aspect ratio and no padding (looses visual content),
   then resize to dimension, preserves visual aspect ratio;
   e.g. `centercrop resize 256 160` or `centercrop xyxy 200 50 400 150 resize 256 160`
 
 `padcrop [ROI] resize DIMENSION`
-: crop/remove data outside optional roi, then center crop with dimension's aspect ratio and padding (retains visual content),
+: crop/remove input outside optional roi, then center crop with dimension's aspect ratio and padding (retains visual content),
   then resize to dimension, preserves visual aspect ratio, also known as "letterboxing" or "pillarboxing";
   e.g. `padcrop resize 256 160` or `padcrop xyxy 200 50 400 150 resize 256 160`
 
 ## Archive
 
 Plugin versions before v1.3.20240619 used `@mlcrop`, `@mlmean`, `@mlscale`, and `@mlswapch` to
-pre-process data. Newer plugins do not support these separate attributes. Use [`@mlinput`](mlinput.md) for all pre-processing.
+pre-process input. Newer plugins do not support these separate attributes. Use [`@mlinput`](mlinput.md) for all pre-processing.
