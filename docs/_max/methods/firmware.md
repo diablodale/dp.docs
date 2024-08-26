@@ -20,7 +20,7 @@ Firmware version query and update for supported sensor devices.
 Some sensors may spontaneously report bootloader version warnings.
 The manufacturer is responsible for their warnings and recommendations.
 
-> 📝 Network devices may be very slow for all `firmware` actions.
+> 📝 Network devices are usually slow for all `firmware` actions.
 
 ## Version
 
@@ -88,3 +88,8 @@ COMPONENT
 8. Success or error messages appear in the Max console.
 9. When successfully updated, the message `firmware update IDSENSOR COMPONENT 1` is sent
    on dumpout.
+
+## OAK sensors
+
+Luxonis documents their OAK sensor firmware and bootloader tools at
+<https://docs.luxonis.com/software/depthai-components/bootloader/>.
