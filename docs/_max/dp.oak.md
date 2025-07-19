@@ -9,7 +9,7 @@ compatible_hardware:
 
 ### System requirements
 
-* Windows 10 April 2018 (Version 1803, OS Build 17134) 64-bit or newer
+* Windows 10 64-bit Version 1903 (OS build 18362) release or newer
 * [Cycling74 Max requirements](https://cycling74.com/products/max)
 * [Luxonis OAK requirements](https://docs.luxonis.com/projects/hardware/en/latest/index.html)
 * dp.oak supports the current Luxonis OAK [RVC2 generation](https://docs.luxonis.com/hardware/platform/rvc/rvc2/)

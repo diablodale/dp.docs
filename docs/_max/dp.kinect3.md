@@ -9,9 +9,9 @@ compatible_hardware:
 
 ### System requirements
 
+* Windows 10 64-bit Version 1903 (OS build 18362) release or newer
 * [Cycling74 Max requirements](https://cycling74.com/products/max)
 * [Microsoft Azure Kinect requirements](https://docs.microsoft.com/en-us/azure/kinect-dk/system-requirements)
-* Windows 10 April 2018 (Version 1803, OS Build 17134) release (64-bit) or newer
 
 The Azure Kinect sensor does not have a shared system driver from Microsoft.
 Microsoft requires customers and applications to install independent
