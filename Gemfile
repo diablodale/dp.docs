@@ -15,7 +15,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
   gem "jekyll-relative-links", "~> 0.6.1"
   gem "jekyll-link-attributes", github: "twinsunllc/jekyll-link-attributes", ref: "6669401e43f8f5b5ebf5b1660613f216ebf118a0"
-  gem "nokogiri", "~> 1.16.4" # required for jekyll-link-attributes yet its gemspec does not specify it
+  gem "nokogiri", ">= 1.18.9" # required for jekyll-link-attributes yet its gemspec does not specify it, and https://github.com/diablodale/dp.docs/security/dependabot/25
   gem "jekyll-redirect-from", "~> 0.16.0"
 end
 
