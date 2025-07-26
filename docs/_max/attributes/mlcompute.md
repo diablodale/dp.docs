@@ -13,6 +13,7 @@ usage:
     - "@mlcompute directml \"2070\" <- DirectML, \"2070\" GPU"
     - "@mlcompute directml intel  <- DirectML, \"intel\" GPU"
     - "@mlcompute directml rtx    <- DirectML, \"rtx\" GPU"
+    - "@mlcompute cpu             <- CPU only"
 ---
 
 Machine learning compute engine and device.
@@ -20,16 +21,13 @@ Enable multiple compute devices for different tasks using attributes like
 [@mlcompute](mlcompute.md), [@transcoder](transcoder.md), and [@opencl](opencl.md).
 For example...
 
-* Track animals using a model on the discrete Nvidia GPU `@mlcompute nvidia`
+* Track animals using a model on the discrete Nvidia GPU `@mlcompute directml nvidia`
 * Decode color frames on the Intel CPU harware decoder `@transcoder intelmedia`
 * Flip and undistort frames on integrated Intel GPU `@opencl intel`
 * and the remaining features run on your CPU
 
 Test to discover which settings meet your needs for hardware, latency, and throughput.
 You can have significant performance improvements! 🙂
-
-DirectML is built into Windows and requires no downloads. Other compute engines like
-CUDA and TensorRT are not tested or supported -- use at your own risk.
 
 > 📝 The second parameter of `@mlcompute` is the name of the device or
 > the numeric index (starting with 0) of the device. *Name* of the device is recommended.
@@ -40,5 +38,5 @@ CUDA and TensorRT are not tested or supported -- use at your own risk.
 
 ## Performance
 
-DirectML works very well across most GPUs. You may have a delay the first-time your model
+DirectML works very well with modern GPUs. You may have a delay the first-time your model
 is started while the engine is optimizing it. Later starts should be quicker.
