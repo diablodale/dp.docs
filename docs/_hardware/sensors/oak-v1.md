@@ -10,7 +10,7 @@ System requirements
 
 * 64-bit Intel® or AMD multi-core processor. Intel® Core™ i5 processor or faster recommended.
 * 4 GB RAM (8 GB or more recommended)
-* Windows 11 is best. Windows 10 version 2004 (20H1) or newer is [possible](../../_max/dp.oak.md#win10). Always 64-bit.
+* Windows 11 is best. Windows 10 19H1 (version 1903) or newer is [possible](../../_max/dp.oak.md#win10). Always 64-bit.
 * [Cycling74 Max requirements](https://cycling74.com/products/max)
 * Luxonis OAK [RVC2 generation sensor](https://docs.luxonis.com/hardware/platform/rvc/rvc2/)
 * [OAK Sensor hardware requirements](https://docs.luxonis.com/projects/hardware/en/latest/)
