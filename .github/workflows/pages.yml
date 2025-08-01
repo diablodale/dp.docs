@@ -22,16 +22,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          cache-version: 1 # Increment this number if you need to re-download cached gems
       - name: Tweak GH Pages via injection
         id: pages # id to reference below for base_path
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
         with:
           enablement: false # don't change repo settings to on/off GH pages
       - name: debug output
@@ -48,8 +48,8 @@ jobs:
           --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload static files as artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_site/  # default uploads from ./_site
 
@@ -66,4 +66,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
